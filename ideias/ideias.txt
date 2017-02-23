@@ -1,0 +1,8 @@
+IDEIAS PROJETO
+
+
+- MESA em si -
+
+* Implementar sistema que verifica o consumo de alcool de cada cliente
+* Tirar fotos automaticamente com cameras superiores, e mandar para o Instagram Facebook etc
+
