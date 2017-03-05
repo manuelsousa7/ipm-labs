@@ -5,4 +5,4 @@ IDEIAS PROJETO
 
 * Implementar sistema que verifica o consumo de alcool de cada cliente
 * Tirar fotos automaticamente com cameras superiores, e mandar para o Instagram Facebook etc
-
+* Modo para colocar os telefones de modo a que nao possam ser usados durante a refeicao, para aumentar interaccao social entre as pessoas
