@@ -1,6 +1,4 @@
-Questionario"
-
---------Profiling do Utilizador-----------
+1 - Quem vai utilizar o sistema?
 
 Idade:
     0-18
@@ -13,98 +11,41 @@ Sexo:
     Masculino
     Feminino
 
-Utiliza tecnologia com que frequencia (nunca,raramente,1vez por semana,3 vezes por semana, todos os dias):
-    PC
-    Smartphone/Tablets
-    Wearables
 
-Costuma ir a(Nunca, Raramente, Frequentemente, Todos os dias):
-    Bar :
-    Restaurante :
-    Café :
-    Takeaway :
-    DriveThrough :
+Tem por habito frequentar restaurantes:
+    Sim
+    Nao
 
-Perfere encomendar(Rating de preferencia):
-    No balcão;
-    Na mesa;
-    Terminais automaticos;
-    Em casa;
 
-Com que frequência consome refeições fora de casa (Nunca, Raramente, Ás vezes, Frequentemente):
-
-Porque deseja consumir refeições fora de casa:
+Qual a razao pela qual recorre a restaurantes:
     Rapidez;
     Menos trabalho;
     Convívio;
+    Outro...
+
+Costuma ir ao restaurante acompanhado?:
+    Sim
+    Nao
+
+Quao complicado e partilhar uma conta?
 
 
-Considera que haja dificuldades/limitações no uso de terminais automáticos:
-    Sim;
-    Não;
-
-Se respondeu sim, indique algumas:
-    (texto)
 
 
-Costuma consumir bebidas alcoolicas:
-    Sim;
-    Nao;
+2 - Que tarefas executam atualmente?
 
-Quantidade de bebidas e que consome por refeição:
-    nenhuma;
-    uma;
-    duas;
-    três ou mais;
+Qual o metodo de pagamento de preferencia?
+    Multibanco
+    Dinheiro
+    Pagamento Eletronico
+    Outro:...
 
-Costuma consumir aperitivos:
-    sim;
-    não;
-
-Preço que acha razoavel uma refeição, por pessoa:
-    0-5;
-    6-10;
-    11-15;
-    16-20;
-    21+
-
-Costuma ir ao restaurante maioritariamente com(Single choice):
-    Sozinho;
-    Acompanhado;
-
-Se costuma ir acompanhado costuma pedir:
-    Conta partilhada;
-    Conta individual;
-
-Se pede conta partilhada quão complicado costuma ser fazer as contas e obter o preço por pessoa?(1-5):
-
-Se vai acompanhado costuma pedir pratos/bebidas partilhados/as:
-    Sim;
-    Não;
-
-Quanto tempo acha que deveria demorar em media, desde que se senta até que paga a conta:
-    5-10 mins
-    11-20 mins
-    21-30 mins
-    31+ mins
-
-Costuma utilizar mais mutibanco ou dinheiro:
-    dinheiro;
-    multibanco;
-
----------------------Parte das tarefas desejáveis-----------------------------------------------------
-
-Se a sua bebida estivesse no final preferia(single choice):
-    Que o empregado viesse emidiatamente encher o copo mesmo sem pedir;
-    Tivesse um botão para pedir mais;
-    não sei;
-
-Consideraria que seria importante/util equanto espera pelo seu pedido(de nada importante, ate muito importante):
-    Poder jogar jogos com os seus amigos;
-    Ouvir musica;
-    Ver videos;
-    Ver desporto/televisao;
-    Apenas conversar;
+O que realiza enquanto espera pelo seu pedido?
+    Estou ao telemovel
+    Socializo com os acompanhantes
+    Leio um Jornal/Livro
+    Assisto Televisao
+    Outro...:
 
 Acha que seria importante poder pagar diretamente na mesa sem ter de ir ao balcão:
     nada importante;
@@ -114,8 +55,132 @@ Acha que seria importante poder pagar diretamente na mesa sem ter de ir ao balc�
     muito importante;
     essenssial;
 
-Que outras possibilidades gostaria de ter quando consome ou encomenda refeições fora de casa:
+
+3 - Que tarefas são desejáveis?
+
+Consideraria que seria importante equanto espera pelo seu pedido(nada importante,1,2,muito importante):
+    Poder jogar jogos com os seus amigos;
+    Ouvir musica;
+    Ver videos;
+    Ver desporto/televisao;
+    Apenas conversar;
+    Poder divir a conta com facilidade
+
+4 - Como se aprendem as tarefas?
+
+
+
+
+
+ 5 - Onde são desempenhadas as tarefas?
+
+Indique em que zonas costuma frequentar este tipo de estabelecimentos?
+    Alentejo
+    Algarve
+    Grande Lisboa
+    Grande Porto
+    Interior Norte
+    Litotal Centro
+    Litroral Norte
+
+7 - Que outros instrumentos tem o utilizador?
+
+Que dispositivos costuma utilizar?
+Smartphone
+Relogio Inteligente
+Tablet
+Computador:...
+Outro:....
+
+6 - Qual a relação entre o utilizador e a informação?
+
+Acha importante saber o que os outros clientes estao a pedir?
+Sim
+Nao
+
+Acha util saber o historico dos seus pedidos?
+Sim
+Nao
+
+Com que frequencia utiliza sites de avaliacoes para decidir a sua ida ao restaurante?
+muito
+pouco
+nada 
+0
+nhecos
+
+
+8 - Como comunicam os utilizadores entre si?
+
+
+
+
+9 - Qual a frequência de desempenho das tarefas? v
+
+
+Qual a frequencia com que coostuma frequentar Restaurantes?
+1 vez por mes
+entre 2 a 4 vezes por mes
+entre 5 a 9 vezes por mes
+mais de 9 vezes por mes
+
+10 - Quais as restrĩções de tempo impostas?
+
+Quanto tempo acha que deveria demorar em media, desde que se senta até que paga a conta:
+    5-10 mins
+    11-20 mins
+    21-30 mins
+    31+ mins
+
+
+  11 - Que acontece se algo correr mal?
+
+  Caso o pedido demore mais do que deseja, com reage?
+    Grito e/ou agrido verbalmentne
+    Recorro ao livro de reclamacoes
+    Peco uma conversa com o Gerente
+    Outra:....
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Questionario"
+
+--------Profiling do Utilizador-----------
+
+
+Utiliza tecnologia com que frequencia (nunca,raramente,1vez por semana,3 vezes por semana, todos os dias):
+    PC
+    Smartphone/Tablets
+    Wearables
+
+Considera que haja dificuldades/limitações no uso de terminais automáticos:
+    Sim;
+    Não;
+
+Se respondeu sim, indique algumas:
     (texto)
+
+Quantidade de bebidas e que consome por refeição:
+    nenhuma;
+    uma;
+    duas;
+    três ou mais;
+
+Se costuma ir acompanhado costuma pedir:
+    Conta partilhada;
+    Conta individual;
+
 
 
 ------------------------------OUTRAS MERDAS-------------------------------------------------
@@ -142,4 +207,4 @@ PERGUNTAS:
 
     10 - Quais as restrĩções de tempo impostas?
 
-    11 - Que acontece se algo correr mal?
+    11 - Que acontece se algo correr mal? v
