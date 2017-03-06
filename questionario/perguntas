@@ -30,8 +30,6 @@ Costuma ir ao restaurante acompanhado?:
 Quao complicado e partilhar uma conta?
 
 
-
-
 2 - Que tarefas executam atualmente?
 
 Qual o metodo de pagamento de preferencia?
@@ -83,15 +81,6 @@ Indique em que zonas costuma frequentar este tipo de estabelecimentos?
     Litotal Centro
     Litroral Norte
 
-7 - Que outros instrumentos tem o utilizador?
-
-Que dispositivos costuma utilizar?
-Smartphone
-Relogio Inteligente
-Tablet
-Computador:...
-Outro:....
-
 6 - Qual a relação entre o utilizador e a informação?
 
 Acha importante saber o que os outros clientes estao a pedir?
@@ -110,10 +99,46 @@ nada
 nhecos
 
 
+7 - Que outros instrumentos tem o utilizador?
+
+Que dispositivos costuma utilizar?
+Smartphone
+Relogio Inteligente
+Tablet
+Computador:...
+Outro:....
+
+Qual a frequencia com que tem contact ocom a tecniclogia touch (telemoveis tablets, etc)
+Nunca
+Todos os dias
+Semanalmente
+mensalmente
+3 em 3 meses
+
+
+
 8 - Como comunicam os utilizadores entre si?
 
 
+Com quem comunica num restaurante?
+Fala fala apenas com as pessoas da minha mesa
+Falo com as restantes pessoas do restaurante
+Falo o gerente do estabelecimento
+Falo com os empregados do estabelecimento
+Outros....
 
+Aquanto no restautne, indique as interacoes que tem com os empregados:
+
+Pedir aperitivo
+pedir bebida
+pedir que me chamem um taxi
+Pedir para mudar de canal
+Outra:....
+
+Para fazer as interacoes mencionadas anteriormente como procede?
+Chama alguem a mesa
+vai ao balcao pedir
+outra:...
 
 9 - Qual a frequência de desempenho das tarefas? v
 
@@ -133,7 +158,7 @@ Quanto tempo acha que deveria demorar em media, desde que se senta até que paga
     31+ mins
 
 
-  11 - Que acontece se algo correr mal?
+11 - Que acontece se algo correr mal?
 
   Caso o pedido demore mais do que deseja, com reage?
     Grito e/ou agrido verbalmentne
@@ -142,48 +167,7 @@ Quanto tempo acha que deveria demorar em media, desde que se senta até que paga
     Outra:....
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-Questionario"
-
---------Profiling do Utilizador-----------
-
-
-Utiliza tecnologia com que frequencia (nunca,raramente,1vez por semana,3 vezes por semana, todos os dias):
-    PC
-    Smartphone/Tablets
-    Wearables
-
-Considera que haja dificuldades/limitações no uso de terminais automáticos:
-    Sim;
-    Não;
-
-Se respondeu sim, indique algumas:
-    (texto)
-
-Quantidade de bebidas e que consome por refeição:
-    nenhuma;
-    uma;
-    duas;
-    três ou mais;
-
-Se costuma ir acompanhado costuma pedir:
-    Conta partilhada;
-    Conta individual;
-
-
-
-------------------------------OUTRAS MERDAS-------------------------------------------------
+------------------------------ AS 11 PERGUNTAS -------------------------------------------------
 
 PERGUNTAS:
 
