@@ -1,0 +1,22 @@
+body {
+	background-color: green;
+	margin: 0;
+}
+
+/*Menu central*/
+#CenterMenu {
+	position: absolute;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 5%;
+	background-color: red;
+	height: 100%;
+	width: 10%;
+}
+
+/*Cada botao do menu central*/
+#CenterMenu button {
+	width: 100%;
+	height: 50%;
+	display: block;
+}
