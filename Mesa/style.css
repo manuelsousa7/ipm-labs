@@ -1,22 +1,43 @@
 body {
-	background-color: green;
+	background-color: #7cf989;
 	margin: 0;
+	font-family: Consolas;
 }
 
 /*Menu central*/
 #CenterMenu {
-	position: absolute;
+	position: relative;
 	margin-right: auto;
 	margin-left: auto;
-	margin-top: 5%;
+	margin-top: 15%;
 	background-color: red;
-	height: 100%;
-	width: 10%;
+	height: 40%;
+	width: 20%;
 }
 
 /*Cada botao do menu central*/
 #CenterMenu button {
+	font-size: 2.5em;
+
+	padding: 7.5%;
 	width: 100%;
 	height: 50%;
 	display: block;
+	text-align: center;
+	background-color: #23ff39;
+}
+
+#Cronometro {
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 5%;
+	padding-right: 2%;
+
+	text-align: right;
+	font-size: 3em;
+
+	height: 40%;
+	width: 15%;
+	background-color: yellow;
 }
