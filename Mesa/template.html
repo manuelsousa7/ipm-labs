@@ -4,6 +4,7 @@
 
 <title>IPM</title>
 <link rel="stylesheet" href="style.css">
+<script type="text/javascript" src="script.js"></script>
 
 </head>
 
@@ -13,13 +14,23 @@
 		<button id="MenuButton" type="button">
 			MENU
 		</button>
-		<button id="SuggestionButton" type="button">
-			SUGESTOES
-		</button>
+		<div id="SuggestionSection">
+			<div id="SuggestionText">
+				SUGESTOES
+			</div>
+			<button id="SuggestionButton1" type="button">1</button>
+			<button id="SuggestionButton2" type="button">2</button>
+			<button id="SuggestionButton3" type="button">3</button>
+		</div>
 	</div>
 
-	<div id ="Cronometro">
-		00:00
+	<div id ="Timer">
+		<div id ="TimerText">
+			00:00
+		</div>
+	 	<div id="ProgressBar" class="meter">
+  			<span style="width: 50%"></span>
+		</div>
 	</div>
 
 </body>

@@ -9,35 +9,111 @@ body {
 	position: relative;
 	margin-right: auto;
 	margin-left: auto;
-	margin-top: 15%;
-	background-color: red;
+	margin-top: 7%;
 	height: 40%;
 	width: 20%;
 }
 
 /*Cada botao do menu central*/
 #CenterMenu button {
+	background-color: #4CAF50; /* Green */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+/*Botao do menu*/
+#MenuButton {
 	font-size: 2.5em;
+	border: solid Green;
 
 	padding: 7.5%;
 	width: 100%;
 	height: 50%;
 	display: block;
 	text-align: center;
-	background-color: #23ff39;
+
+	margin-bottom: 10%;
 }
 
-#Cronometro {
+/*Seccao de sugestao*/
+#SuggestionSection {
+	text-align: center;
+	color: black;
+	font-size: 1.5em;
+}
+
+#SuggestionText {
+	border: solid Green;
+	border-bottom: none;
+}
+
+#SuggestionSection button {
+	font-size: 2em;
+}
+
+#SuggestionButton1 {
+	display: block;
+	border: solid Green;
+	width: 100%;
+	padding: 5%;
+}
+
+#SuggestionButton2 {
+	display: table-cell;
+	border: solid Green;
+	border-top: none;
+	border-right: none;
+	padding: 5%;
+	width: 50%;
+}
+
+#SuggestionButton3 {
+	display: table-cell;
+	border: solid Green;
+	border-top: none;
+	padding: 5%;
+	width: 50%;
+}
+
+/*Cronometro*/
+#Timer {
 	position: relative;
+	
 	margin-right: auto;
 	margin-left: auto;
 	margin-top: 5%;
-	padding-right: 2%;
 
-	text-align: right;
+	text-align: center;
+	color: white;
 	font-size: 3em;
 
-	height: 40%;
-	width: 15%;
-	background-color: yellow;
+	width: 20%;
+
+	background-color: blue;
+}
+
+#TimerText {
+	
+}
+
+#ProgressBar {
+	height: 5%;
+	width: 100%;
+}
+
+/*
+progress {
+	position: relative;
+	width: 100%;
+	height: 10%;
+}
+*/
+
+.meter { 
+	height: 20px;  /* Can be anything */
+	position: relative;
+	background: #555;
+	color: green;
+	padding: 10px;
 }
