@@ -3,8 +3,36 @@
 <head>
 
 <title>IPM</title>
+
+<meta charset="utf-8">
 <link rel="stylesheet" href="style.css">
-<script type="text/javascript" src="script.js"></script>
+<!--<script type="text/javascript" src="script.js"></script>-->
+
+
+<link rel="shortcut icon" type="image/png" href="favicon.png"/>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Loading Bootstrap -->
+<link href="dist/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Loading Flat UI -->
+<link href="dist/css/flat-ui.css" rel="stylesheet">
+
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+<!--[if lt IE 9]>
+  <script src="../dist/js/vendor/html5shiv.js"></script>
+  <script src="../dist/js/vendor/respond.min.js"></script>
+<![endif]  #EAEDF1 -->
+
+
+
+    <link rel="stylesheet" href="clock/flipclock.css">
+
+<script src="google/jquery.min.js"></script>
+
+<script src="clock/flipclock.js"></script>
  
 </head>
 
@@ -25,7 +53,25 @@
 			</div>
 		</div>
 	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class="clock" style="margin:2em; left: 37.5%" ></div>
+	  <!--<div class="message"></div>-->
 
+	  <script type="text/javascript">
+	    var clock;
+	    $(document).ready(function() {
+
+	      clock = $('.clock').FlipClock({
+	            clockFace: 'MinuteCounter'
+	        });
+	    });
+	  </script>
+
+	<!--
 	<div id ="Timer">
 		<div id ="TimerText">
 			00:00
@@ -34,6 +80,7 @@
   			<span style="width: 50%"></span>
 		</div>
 	</div>
+	-->
 
 </body>
 </html>
