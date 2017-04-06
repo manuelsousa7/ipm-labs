@@ -4,10 +4,25 @@ document.addEventListener('DOMContentLoaded', function() { // When the DOM is fi
     /* We bind the click event on all the buttons of the demo */
     for(var el in triggers) {
         var btn = triggers[el];
-        btn.onclick = function(e) {
-            getRandomNotification(
-                this.getAttribute('data-notif-type')) // to get the type of the notification we want to show 
+        
+        document.onkeypress = function(evt) {
+            evt = evt || window.event;
+            var charCode = evt.keyCode || evt.which;
+            var charStr = String.fromCharCode(charCode);
+            if(charStr == "k"){
+
+                time += 120;
+                $(document).ready(function() {
+                    clock = $('.clock').FlipClock(time,{
+                        countdown : true,
+                        clockFace: 'MinuteCounter'
+                    });
+                });
+                
+                getRandomNotification(
+                "error") // to get the type of the notification we want to show 
                     .display(9000);
+            }
         };
     }
 });
@@ -15,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() { // When the DOM is fi
 // utilitary function that creates a notification of given type with a random message
 // only useful for this example.
 var getRandomNotification = function generateNotification(type) {
-    return new Notif(getRandomMsg(), type);
+    return new Notif("Problema na Cozinha!", type);
 }
 // random messages array
 // only useful for this example
