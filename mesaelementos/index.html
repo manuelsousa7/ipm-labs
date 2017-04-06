@@ -26,9 +26,14 @@
 
         <link rel="stylesheet" href="clock/flipclock.css">
 
+
+<link rel="stylesheet" href="another/style.css">
+
     <script src="google/jquery.min.js"></script>
 
     <script src="clock/flipclock.js"></script>
+
+    <link href='circular/circular.css' rel='stylesheet' type='text/css'>
 
     <link href='notification/notification.css' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -36,8 +41,10 @@
     <link href='notification/watnotif.left-top-bubble.min.css' rel='stylesheet' type='text/css'>
 </head>
 <body style="text-align: center;" >
+<p><p><p><p><p><p>
 
-<div class="clock" style="margin:2em;"></div>
+
+<div class="clock" ></div>
   <div class="message"></div>
 
   <script type="text/javascript">
@@ -51,11 +58,12 @@
   </script>
 
   <div class="progress">
+  <div class="progress-bar" style="width: 50%;"></div>
+   <!--<div class="progress-bar progress-bar-warning" style="width: 10%;"></div>-->
+  <div class="progress-bar progress-bar-danger" style="width: 1%;"></div>
   <div class="progress-bar" style="width: 10%;"></div>
-  <div class="progress-bar progress-bar-warning" style="width: 10%;"></div>
-  <div class="progress-bar progress-bar-danger" style="width: 10%;"></div>
-  <div class="progress-bar progress-bar-success" style="width: 10%;"></div>
-  <div class="progress-bar progress-bar-info" style="width: 10%;"></div>
+   <!--<div class="progress-bar progress-bar-success" style="width: 10%;"></div>-->
+   <!--<div class="progress-bar progress-bar-info" style="width: 10%;"></div>-->
   </div>
 
  <!-- Plugin script -->
@@ -73,6 +81,37 @@
         </div>
 
 
+        <div id="nav" class="wrapcircles closed">
+  <div class="circle c-1"><span><a class="link" href="#"></a></span></div>
+  <div class="circle c-2"><span><a class="link" href="#"></a></span></div>
+  <div class="circle c-3"><span><a class="link" href="http://codepen.io/Chrisstar"></a></span></div>
+  <div class="circle c-4"><span><a class="link" href="http://www.twitter.com/DaChrisstar"></a></span></div>
+  <div id="click" class="circle c-5"><span><a class="link"></a></span></div>
+<script src="another/index.js"></script>
+
+
+
+
+<body>
+  <nav class="top-right open">
+  <a class="disc l1">
+    <div>Messages</div>
+  </a>
+  <a class="disc l2">
+    <div>Photos</div>
+  </a>
+  <a class="disc l3">
+    <div>Profile</div>
+  </a>
+  <a class="disc l4">
+    <div>Likes</div>
+  </a>
+  <a class="disc l5 toggle">
+    Menu
+  </a>
+</nav>
+
+<script src="circular/circular.js"></script>
 
 </body>
 </html>
