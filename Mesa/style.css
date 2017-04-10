@@ -51,6 +51,7 @@ body {
 }
 
 #SuggestionText {
+	color: white;
 	background-color: #696969;
 	border-radius: 5px;
 	border: solid #696969;
@@ -61,23 +62,9 @@ body {
 	font-size: 2em;
 }
 
-#SuggestionButton1 {
-	border: 1%, solid #696969;
-	background-image: url("bacalhau2");
-	background-repeat: no-repeat;
-	margin: 1%;
-	border-radius: 10px;
-	display: inline-block;
-	padding: 5%;
-	float: left;
-	width: 48%;
-	height: 125px;
-}
-
-#SuggestionButton0 {
+.ButtonWithImage{
 	margin: 1%;
 	border: 1%,solid #696969;
-	background-image: url("bitoque2");
 	background-repeat: no-repeat;
 	display: inline-block;
 	padding: 5%;
@@ -85,32 +72,21 @@ body {
 	width: 48%;
 	height: 125px;
 	border-radius: 5px;
+}
+#SuggestionButton0 {
+	background-image: url("bitoque2");
+}
+
+#SuggestionButton1 {
+	background-image: url("bacalhau2");
 }
 
 #SuggestionButton2 {
-	margin: 1%;
-	border: 1%,solid #696969;
 	background-image: url("bacalhau2");
-	background-repeat: no-repeat;
-	display: inline-block;
-	padding: 5%;
-	float: left;
-	width: 48%;
-	height: 125px;
-	border-radius: 5px;
 }
 
 #SuggestionButton3 {
-	margin: 1%;
-	border: 1%,solid #696969;
 	background-image: url("bitoque2");
-	background-repeat: no-repeat;
-	display: inline-block;
-	padding: 5%;
-	float: left;
-	width: 48%;
-	height: 125px;
-	border-radius: 5px;
 }
 
 /*Cronometro*/
