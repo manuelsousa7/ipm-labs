@@ -2,38 +2,57 @@ body {
 	background-color:#E0D7D2;
 	background-repeat: no-repeat;
 	background-size:100%,100%;
-	margin: 0;
 	font-family: Consolas;
+}
+
+#Titulo {
+	width: 100%;
+	text-align: center;
+	font-size: 2.5em;
 }
 
 #OverviewGrid {
 	position: absolute;
-	left: 12%;
 	top: 15%;
 	text-align: center;
 }
 
 #Table {
-
+	left: 0%;
+	margin-left: 12%;
+	background-color: #8F4350;
+	color: #CEB094;
 }
 
 #Table td {
-	height: 100px;
+
 }
 
 #Table2 {
-
+	left: 0%;
+	margin-left: 12%;
+	
 }
 
 #Table2 td {
-	height: 100px;
+
+}
+
+#Table3 {
+	background-color: #8F4350;
+	color: #CEB094;
 }
 
 #NutricionalGrid {
 	position: absolute;
-	right: 10%;
+	right: 5%;
 	top: 15%;
 	text-align: center;
+}
+
+ul {
+	list-style-type: none;
+	text-align: left;
 }
 
 .button {
