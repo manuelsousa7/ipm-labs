@@ -2,15 +2,16 @@
 <html>
 <head>
 
-<title>Menu Inicial</title>
+<title>Pagamento</title>
 
 <meta charset="utf-8">
 
 <!--Variavel global que representa o numero de segundos total do pedido-->
 <script type="text/javascript"> 
 		var time = 600;
-	</script>>
+	</script>
 
+<link rel="stylesheet" href="style2.css">
 <link rel="stylesheet" href="style.css">
 <!--<script type="text/javascript" src="script.js"></script>-->
 <link rel="shortcut icon" type="image/png" href="favicon.png"/>
@@ -47,27 +48,58 @@
 
 <body>
 
-	<div id="CenterMenu">
-		<button id="MenuButton" type="button" class="button">
-			MENU
-		</button>
-		<div id="SuggestionSection">
-			<div id="SuggestionText">
-				SUGESTOES
-			</div>
-			<div id = "container">
-				<button id="SuggestionButton0" type="button" class="ButtonWithImage"></button>
-				<button id="SuggestionButton1" type="button" class="ButtonWithImage"></button>
-			</div>
-			<div id = "container">
-				<button id="SuggestionButton2" type="button" class="ButtonWithImage"></button>
-				<button id="SuggestionButton3" type="button" class="ButtonWithImage"></button>
-			</div>
-		</div>
+	<div id="OverviewGrid">
+		<table id="Table" border="2" align="center">
+			<tr style="font-size: 1.2em">
+				<td style="width: 400px; height: 50px;">Nome</td>
+				<td style="width: 150px; height: 50px;">$</td>
+				<td style="width: 150px; height: 50px;">Quantidade</td>
+			</tr>
+			<tr style="font-size: 1.7em">
+				<td style="width: 250px;">Bife</td>
+				<td style="width: 150px; height: 50px;">9,50</td>
+				<td style="width: 150px; height: 50px;">1</td>
+			</tr>
+			<tr style="font-size: 1.7em">
+				<td style="width: 250px;">Batatas</td>
+				<td style="width: 150px; height: 50px;">1,50</td>
+				<td style="width: 150px; height: 50px;">1</td>
+			</tr>
+			
+		</table>
+		<table id="Table2" align="center">
+			<tr style="border: 2; font-size: 1.7em">
+				<td style="width: 400px;">Total:</td>
+				<td style="width: 150px; height: 50px; border: thin solid; border-top: none">11,00</td>
+				<td style="width: 150px; height: 50px;"></td>
+			</tr>
+		</table>
 	</div>
-	<!-- Plugin script -->
 
-	<div class="clock" style="margin:2em; width: 25%; align-content: center; position: relative; top: 10%; left: 41%;"></div>
+	<div id="NutricionalGrid">
+		<table id="Table3" border="2" align="center">
+			<tr style="font-size: 1.7em">
+				<td style="width: 500px; height: 50px;">Valor Nutricional</td>
+			</tr>
+			<tr style="font-size: 1.7em">
+				<td style="width: 500px; height: 450px;">
+					Bife
+				</td>
+			</tr>
+
+			
+		</table>
+	</div>
+
+	<button id="BotaoVoltar" type="button" class="button" style="font-size: 2em;">
+		VOLTAR
+	</button>
+
+	<button id="BotaoPedir" type="button" class="button" style="font-size: 2em;">
+		PEDIR
+	</button>
+
+	<div class="clock" style="margin:2em; width: 25%; align-content: center; position: absolute; top: 75%; left: 37.5%;"></div>
 	  <!--<div class="message"></div>-->
 
 	  <script type="text/javascript">
@@ -85,6 +117,17 @@
 
     <!-- script that handles the binding of the notifications to the buttons -->
     <script type="text/javascript" src="notification/example.js"></script>
+
+	<!--
+	<div id ="Timer">
+		<div id ="TimerText">
+			00:00
+		</div>
+	 	<div id="ProgressBar" class="meter">
+  			<span style="width: 50%"></span>
+		</div>
+	</div>
+	-->
 
 </body>
 </html>

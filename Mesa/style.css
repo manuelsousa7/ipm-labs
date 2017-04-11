@@ -21,8 +21,6 @@ body {
 }
 /*Cada botao do menu central*/
 #CenterMenu button {
-
-
     text-align: center;
     text-decoration: none;
 }
@@ -30,13 +28,15 @@ body {
 /*Botao do menu*/
 #MenuButton {
 	color: #CEB094;
-	border-radius: 5px;
-	font-size: 2.5em;
 	background-color: #8F4350;
-	border: 1% solid #8F4350;
-	
-	padding: 5%;
-	width: 100%;
+	border: 2% solid #8F4350;
+	border-radius: 5px;
+
+	font-size: 4em;
+
+	margin-left: 25%;
+
+	width: 50%;
 	height: 125px;
 	text-align: center;
 
