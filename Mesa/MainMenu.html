@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Menu Inicial</title>
+
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="MenuStyle.css">
+<!--<script type="text/javascript" src="script.js"></script>-->
+<link rel="shortcut icon" type="image/png" href="favicon.png"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Loading Bootstrap -->
+    <link href="dist/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="dist/css/flat-ui.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="clock/flipclock.css">
+    
+    <script src="google/jquery.min.js"></script>
+    <script src="clock/flipclock.js"></script>
+
+    <link href='notification/notification.css' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <!-- Stylesheet for WatNotif -->
+    <link href='notification/watnotif.left-top-bubble.min.css' rel='stylesheet' type='text/css'>
+ 
+</head>
+
+<body>
+    
+    <script type="text/javascript">
+        // variavel global que guarda  a ultima sugestao clicada
+        var previous = 0;
+    </script>
+
+    <script>
+        function sugestao1() {
+            if(previous != 0){
+                var prev = "sugestaobtn" + previous;
+                document.getElementById(prev).style.background ='#d6dbdf';
+            }
+            document.getElementById("ImagemSugestao").src="sugestao1";
+            document.getElementById("sugestaobtn1").style.background = "#1abc9c";
+            previous = 1;
+
+        }
+    </script>
+
+    <script>
+        function sugestao2() {
+            if(previous != 0){
+                var prev = "sugestaobtn" + previous;
+                document.getElementById(prev).style.background ='#d6dbdf';
+            }
+            document.getElementById("ImagemSugestao").src="sugestao2";
+            document.getElementById("sugestaobtn2").style.background = "#1abc9c";
+            previous = 2;
+        }
+    </script>
+
+    <script type="text/javascript">
+        function next(){
+
+            if(previous == 2){
+                return;
+            }
+            
+            var prev = "sugestaobtn"+previous;
+            var newImage = "sugestao" + (previous+1);
+            var next = "sugestaobtn" + (previous+1);
+
+            document.getElementById("ImagemSugestao").src = newImage;
+
+            document.getElementById("nextButton").style.background = '#d6dbdf';
+
+            document.getElementById(next).style.background = "#1abc9c";
+
+            document.getElementById(prev).style.background ='#d6dbdf';
+            previous+=1;
+        }
+    </script>
+   <div id = "menuSugestoes" >
+            <div class="thumbnail" style = "margin-bottom: 0px;" >
+                <img  id = "ImagemSugestao" src="sugestao1" />
+            </div>
+            <p class="caption" style = "margin-bottom: 0px;" >Bitoque</p>
+        <ul class="pagination" style = "margin-top: 0px;margin-left: 20%;margin-right: 10%;">
+            <li class="previous">
+                <a href="#" class="fui-arrow-left"></a>
+                <a id = "sugestaobtn1" href="#" onclick="sugestao1()">1</a>
+                <a  id = "sugestaobtn2" href="#" onclick="sugestao2()">2</a>
+            </li>
+            <li class="next">
+                <a id = "nextButton" href="#" class="fui-arrow-right" onclick="next()"></a>
+            </li>
+        </ul>
+    </div>
+</body>
