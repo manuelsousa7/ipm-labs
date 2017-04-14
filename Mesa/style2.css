@@ -12,14 +12,14 @@ body {
 }
 
 #OverviewGrid {
-	position: absolute;
+	position: relative;
 	top: 15%;
 	text-align: center;
 }
 
 #Table {
 	left: 0%;
-	margin-left: 12%;
+	margin-left: 10%;
 	background-color: #8F4350;
 	color: #CEB094;
 }
@@ -30,7 +30,7 @@ body {
 
 #Table2 {
 	left: 0%;
-	margin-left: 12%;
+	margin-left: 10%;
 	
 }
 
@@ -44,15 +44,46 @@ body {
 }
 
 #NutricionalGrid {
-	position: absolute;
-	right: 5%;
-	top: 15%;
+	width: 100%;
+	position: relative;
 	text-align: center;
+
+	left: 70%;
+	bottom: 20%;
 }
 
 ul {
 	list-style-type: none;
 	text-align: left;
+}
+
+#Quantidade div{
+	display: inline;
+	text-align: center;
+}
+
+.BotaoMenos {
+	margin-left: 5%;
+	margin-right: 5%;
+	padding-left: 5%;
+	padding-right: 5%;
+	border: solid;
+	background-color: black;
+}
+
+.BotaoMais {
+	margin-left: 5%;
+	margin-right: 5%;
+	padding-left: 5%;
+	padding-right: 5%;
+	border: solid;
+	background-color: black;
+}
+
+.QuadradoQuantidade {
+	padding-left: 5%;
+	padding-right: 5%;
+	border: solid;
 }
 
 .button {

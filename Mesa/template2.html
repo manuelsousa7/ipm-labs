@@ -13,7 +13,7 @@
 
 <link rel="stylesheet" href="style2.css">
 <link rel="stylesheet" href="style.css">
-<!--<script type="text/javascript" src="script.js"></script>-->
+<script type="text/javascript" src="script2.js"></script>
 <link rel="shortcut icon" type="image/png" href="favicon.png"/>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,7 +51,7 @@
 	<p id="Titulo">CONCLUIR PEDIDO</p>
 
 	<div id="OverviewGrid">
-		<table id="Table" border="2" align="center" width="120%">
+		<table id="Table" border="2" align="center" width="50%">
 			<tr style="font-size: 1.2em">
 				<td width="25%" height="50">Nome</td>
 				<td width="25%" height="50">$</td>
@@ -60,16 +60,40 @@
 			<tr style="font-size: 1.7em">
 				<td width="25%" height="80">Bife</td>
 				<td width="25%" height="80">9,50</td>
-				<td width="15%" height="80">1</td>
+				<td width="15%" height="80">
+					<div id="Quantidade">
+						<button id="QuadradoMenos1" class="BotaoMenos" onclick="CustomOnClick(1, false)">
+							-
+						</button>
+						<div id="Quantidade1" class="QuadradoQuantidade">
+							1
+						</div>
+						<button id="QuadradoMais1" class="BotaoMais" onclick="CustomOnClick(1, true)">
+							+
+						</button>
+					</div>
+				</td>
 			</tr>
 			<tr style="font-size: 1.7em">
 				<td width="25%" height="80">Batatas</td>
 				<td width="25%" height="80">1,50</td>
-				<td width="15%" height="80">1</td>
+				<td width="15%" height="80">
+					<div id="Quantidade">
+						<button id="QuadradoMenos2" class="BotaoMenos" onclick="CustomOnClick(2, false)">
+							-
+						</button>
+						<div id="Quantidade2" class="QuadradoQuantidade">
+							1
+						</div>
+						<button id="QuadradoMais2" class="BotaoMais" onclick="CustomOnClick(2, true)">
+							+
+						</button>
+					</div>
+				</td>
 			</tr>
 			
 		</table>
-		<table id="Table2" align="center" width="120%">
+		<table id="Table2" align="center" width="50%">
 			<tr style="border: none; font-size: 1.7em">
 				<td width="25%" height="80">Total:</td>
 				<td width="25%" height="80" style="border: thin solid; border-top: none; background-color: #8F4350; color: #CEB094;">11,00</td>
@@ -79,7 +103,7 @@
 	</div>
 
 	<div id="NutricionalGrid">
-		<table id="Table3" border="2" align="center" width="100%">
+		<table id="Table3" border="2" width="25%">
 			<tr style="font-size: 1.7em">
 				<td width="50%">Valor Nutricional</td>
 			</tr>
@@ -105,6 +129,9 @@
 	<button id="BotaoPedir" type="button" class="button" style="font-size: 2em;">
 		PEDIR
 	</button>
+
+
+	
 
 	<div class="clock" style="margin:2em; width: 25%; align-content: center; position: absolute; top: 75%; left: 37.5%;"></div>
 	  <!--<div class="message"></div>-->
