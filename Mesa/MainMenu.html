@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
 
@@ -17,7 +17,7 @@
     <!-- Loading Flat UI -->
     <link href="dist/css/flat-ui.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="clock/flipclock.css">
+    <link rel="stylesheet" href="clock/flipclock.css"> 
     
     <script src="google/jquery.min.js"></script>
     <script src="clock/flipclock.js"></script>
@@ -104,25 +104,32 @@
 
         <div id = "profileDiv">
             <div id = "profileThumbnail">
-                <img id = "profilePhoto" src = "manuel.png">   Manuel
-                <div id = icons>
-                    <div id = "icon1" class=" fui-facebook btn btn-block btn-lg btn-inverse"></div>
-                    <div id = "icon2" class=" fui-star-2 btn btn-block btn-lg btn-inverse"></div>
+                <img id = "profilePhoto" src = "manuel.png">   <p> Manuel </p>
+                <!--<div id = icons>
+                    <div id = "icon1" class=" fui-heart btn btn-block btn-lg btn-inverse"></div>
+                    <div id = "icon2" class=" fui-bookmark btn btn-block btn-lg btn-inverse"></div>
                     <div id = "icon3" class=" fui-gear  btn btn-block btn-lg btn-inverse"> Settings</div>
-                </div>
+                </div> -->
             </div>
         </div>
 
-        <div id = "testDiv" style = "margin-top: 5%;">
+        <div id = "otherButtonsDiv">
+                   <div id = "helpButton" class=" fui-question-circle btn btn-block btn-lg btn-inverse"></div>
+                   <div id = "musicButton" class=" fui-facebook btn btn-block btn-lg btn-inverse"></div>
+                   <div id = "musicButton"  style = "margin-left: 2%;" class=" fui-spotify btn btn-block btn-lg btn-inverse"></div>
+                   <div id = "moreButton" class=" fui-plus btn btn-block btn-lg btn-inverse"></div>
+        </div>
+
+        <div id = "testDiv" style="margin-top: 5%;">
             <button  id = "menuButton" class="btn btn-hg btn-primary">
                    Menu
             </button>
         </div>
 
-       <div id = "menuSugestoes" style="margin-top: 0px;" >
+       <div id = "menuSugestoes" style="margin-top: 0.5%;" >
             
             <div id = "plateThing">
-                <div class="thumbnail" style = "margin-bottom: 0px;" >
+                <div class="thumbnail" style = " color: white; margin-bottom: 0px;" >
                         Sugestões do dia
                     <img  id = "ImagemSugestao" src="sugestao1" />
                 </div>
