@@ -195,6 +195,7 @@ nav.top-right {
           transition-delay: 0.4s;
 }
 .open .l5 {
+  background-image: url("../manuel.png");
   -webkit-transition-delay: 0.4s;
           transition-delay: 0.4s;
   -webkit-transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 190deg);
@@ -202,16 +203,17 @@ nav.top-right {
   opacity: 1;
 }
 .open .l5:hover {
-  background: #1a1301;
+  background-image: url("../manuel.png");
   color: #ffc00e;
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
 }
 .open .l5:active {
-  background: #806007;
+ background-image: url("../manuel.png");
   color: #ffc00e;
 }
 .open .l5.toggle {
+  background-image: url("../manuel.png");
   -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, 10deg);
           transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, 10deg);
 }
@@ -220,7 +222,7 @@ nav.top-right {
   line-height: 100px;
   padding: 0;
   width: 100px;
-  background: gold;
+  background-image: url("../manuel.png");
   opacity: 1;
   -webkit-transform: none;
           transform: none;
@@ -233,7 +235,7 @@ nav.top-right {
           transform: rotate3d(0, 0, 1, 0deg);
 }
 .toggle:hover {
-  background: #1a1600;
+  background-image: url("../manuel.png");
   color: gold;
 }
 .toggle:active {
