@@ -6,10 +6,6 @@
 
 <meta charset="utf-8">
 
-<link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="ism/css/my-slider.css"/>
-<script src="ism/js/ism-2.2.min.js"></script>
-
 <!--<script type="text/javascript" src="script.js"></script>-->
 <link rel="shortcut icon" type="image/png" href="favicon.png"/>
 
@@ -130,21 +126,29 @@
             </button>
         </div>
 
-        <div class="ism-slider" id="my-slider" style="margin-left: auto; margin-right: auto; margin-top: 2%;">
-        <ol>
-            <li>
-                <img src="ism/image/slides/_u/1492562152765_332677.jpg">
-                <div class="ism-caption ism-caption-0">Salada de alho porro</div>
-            </li>
-            <li>
-                <img src="ism/image/slides/_u/1492562036870_209786.jpg">
-                <div class="ism-caption ism-caption-0">Hamburguer da casa</div>
-            </li>
-            <li>
-                <img src="ism/image/slides/_u/1492562024631_533954.jpg">
-                <div class="ism-caption ism-caption-0">Salmão á chef</div>
-            </li>
-        </ol>
-        </div>
+       <div id = "menuSugestoes" style="margin-top: 0.5%;" >
+            
+            <div id = "plateThing">
+                <div class="thumbnail" style = " color: white; margin-bottom: 0px;" >
+                        Sugestões do dia
+                    <img  id = "ImagemSugestao" src="sugestao1" />
+                </div>
+                <p class="caption" style = "margin-bottom: 0px;" >Bitoque</p>
+            </div>
 
+                <ul class="pagination" style = "margin-top: 0px;margin-left: 15%;margin-right: 10%;">
+                <li class="previous">
+                    <a id = prevButton href="#" class="fui-arrow-left" onclick="before()"></a>
+                    <a id = "sugestaobtn1" href="#" onclick="sugestao1()">1</a>
+                    <a  id = "sugestaobtn2" href="#" onclick="sugestao2()">2</a>
+                    <a id = "sugestaobtn1" href="#" onclick="sugestao1()">3</a>
+                    <a  id = "sugestaobtn2" href="#" onclick="sugestao2()">4</a>
+                    <a id = "sugestaobtn1" href="#" onclick="sugestao1()">5</a>
+                    <a  id = "sugestaobtn2" href="#" onclick="sugestao2()">6</a>
+                </li>
+                <li class="next">
+                    <a id = "nextButton" href="#" class="fui-arrow-right" onclick="next()"></a>
+                </li>
+                </ul>
+        </div>
 </body>
