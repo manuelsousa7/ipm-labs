@@ -16,7 +16,7 @@ function CustomOnClick(index, add) {
 
 function UpdatePriceText() {
 
-	var PlateNum = 2;
+	var PlateNum = 3;
 	var contador = 0;
 	var i;
 	for (i = 0; i < PlateNum; i++) {
@@ -25,5 +25,7 @@ function UpdatePriceText() {
 		contador += parseFloat(parseInt(document.getElementById(Texto1).innerHTML) * parseFloat(document.getElementById(Texto2).innerHTML));
 	}
 
-	document.getElementById("TotalTexto").innerHTML = contador;
+	var textoComSimbolo = contador.toFixed(2) + " €";
+	document.getElementById("TotalTexto").innerHTML = contador.toFixed(2);
+	document.getElementById("moneyText").innerHTML = textoComSimbolo;
 }
