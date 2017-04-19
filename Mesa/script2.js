@@ -35,8 +35,8 @@ function UpdatePriceText() {
 	var textoComSimbolo = contador.toFixed(2) + " €";
 	document.getElementById("TotalTexto").innerHTML = contador.toFixed(2);
 	document.getElementById("moneyText").innerHTML = textoComSimbolo;
-	document.getElementById("TextoCalorias").innerHTML = "Calorias\t" + TotalCalorias + " g";
-	document.getElementById("TextoProteinas").innerHTML = "Proteínas\t" + TotalProteinas + " g";
-	document.getElementById("TextoLipidos").innerHTML = "Lípidos\t" + TotalLipidos + " g";
-	document.getElementById("TextoHidratos").innerHTML = "Hidratos\t" + TotalHidratos + " g";
+	document.getElementById("TextoCalorias").innerHTML = "Calorias:\t" + TotalCalorias + " g";
+	document.getElementById("TextoProteinas").innerHTML = "Proteínas:\t" + TotalProteinas + " g";
+	document.getElementById("TextoLipidos").innerHTML = "Lípidos:\t" + TotalLipidos + " g";
+	document.getElementById("TextoHidratos").innerHTML = "Hidratos:\t" + TotalHidratos + " g";
 }

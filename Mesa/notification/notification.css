@@ -1,5 +1,5 @@
 html, body { font-family: 'Open Sans', sans-serif; margin: 0; padding: 0; width: 100%; height: 100%; }
-body { background: linear-gradient(135deg, #C7DFC5 0%,#C7DFC5 100%);; }
+body { background: linear-gradient(135deg, #FFFCF9 0%, #FFFCF9 100%);; }
 #container { display: table; width: 100%; height: 100%; }
 #container > * { display: table-cell; vertical-align: middle; }
 *, 

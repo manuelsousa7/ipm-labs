@@ -1,7 +1,8 @@
 :root {
-	--background_1: #51E5FF;
-	--background_2: #C7DFC5;
-	--font_color: #160c04;
+	--background_1: #fccb1b;
+	--background_2: #FFFCF9;
+	--font_color: #545775;
+	--border_color: #F4A261;
 }
 
 #Titulo {
@@ -9,13 +10,14 @@
 	text-align: center;
 	font-size: 2.5em;
 	padding-top: 4%;
+	color: var(--font_color);
 }
 
 #OverviewGrid {
 	position: relative;
 	top: 7%;
 	text-align: center;
-	color:  var(--font_color);
+	color: var(--font_color);
 }
 
 #Table {
@@ -38,7 +40,7 @@
 	margin-right: 5%;
 	padding-left: 5%;
 	padding-right: 5%;
-	border: solid;
+	border: solid var(--border_color);
 	border-radius: 8px;
 	font-size: .8em;
 	font-weight: bold;
@@ -51,7 +53,7 @@
 .QuadradoQuantidade {
 	padding-left: 5%;
 	padding-right: 5%;
-	border: solid;
+	border: solid var(--border_color);
 	min-width: 45px;
 	height: 50px;
 	color:  var(--font_color);
@@ -75,9 +77,8 @@ ul {
 #BotaoVoltar, #BotaoPedir {
 	color:  var(--font_color);
 	background-color: var(--background_1);
-	border: solid;
+	border: solid var(--border_color);
 	border-radius: 8px;
-
 	font-size: 4em;
 
 	width: 15%;
@@ -104,8 +105,9 @@ ul {
 }
 
 #Tempo {
-	border: solid;
+	border: solid var(--border_color);
 	border-radius: 5px;
+	background-color: var(--background_1);
 	margin:2em;
 	width: 17%;
 	align-content: center;
@@ -159,7 +161,10 @@ ul {
 	height: 40%;
     top: 25%;
 
-    background-color: var(--background_1);
+    border: solid var(--border_color);
+    border-radius: 8px;
+
+    background-color: var(--background_2);
     color:  var(--font_color);
     text-align: center;
 
@@ -174,9 +179,8 @@ ul {
 
 #BotaoConfirmar, #BotaoNãoConfirmar {
 	color:  var(--font_color);
-	border: solid;
+	border: solid var(--border_color);
 	border-radius: 8px;
-
 	width: 25%;
 	height: 10%;
 	text-align: center;
