@@ -51,7 +51,7 @@
 		<table id="Table" border="0" align="center" width="50%">
 			<tr style="font-size: 1.2em; font-weight: bold">
 				<td width="25%" height="50">Nome</td>
-				<td width="25%" height="50">$</td>
+				<td width="25%" height="50">€</td>
 				<td width="15%" height="50" style="min-width: 150px">Quantidade (doses)</td>
 			</tr>
 			<tr style="font-size: 1.7em; border-top: solid #21295C;">
@@ -125,28 +125,28 @@
 			<tr style="font-size: 1.7em">
 				<td width="50%" style="min-width: 350px; border-top: solid #21295C;">
 					<ul>
-						<li>Calorias:	200 g</li>
+						<li id="TextoCalorias">Calorias:	225 g</li>
 					</ul>
 				</td>
 			</tr>
 			<tr style="font-size: 1.7em">
 				<td width="50%" style="min-width: 350px; border-top: solid #21295C">
 					<ul>
-						<li>Proteínas:	20 g</li>
+						<li id="TextoProteinas">Proteínas:	21 g</li>
 					</ul>
 				</td>
 			</tr>
 			<tr style="font-size: 1.7em">
 				<td width="50%" style="min-width: 350px; border-top: solid #21295C">
 					<ul>
-						<li>Lípidos:	17.5 g</li>
+						<li id="TextoLipidos">Lípidos:	15 g</li>
 					</ul>
 				</td>
 			</tr>
 			<tr style="font-size: 1.7em">
 				<td width="50%" style="min-width: 350px; border-top: solid #21295C">
 					<ul>
-						<li>Hidratos:	40 g</li>
+						<li id="TextoHidratos">Hidratos:	24 g</li>
 					</ul>
 				</td>
 			</tr>
@@ -155,7 +155,7 @@
 		</table>
 	</div>
 
-	<button id="BotaoVoltar" type="button" class="button" onclick="myFunction()" style="font-size: 2em;">
+	<button id="BotaoVoltar" type="button" class="button" onclick="location.href = 'javascript:history.back()';" style="font-size: 2em;">
 		VOLTAR
 	</button>
 
@@ -166,7 +166,7 @@
 	<div class="popup" id="myPopup">
 		<div class="fillScreen"></div>
 
-		<div id="janelaPopup">
+		<div class="janelaPopup">
 			<div id="popupText">
 				Tem a certeza que pretende fazer o pedido?
 			</div>
@@ -191,7 +191,11 @@
 	</script>
 	
 
-	<div class="clock" style="margin:2em; width: 25%; align-content: center; position: absolute; bottom: 5%; left: 41%;"></div>
+	<div id="Tempo">
+		<div id="TempoEstimado">Tempo estimado:</div>
+		<div class="clock" style="width:100%"></div>
+	</div>
+
 	
 	<script type="text/javascript">
 	var clock;
