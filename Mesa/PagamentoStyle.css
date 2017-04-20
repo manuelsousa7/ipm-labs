@@ -45,7 +45,7 @@
 	font-size: .8em;
 	font-weight: bold;
 	width: 45px;
-	height: 50px;
+	height: 35px;
 	color: var(--font_color);
 	background-color: var(--background_1);
 }
@@ -65,7 +65,7 @@
 	text-align: center;
 
 	right: 5%;
-	bottom: 28%;
+	bottom: 25%;
 	color:  var(--font_color);
 }
 
@@ -109,11 +109,11 @@ ul {
 	border-radius: 5px;
 	background-color: var(--background_1);
 	margin:2em;
-	width: 17%;
+	width: 25%;
 	align-content: center;
 	position: absolute;
-	bottom: 3%;
-	left: 39.5%;
+	bottom: 2%;
+	left: 36%;
 	color:  var(--font_color);
 }
 
@@ -174,7 +174,7 @@ ul {
 
 #popupText {
 	margin-top: 8%;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 #BotaoConfirmar, #BotaoNãoConfirmar {
@@ -183,6 +183,7 @@ ul {
 	border-radius: 8px;
 	width: 25%;
 	height: 10%;
+	font-size: 1.1em;
 	text-align: center;
 	padding-bottom: 6%;
 
@@ -193,7 +194,6 @@ ul {
 	bottom: 5%;
 	right: 5%;
 
-	font-size: 1.5em;
 	background-color: #8AC926;
 }
 
@@ -202,7 +202,6 @@ ul {
 	bottom: 5%;
 	left: 5%;
 
-	font-size: 1.5em;
 	background-color: #FF595E;
 }
 
