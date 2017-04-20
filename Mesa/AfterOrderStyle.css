@@ -22,6 +22,7 @@ body{
 }
 
 footer {
+	background-color:#ECECEC;
     position: fixed;
     bottom: 0;
     width: 100%;
