@@ -204,7 +204,8 @@
 .flip-clock-divider .flip-clock-label {
   position: absolute;
   top: -1.5em;
-  right: -86px;
+  right: -92px;
+  font-size: 14px;
   /*Cor do texto "minutos" e "segundos"*/
   color: black;
   text-shadow: none; }
