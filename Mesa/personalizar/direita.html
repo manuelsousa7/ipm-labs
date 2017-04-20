@@ -65,11 +65,15 @@
 		</table>
 		</div>
 	
-	<button id="BotaoPedir" type="button" class="button" href="../Pagamento.html" style="font-size: 2em;">
+	<button id="BotaoPedir" type="button" class="button" onclick="goPay()" style="font-size: 2em;">
 		PEDIR
 	</button>
 	
-
+	<script type="text/javascript">
+		function goPay(){
+	window.top.location.href = "../Pagamento.html";
+}
+	</script>
 
 </body>
 </html>

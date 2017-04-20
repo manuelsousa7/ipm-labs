@@ -1,17 +1,15 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
 
-<title>Menu Inicial</title>
-
+<title>Menu de Espera</title>
+ 
 <meta charset="utf-8">
 
 <!--Variavel global que representa o numero de segundos total do pedido-->
 <script type="text/javascript"> 
-		var time = 600;
-	</script>
-
-<link rel="stylesheet" href="style.css">
+        var time = 600;
+    </script>
 <!--<script type="text/javascript" src="script.js"></script>-->
 <link rel="shortcut icon" type="image/png" href="favicon.png"/>
 
@@ -35,52 +33,59 @@
     <script src="clock/flipclock.js"></script>
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="clock/flipclock.css">
+    <link rel="stylesheet" href="clock/flipclock2.css">
     <!-- Stylesheet for WatNotif -->
     <link href='notification/watnotif.left-top-bubble.min.css' rel='stylesheet' type='text/css'>
- 
+
+    <link rel="stylesheet" href="AfterOrderStyle.css">
+    <link href='circular/circular.css' rel='stylesheet' type='text/css'>
 </head>
 
-<body>
+<body> 
 
-	<div id="CenterMenu">
-		<button id="MenuButton" type="button" class="button">
-			MENU
-		</button>
-		<div id="SuggestionSection">
-			<div id="SuggestionText">
-				SUGESTOES
-			</div>
-			<div id = "container">
-				<button id="SuggestionButton0" type="button" class="ButtonWithImage"></button>
-				<button id="SuggestionButton1" type="button" class="ButtonWithImage"></button>
-			</div>
-			<div id = "container">
-				<button id="SuggestionButton2" type="button" class="ButtonWithImage"></button>
-				<button id="SuggestionButton3" type="button" class="ButtonWithImage"></button>
-			</div>
-		</div>
-	</div>
-	<!-- Plugin script -->
+    <iframe id = "frame" src="AfterOrderFrame.html" scrolling="no"></iframe>
 
-	<div class="clock" style="margin:2em; width: 25%; align-content: center; position: relative; top: 10%; left: 41%;"></div>
-	  <!--<div class="message"></div>-->
+    <div id = "profileDiv">
+         <nav class="top-right open">
+  <a class="disc l1">
+    <div>Cenas</div>
+  </a>
+  <a class="disc l2">
+    <div>Cenas</div>
+  </a>
+  <a class="disc l3">
+    <div>Cenas</div>
+  </a>
+  <a class="disc l4">
+    <div>Cenas</div>
+  </a>
+  <a class="disc l5 toggle">
+    Perfil
+  </a>
+</nav>
 
-	  <script type="text/javascript">
-	    var clock;
-	    $(document).ready(function() {
+<script src="circular/circular.js"></script>
+    </div>
 
-	      clock = $('.clock').FlipClock(time,{
-	      		countdown : true,
-	            clockFace: 'MinuteCounter'
-	        });
-	    });
-	  </script>
 
-	  <script type="text/javascript" src="notification/watnotif-1.0.js"></script>
+      <script type="text/javascript" src="notification/watnotif-1.0.js"></script>
 
     <!-- script that handles the binding of the notifications to the buttons -->
     <script type="text/javascript" src="notification/example.js"></script>
 
 </body>
-</html>
+<footer>
+        <div class="clock"></div>
+      <!--<div class="message"></div>-->
+
+        <script type="text/javascript">
+            var clock;
+                $(document).ready(function() {
+
+                    clock = $('.clock').FlipClock(time,{
+                        countdown : true,
+                        clockFace: 'MinuteCounter'
+                    });
+                });
+        </script>
+</footer>

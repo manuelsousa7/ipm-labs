@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function() { // When the DOM is fi
             var charCode = evt.keyCode || evt.which;
             var charStr = String.fromCharCode(charCode);
             if(charStr == "k"){
-
                 time += 120;
                 $(document).ready(function() {
                     clock = $('.clock').FlipClock(time,{
