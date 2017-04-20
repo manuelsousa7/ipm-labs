@@ -179,7 +179,7 @@
 			<div id="moneyText">
 				13.50 €
 			</div>
-			<button id="BotaoConfirmar" type="button" class="button">
+			<button id="BotaoConfirmar" type="button" class="button" onclick="goToMenu()">
 				CONFIRMAR
 			</button>
 			<button id="BotaoNãoConfirmar" type="button" class="button" onclick="myFunction()" >
@@ -194,6 +194,12 @@
 	    var popup = document.getElementById("myPopup");
 	    popup.classList.toggle("show");
 	}
+	</script>
+
+	<script type="text/javascript">
+        function goToMenu(){
+            window.top.location.href = "AfterOrder.html";
+        }   
 	</script>
 	
 
