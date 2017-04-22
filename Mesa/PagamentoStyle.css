@@ -16,6 +16,12 @@
 #OverviewGrid {
 	position: relative;
 	top: 7%;
+	max-height: 60%;
+	width: 60%;
+
+	border: solid var(--border_color);
+	border-radius: 5px;
+
 	text-align: center;
 	color: var(--font_color);
 }
@@ -105,15 +111,17 @@ ul {
 }
 
 #Tempo {
+	position: absolute;
+	width: 330px;
+	left:auto;
+	right:auto;
+	left: 39.5%;
+	bottom: 3%;
+	
 	border: solid var(--border_color);
 	border-radius: 5px;
+	
 	background-color: var(--background_1);
-	margin:2em;
-	width: 17%;
-	align-content: center;
-	position: absolute;
-	bottom: 3%;
-	left: 39.5%;
 	color:  var(--font_color);
 }
 
