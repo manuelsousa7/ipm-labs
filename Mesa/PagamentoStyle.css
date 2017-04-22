@@ -20,7 +20,7 @@
 	color: var(--font_color);
 }
 
-#Table {
+#Table1 {
 	left: 0%;
 	margin-left: 7%;
 }
@@ -45,7 +45,7 @@
 	font-size: .8em;
 	font-weight: bold;
 	width: 45px;
-	height: 40px;
+	height: 50px;
 	color: var(--font_color);
 	background-color: var(--background_1);
 }
@@ -60,12 +60,12 @@
 }
 
 #NutricionalGrid {
-	width: 100%;
-	position: relative;
+	position: absolute;
+	width: 10%;
 	text-align: center;
 
 	right: 5%;
-	bottom: 25%;
+	top: 28%;
 	color:  var(--font_color);
 }
 
@@ -109,11 +109,11 @@ ul {
 	border-radius: 5px;
 	background-color: var(--background_1);
 	margin:2em;
-	width: 25%;
+	width: 17%;
 	align-content: center;
 	position: absolute;
-	bottom: 2%;
-	left: 36%;
+	bottom: 3%;
+	left: 39.5%;
 	color:  var(--font_color);
 }
 
@@ -121,7 +121,7 @@ ul {
 	position: relative;
 	font-size: 1.5em;
 	text-align: center;
-	margin-bottom: 5%;
+	margin-bottom: 10%;
 }
 
 .meter { 
@@ -174,7 +174,7 @@ ul {
 
 #popupText {
 	margin-top: 8%;
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 #BotaoConfirmar, #BotaoNãoConfirmar {
@@ -183,7 +183,6 @@ ul {
 	border-radius: 8px;
 	width: 25%;
 	height: 10%;
-	font-size: 1.1em;
 	text-align: center;
 	padding-bottom: 6%;
 
@@ -194,6 +193,7 @@ ul {
 	bottom: 5%;
 	right: 5%;
 
+	font-size: 1.5em;
 	background-color: #8AC926;
 }
 
@@ -202,6 +202,7 @@ ul {
 	bottom: 5%;
 	left: 5%;
 
+	font-size: 1.5em;
 	background-color: #FF595E;
 }
 

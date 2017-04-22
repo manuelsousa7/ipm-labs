@@ -53,17 +53,17 @@
 	<p id="Titulo">CONCLUIR PEDIDO</p>
 
 	<!--Tabela de visualização do pedido-->
-	<div id="OverviewGrid">
-		<table id="Table" border="0" align="center" width="50%">
-			<tr style="font-size: 1em; font-weight: bold">
-				<td width="25%" height="30">Nome</td>
-				<td width="25%" height="30">€</td>
-				<td width="15%" height="30" style="min-width: 150px">Quantidade (doses)</td>
+	<div id="OverviewGrid" style="overflow-y: auto">
+		<table id="Table1" border="0" align="center" width="50%">
+			<tr style="font-size: 1.2em; font-weight: bold">
+				<td width="25%" height="50">Nome</td>
+				<td width="25%" height="50">€</td>
+				<td width="15%" height="50" style="min-width: 150px">Quantidade (doses)</td>
 			</tr>
-			<tr style="font-size: 1.2em; border-top: solid var(--border_color);">
-				<td width="25%" height="60">Bife</td>
-				<td width="25%" height="60" id="TextoPrato1">9.50</td>
-				<td width="15%" height="60" style="min-width: 150px">
+			<tr style="font-size: 1.7em; border-top: solid var(--border_color);">
+				<td width="25%" height="80">Bife</td>
+				<td width="25%" height="80" id="TextoPrato1">9.50</td>
+				<td width="15%" height="80" style="min-width: 150px">
 					<div id="Quantidade">
 						<button id="QuadradoMenos1" class="BotaoQuantidade" onclick="CustomOnClick(1, false)">
 							-
@@ -77,10 +77,10 @@
 					</div>
 				</td>
 			</tr>
-			<tr style="font-size: 1.2em; border-top: solid var(--border_color);">
-				<td width="25%" height="60">Batatas fritas</td>
-				<td width="25%" height="60" id="TextoPrato2">2.50</td>
-				<td width="15%" height="60" style="min-width: 150px">
+			<tr style="font-size: 1.7em; border-top: solid var(--border_color);">
+				<td width="25%" height="80">Batatas fritas</td>
+				<td width="25%" height="80" id="TextoPrato2">2.50</td>
+				<td width="15%" height="80" style="min-width: 150px">
 					<div id="Quantidade">
 						<button id="QuadradoMenos2" class="BotaoQuantidade" onclick="CustomOnClick(2, false)">
 							-
@@ -94,10 +94,10 @@
 					</div>
 				</td>
 			</tr>
-			<tr style="font-size: 1.2em; border-top: solid var(--border_color);">
-				<td width="25%" height="60">Coca-Cola</td>
-				<td width="25%" height="60" id="TextoPrato3">1.50</td>
-				<td width="15%" height="60" style="min-width: 150px">
+			<tr style="font-size: 1.7em; border-top: solid var(--border_color);">
+				<td width="25%" height="80">Coca-Cola</td>
+				<td width="25%" height="80" id="TextoPrato3">1.50</td>
+				<td width="15%" height="80" style="min-width: 150px">
 					<div id="Quantidade">
 						<button id="QuadradoMenos3" class="BotaoQuantidade" onclick="CustomOnClick(3, false)">
 							-
@@ -114,42 +114,42 @@
 		</table>
 
 		<table id="Table2" align="center" width="50%">
-			<tr style="font-size: 1.2em; border-top: solid var(--border_color);">
-				<td width="25%" height="60">Total:</td>
-				<td width="25%" height="60" id="TotalTexto">13.50</td>
-				<td width="15%" height="60" style="min-width: 150px"></td>
+			<tr style="font-size: 1.7em; border-top: solid var(--border_color);">
+				<td width="25%" height="80">Total:</td>
+				<td width="25%" height="80" id="TotalTexto">13.50</td>
+				<td width="15%" height="80" style="min-width: 150px"></td>
 			</tr>
 		</table>
 	</div>
 
 	<!--Tabela de visualização do valor nutricional-->
 	<div id="NutricionalGrid">
-		<table id="NutricionalTable" align="right" width="25%"  style="min-width: 350px">
-			<tr style="font-size: 1.2em; font-weight: bold">
+		<table id="NutricionalTable" align="right" width="100%"  style="min-width: 450px">
+			<tr style="font-size: 1.7em; font-weight: bold">
 				<td width="50%">Valor Nutricional</td>
 			</tr>
-			<tr style="font-size: 1.2em">
+			<tr style="font-size: 1.7em">
 				<td width="50%" style="min-width: 350px; border-top: solid var(--border_color);">
 					<ul>
 						<li id="TextoCalorias">Calorias:	225 g</li>
 					</ul>
 				</td>
 			</tr>
-			<tr style="font-size: 1.2em">
+			<tr style="font-size: 1.7em">
 				<td width="50%" style="min-width: 350px; border-top: solid var(--border_color)">
 					<ul>
 						<li id="TextoProteinas">Proteínas:	21 g</li>
 					</ul>
 				</td>
 			</tr>
-			<tr style="font-size: 1.2em">
+			<tr style="font-size: 1.7em">
 				<td width="50%" style="min-width: 350px; border-top: solid var(--border_color)">
 					<ul>
 						<li id="TextoLipidos">Lípidos:	15 g</li>
 					</ul>
 				</td>
 			</tr>
-			<tr style="font-size: 1.2em">
+			<tr style="font-size: 1.7em">
 				<td width="50%" style="min-width: 350px; border-top: solid var(--border_color)">
 					<ul>
 						<li id="TextoHidratos">Hidratos:	24 g</li>
@@ -161,11 +161,11 @@
 		</table>
 	</div>
 
-	<button id="BotaoVoltar" type="button" class="button" onclick="location.href = 'javascript:history.back()';" style="font-size: 1.5em;">
+	<button id="BotaoVoltar" type="button" class="button" onclick="location.href = 'javascript:history.back()';" style="font-size: 2em;">
 		VOLTAR
 	</button>
 
-	<button id="BotaoPedir" type="button" class="button" onclick="myFunction()" style="font-size: 1.5em;">
+	<button id="BotaoPedir" type="button" class="button" onclick="myFunction()" style="font-size: 2em;">
 		PEDIR
 	</button>
 
