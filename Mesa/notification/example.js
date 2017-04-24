@@ -10,14 +10,12 @@ document.addEventListener('DOMContentLoaded', function() { // When the DOM is fi
             var charCode = evt.keyCode || evt.which;
             var charStr = String.fromCharCode(charCode);
             if(charStr == "k"){
-                time += 120;
-                $(document).ready(function() {
-                    clock = $('.clock').FlipClock(time,{
-                        countdown : true,
-                        clockFace: 'MinuteCounter'
-                    });
-                });
-                
+                clock.stop();
+                var s = clock.getTime();
+                s = Number(s);
+                s += 120;
+                clock.setTime(s);
+                clock.start();
                 getRandomNotification(
                 "error") // to get the type of the notification we want to show 
                     .display(9000);
