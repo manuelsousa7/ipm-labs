@@ -16,11 +16,12 @@
 #OverviewGrid {
 	position: relative;
 	top: 7%;
-	max-height: 60%;
-	width: 60%;
+	left: 5%;
+	height: 50%;
+	width: 55%;
 
-	border: solid var(--border_color);
-	border-radius: 5px;
+	border-left: solid var(--border_color);
+	border-right: solid var(--border_color);
 
 	text-align: center;
 	color: var(--font_color);
@@ -115,8 +116,8 @@ ul {
 	width: 330px;
 	left:auto;
 	right:auto;
-	left: 39.5%;
-	bottom: 3%;
+	left: 41.5%;
+	bottom: 6%;
 	
 	border: solid var(--border_color);
 	border-radius: 5px;

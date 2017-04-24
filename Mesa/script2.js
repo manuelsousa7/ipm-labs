@@ -1,4 +1,4 @@
-var numPratos = 4;
+var numPratos = 8;
 
 //Clicar nos botoes das quantidades
 function CustomOnClick(index, add) {
@@ -42,36 +42,43 @@ function UpdatePriceText() {
 }
 
 window.onload = function() {
-	var quantityElement = document.getElementById("Quantidade");
 
-	var table = document.getElementById("Table1");
-	var newTr = table.insertRow(4);
-	newTr.setAttribute("style", "font-size: 1.7em; border-top: solid var(--border_color);");
+	var i;
+	for (i = 4; i <= numPratos; i++) {
+		var quantityElement = document.getElementById("Quantidade");
 
-	var nomes = ["TextoPrato", "QuadradoMenos", "Quantidade", "QuadradoMais"];
+		var table = document.getElementById("Table1");
+		var newTr = table.insertRow(i);
+		newTr.setAttribute("style", "font-size: 1.7em; border-top: solid var(--border_color);");
 
-	var newTd = [newTr.insertCell(0), newTr.insertCell(1), newTr.insertCell(2)];
-	newTd[0].setAttribute("width", "25%");
-	newTd[1].setAttribute("width", "25%");
-	newTd[2].setAttribute("width", "15%");
-	newTd[0].setAttribute("height", "80");
-	newTd[1].setAttribute("height", "80");
-	newTd[2].setAttribute("height", "80");
+		var nomes = ["TextoPrato", "QuadradoMenos", "Quantidade", "QuadradoMais"];
 
-	newTd[1].setAttribute("id", nomes[0] + "4");
-	newTd[2].setAttribute("style", "min-width: 150px");
+		var newTd = [newTr.insertCell(0), newTr.insertCell(1), newTr.insertCell(2)];
+		newTd[0].setAttribute("width", "25%");
+		newTd[1].setAttribute("width", "25%");
+		newTd[2].setAttribute("width", "15%");
+		newTd[0].setAttribute("height", "80");
+		newTd[1].setAttribute("height", "80");
+		newTd[2].setAttribute("height", "80");
 
-	newTd[0].appendChild(document.createTextNode("Azeitonas"));
-	newTd[1].appendChild(document.createTextNode("0.50"));
+		newTd[1].setAttribute("id", nomes[0] + i);
+		newTd[2].setAttribute("style", "min-width: 150px");
 
-	var newQuantity = quantityElement.cloneNode(true);
-	newQuantity.children[0].setAttribute("id", nomes[1] + "4");
-	newQuantity.children[1].setAttribute("id", nomes[2] + "4");
-	newQuantity.children[2].setAttribute("id", nomes[3] + "4");
+		newTd[0].appendChild(document.createTextNode("Azeitonas"));
+		newTd[1].appendChild(document.createTextNode("0.50"));
 
-	newQuantity.children[0].setAttribute("onclick", "CustomOnClick(4, false)");
-	newQuantity.children[2].setAttribute("onclick", "CustomOnClick(4, true)");
+		var newQuantity = quantityElement.cloneNode(true);
+		newQuantity.children[0].setAttribute("id", nomes[1] + i);
+		newQuantity.children[1].setAttribute("id", nomes[2] + i);
+		newQuantity.children[2].setAttribute("id", nomes[3] + i);
 
-	newTd[2].appendChild(newQuantity);
+		newClick0 = "CustomOnClick(" + i + ", false)";
+		newClick2 = "CustomOnClick(" + i + ", true)";
+
+		newQuantity.children[0].setAttribute("onclick", newClick0);
+		newQuantity.children[2].setAttribute("onclick", newClick2);
+
+		newTd[2].appendChild(newQuantity);
+	}
 };
 

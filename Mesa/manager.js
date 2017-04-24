@@ -1,16 +1,16 @@
-Prato = function(nome, preco, calorias, proteinas, lipidos, hidratos) {
+Prato = function(nome, preco) {
 	this.nome = nome;
 	this.preco = preco;
-	this.calorias = calorias;
-	this.proteinas = proteinas;
-	this.lipidos = lipidos;
-	this.hidratos = hidratos
+	this.calorias = nome.length * 17;
+	this.proteinas = nome.length * 5;
+	this.lipidos = nome.length * 3;
+	this.hidratos = nome.length * 10;
 }
 
 var listaPratos = [];
 
-function AdicionarPrato(nome, preco, calorias, proteinas, lipidos, hidratos) {
-	listaPratos.push(new Prato(nome, preco, calorias, proteinas, lipidos, hidratos));
+function AdicionarPrato(nome, preco) {
+	listaPratos.push(new Prato(nome, preco));
 }
 
 function RemoverPrato(nome) {
