@@ -5,9 +5,12 @@ Prato = function(nome, preco) {
 	this.proteinas = nome.length * 5;
 	this.lipidos = nome.length * 3;
 	this.hidratos = nome.length * 10;
+	this.tempo = nome.length * 0.5;
 }
 
 var listaPratos = [];
+
+var caloryThreshold = 10;
 
 function AdicionarPrato(nome, preco) {
 	listaPratos.push(new Prato(nome, preco));
@@ -23,4 +26,15 @@ function RemoverPrato(nome) {
 			return;
 		}
 	}
+}
+
+window.onload = function() {
+
+	AdicionarPrato("Bife", 9.50);
+	AdicionarPrato("Batatas Fritas", 2.50);
+	AdicionarPrato("Coca-Cola", 1.50);
+	AdicionarPrato("Azeitonas", 0.50);
+
+	CarregaPratos();
+	UpdatePriceText();
 }

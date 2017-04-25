@@ -17,19 +17,18 @@ function CustomOnClick(index, add) {
 
 function UpdatePriceText() {
 
-	var Calorias = 75, Proteinas = 7, Lipidos = 5, Hidratos = 8;
 	var TotalCalorias = 0, TotalProteinas = 0, TotalLipidos = 0, TotalHidratos = 0;
 
 	var contador = 0;
 	var i;
-	for (i = 0; i < numPratos; i++) {
-		var Texto1 = "Quantidade" + (i+1);
-		var Texto2 = "TextoPrato" + (i+1);
-		contador += parseFloat(parseInt(document.getElementById(Texto1).innerHTML) * parseFloat(document.getElementById(Texto2).innerHTML));
-		TotalCalorias += Calorias * parseInt(document.getElementById(Texto1).innerHTML);
-		TotalProteinas += Proteinas * parseInt(document.getElementById(Texto1).innerHTML);
-		TotalLipidos += Lipidos * parseInt(document.getElementById(Texto1).innerHTML);
-		TotalHidratos += Hidratos * parseInt(document.getElementById(Texto1).innerHTML);
+	for (i = 1; i <= listaPratos.length; i++) {
+		var Texto = "Quantidade" + i;
+		var Quant = parseInt(document.getElementById(Texto).innerHTML);
+		contador += listaPratos[i-1].preco * Quant;
+		TotalCalorias += listaPratos[i-1].calorias * Quant;
+		TotalProteinas += listaPratos[i-1].proteinas * Quant;
+		TotalLipidos += listaPratos[i-1].lipidos * Quant;
+		TotalHidratos += listaPratos[i-1].hidratos * Quant;
 	}
 
 	var textoComSimbolo = contador.toFixed(2) + " €";
@@ -41,17 +40,21 @@ function UpdatePriceText() {
 	document.getElementById("TextoHidratos").innerHTML = "Hidratos:\t" + TotalHidratos + " g";
 }
 
-window.onload = function() {
-
+function CarregaPratos() {
 	var i;
-	for (i = 4; i <= numPratos; i++) {
-		var quantityElement = document.getElementById("Quantidade");
+	var quantityElement = document.getElementsByClassName("Quantidade");
+	var table = document.getElementById("Table1");
+	var nomes = ["TextoPrato", "QuadradoMenos", "Quantidade", "QuadradoMais"];
+	
+	for (i = 1; i <= listaPratos.length; i++) {
 
-		var table = document.getElementById("Table1");
 		var newTr = table.insertRow(i);
-		newTr.setAttribute("style", "font-size: 1.7em; border-top: solid var(--border_color);");
-
-		var nomes = ["TextoPrato", "QuadradoMenos", "Quantidade", "QuadradoMais"];
+		if (listaPratos[i-1].nome.length > caloryThreshold) {
+			newTr.setAttribute("style", "font-size: 1.7em; border-top: solid var(--border_color); background-color: #dbbc83");
+		}
+		else {
+			newTr.setAttribute("style", "font-size: 1.7em; border-top: solid var(--border_color);");
+		}
 
 		var newTd = [newTr.insertCell(0), newTr.insertCell(1), newTr.insertCell(2)];
 		newTd[0].setAttribute("width", "25%");
@@ -64,10 +67,12 @@ window.onload = function() {
 		newTd[1].setAttribute("id", nomes[0] + i);
 		newTd[2].setAttribute("style", "min-width: 150px");
 
-		newTd[0].appendChild(document.createTextNode("Azeitonas"));
-		newTd[1].appendChild(document.createTextNode("0.50"));
+		newTd[0].appendChild(document.createTextNode(listaPratos[i-1].nome));
+		newTd[1].appendChild(document.createTextNode((listaPratos[i-1].preco).toFixed(2)));
 
-		var newQuantity = quantityElement.cloneNode(true);
+		var newQuantity = quantityElement[0].cloneNode(true);
+
+		newQuantity.setAttribute("style", "display: all;");
 		newQuantity.children[0].setAttribute("id", nomes[1] + i);
 		newQuantity.children[1].setAttribute("id", nomes[2] + i);
 		newQuantity.children[2].setAttribute("id", nomes[3] + i);

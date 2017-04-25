@@ -53,65 +53,27 @@
 
 	<p id="Titulo">CONCLUIR PEDIDO</p>
 
+	<!--Escolher a quantidade a pedir-->
+	<div class="Quantidade" style="display: none;">
+		<button id="QuadradoMenos" class="BotaoQuantidade">
+			-
+		</button>
+		<div id="Quantidade" class="QuadradoQuantidade">
+			1
+		</div>
+		<button id="QuadradoMais" class="BotaoQuantidade">
+			+
+		</button>
+	</div>
+
 	<!--Tabela de visualização do pedido-->
 	<div id="OverviewGrid">
 		<div id="Plates Grid" style="position: relative; max-height: 450px; width: 100%; overflow-y: auto">
 			<table id="Table1" border="0" align="center" width="85%">
-				<tr style="font-size: 1.2em; font-weight: bold">
+				<tr style="font-size: 1.2em; font-weight: bold; background-color: white;">
 					<td width="25%" height="50">Nome</td>
 					<td width="25%" height="50">€</td>
 					<td width="15%" height="50" style="min-width: 150px">Quantidade (doses)</td>
-				</tr>
-				<tr style="font-size: 1.7em; border-top: solid var(--border_color);">
-					<td width="25%" height="80">Bife</td>
-					<td width="25%" height="80" id="TextoPrato1">9.50</td>
-					<td width="15%" height="80" style="min-width: 150px">
-						<div id="Quantidade">
-							<button id="QuadradoMenos1" class="BotaoQuantidade" onclick="CustomOnClick(1, false)">
-								-
-							</button>
-							<div id="Quantidade1" class="QuadradoQuantidade">
-								1
-							</div>
-							<button id="QuadradoMais1" class="BotaoQuantidade" onclick="CustomOnClick(1, true)">
-								+
-							</button>
-						</div>
-					</td>
-				</tr>
-				<tr style="font-size: 1.7em; border-top: solid var(--border_color);">
-					<td width="25%" height="80">Batatas fritas</td>
-					<td width="25%" height="80" id="TextoPrato2">2.50</td>
-					<td width="15%" height="80" style="min-width: 150px">
-						<div id="Quantidade">
-							<button id="QuadradoMenos2" class="BotaoQuantidade" onclick="CustomOnClick(2, false)">
-								-
-							</button>
-							<div id="Quantidade2" class="QuadradoQuantidade">
-								1
-							</div>
-							<button id="QuadradoMais2" class="BotaoQuantidade" onclick="CustomOnClick(2, true)">
-								+
-							</button>
-						</div>
-					</td>
-				</tr>
-				<tr style="font-size: 1.7em; border-top: solid var(--border_color);">
-					<td width="25%" height="80">Coca-Cola</td>
-					<td width="25%" height="80" id="TextoPrato3">1.50</td>
-					<td width="15%" height="80" style="min-width: 150px">
-						<div id="Quantidade">
-							<button id="QuadradoMenos3" class="BotaoQuantidade" onclick="CustomOnClick(3, false)">
-								-
-							</button>
-							<div id="Quantidade3" class="QuadradoQuantidade">
-								1
-							</div>
-							<button id="QuadradoMais3" class="BotaoQuantidade" onclick="CustomOnClick(3, true)">
-								+
-							</button>
-						</div>
-					</td>
 				</tr>
 			</table>
 		</div>

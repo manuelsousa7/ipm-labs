@@ -20,9 +20,6 @@
 	height: 50%;
 	width: 55%;
 
-	border-left: solid var(--border_color);
-	border-right: solid var(--border_color);
-
 	text-align: center;
 	color: var(--font_color);
 }
@@ -37,7 +34,7 @@
 	margin-left: 7%;
 }
 
-#Quantidade div{
+.Quantidade div{
 	display: inline;
 	text-align: center;
 }
