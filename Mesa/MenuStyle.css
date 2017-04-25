@@ -85,10 +85,10 @@ body{
 	border: 2px solid #F4A261;;
 	margin-right: auto;
 	margin-left: 5%;
-	margin-top: 10%;
+	margin-top: 5%;
 	width: 44%;
 	height: 100%;
-	margin-bottom: 0px;
+	margin-bottom: 5%;
 	background-color: #fccb1b;
 	color: #545775;
 }
@@ -110,7 +110,7 @@ body{
 }
 
 #otherButtonsDiv{
-	margin-top: 5%;
+	margin-top: 15%;
 	float: left;
 	margin-left:3%;
 	height: 70%;
