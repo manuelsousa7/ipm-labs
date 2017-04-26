@@ -51,6 +51,7 @@ function CarregaPratos() {
 		var newTr = table.insertRow(i);
 		if (listaPratos[i-1].nome.length > caloryThreshold) {
 			newTr.setAttribute("style", "font-size: 1.7em; border-top: solid var(--border_color); background-color: #dbbc83");
+			newTr.setAttribute("title", "Atenção: " + listaPratos[i-1].nome + " tem muitas calorias!");
 		}
 		else {
 			newTr.setAttribute("style", "font-size: 1.7em; border-top: solid var(--border_color);");
