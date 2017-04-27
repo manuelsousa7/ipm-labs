@@ -13,11 +13,10 @@ body{
 	margin-right: 1%;
 	width:20%;
 }
-
 #profilePhoto{
 	border-radius: 50%;
 	margin-left: 1%
-	margin-right: 0px;
+	margin-right: 100px;
 	margin-bottom: 5%;
 }
 
@@ -25,14 +24,16 @@ footer {
 	background-color:#ECECEC;
     position: fixed;
     bottom: 0;
+    margin-bottom: 80px;
     width: 100%;
+    margin-left: 30px;
     right: 3%;
     left: 75%;
 }
 
 iframe{
 	width: 70%;
-	height: 580px;
+	height: 900px;
 	border-style: solid;
 	float: left;
 	margin-left: 3%;

@@ -13,3 +13,6 @@ function goToMenu(){
 function incompleteFrame(){
 	document.getElementById("frame").src = "404.html"
 }
+function orderFrame(){
+	document.getElementById("frame").src = "progressCircle/index.html"
+}

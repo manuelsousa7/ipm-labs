@@ -10,10 +10,11 @@ document.addEventListener('DOMContentLoaded', function() { // When the DOM is fi
             var charCode = evt.keyCode || evt.which;
             var charStr = String.fromCharCode(charCode);
             if(charStr == "k"){
+                test = 1;
                 clock.stop();
                 var s = clock.getTime();
                 s = Number(s);
-                s += 120;
+                s += 20;
                 clock.setTime(s);
                 clock.start();
                 getRandomNotification(
