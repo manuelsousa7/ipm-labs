@@ -6,6 +6,9 @@
     <meta charset="utf-8">
     <script type="text/javascript">
     	localStorage.t = 0;
+        function goBack(){
+            window.history.back();
+        }
     </script>
 </head>
 	<script type="text/javascript">
@@ -18,20 +21,14 @@
     			document.getElementById("rightFrame").src = "1.html"
     			localStorage.t = 0;
     		}
-  		}, 1000);
+  		}, 200);
 	</script>
 
 	<frameset cols="30%,*">
 	<frame src="esquerda.htm"  noresize="noresize" frameBorder="0">
 	<frame  id ="rightFrame" src="1.html" border="0" noresize="noresize" frameBorder="0" >
 	</frameset>
- 
 	<p>Esta página utiliza frames, mas o seu browser não as suporta.</p>
 	</body>
-	</noframes>
-
-
-
-
 
 </html>
