@@ -164,6 +164,9 @@
 			<div id="fatText">
 				O seu pedido contem demasiadas calorias!
 			</div>
+			<button id="BotaoConfirmar" type="button" class="button" onclick="removeAndBack()">
+				REMOVER
+			</button>
 			<button id="BotaoNãoConfirmar" type="button" class="button" onclick="myFatPopUp()" >
 				IGNORAR
 			</button>
@@ -178,6 +181,10 @@
 	}
 	function goToMenu(){
         window.top.location.href = "AfterOrder.html";
+    }
+    function removeAndBack(){
+    	CustomOnClick(lastIndex,false);
+    	myFatPopUp();
     }
 	</script>	
 
