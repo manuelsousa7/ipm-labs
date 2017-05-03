@@ -128,9 +128,13 @@ body{
 	width: 10%;
 	height: 10%;
 	margin-right: 1%;
-	float:left;
 	background-color: #fccb1b;
 	color: #545775;
+	margin-bottom: 2%;
+}
+#buttons{
+	float: left;
+	width: 3%;
 }
 #musicButton{
 	display: inline-block;

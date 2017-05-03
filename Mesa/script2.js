@@ -1,5 +1,5 @@
 var numPratos = 8;
-
+var lastIndex = 0;
 //Clicar nos botoes das quantidades
 function CustomOnClick(index, add) {
 	var nome = "Quantidade" + index.toString();
@@ -7,8 +7,9 @@ function CustomOnClick(index, add) {
 
 	if (add) {
 		old++;
+		lastIndex = index;
 	}
-	else if (old >= 1) {
+	else if (old >= 1) { 
 		old--;
 	}
 	document.getElementById(nome).innerHTML = old;
