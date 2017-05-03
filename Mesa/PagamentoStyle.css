@@ -217,6 +217,32 @@ ul {
 	font-size: 3.5em;
 }
 
+#fatText {
+	margin-top: 5%;
+	font-size: 2.5em;
+}
+#fatPopupText{
+	font-size: 3em;
+}
+
+.janelaPopupFat{
+    position: absolute;
+	left: 30%;
+	width: 40%;
+	height: 40%;
+    top: 25%;
+
+    border: solid #FF595E;
+    border-radius: 8px;
+
+    background-color: var(--background_2);
+    color:  var(--font_color);
+    text-align: center;
+
+    z-index: 5;
+    opacity: 1;
+}
+
 /* Toggle this class - hide and show the popup */
 .show {
     visibility: visible;

@@ -10,7 +10,7 @@
 <script type="text/javascript"> 
 	var time = 800;
 </script>
-
+ 
 <script type="text/javascript" src="script2.js"></script>
 <script type="text/javascript" src="manager.js"></script>
 
@@ -96,7 +96,7 @@
 			<tr style="font-size: 1.7em">
 				<td width="50%" style="min-width: 350px; border-top: solid var(--border_color);">
 					<ul>
-						<li id="TextoCalorias">Calorias:	225 g</li>
+						<li id="TextoCalorias">Calorias:	225 kcal</li>
 					</ul>
 				</td>
 			</tr>
@@ -153,13 +153,29 @@
 		</div>
 	</div>
 
+	<!--popup demasiadas calorias warning-->
+	<div class="popup" id="fatPopup">
+		<div class="fillScreen"></div>
+
+		<div class="janelaPopupFat">
+			<div id="fatPopupText">
+				Cuidado!
+			</div>
+			<div id="fatText">
+				O seu pedido contem demasiadas calorias!
+			</div>
+			<button id="BotaoNãoConfirmar" type="button" class="button" onclick="myFatPopUp()" >
+				IGNORAR
+			</button>
+		</div>
+	</div>
+
 	<script>
 	// When the user clicks on div, open the popup
 	function myFunction() {
 	    var popup = document.getElementById("myPopup");
 	    popup.classList.toggle("show");
 	}
-
 	function goToMenu(){
         window.top.location.href = "AfterOrder.html";
     }

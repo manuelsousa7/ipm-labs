@@ -119,12 +119,16 @@ body{
 }
 
 #helpButton{
+	display: inline;
 	border-style: solid;
     border-width: 2px;
+    margin-top: 2%;
 	border-color: #F4A261;
 	text-align: center;
-	width: 100%;
-	height: 50%;
+	width: 10%;
+	height: 10%;
+	margin-right: 1%;
+	float:left;
 	background-color: #fccb1b;
 	color: #545775;
 }
@@ -135,6 +139,7 @@ body{
 	border-color: #F4A261;
 	text-align: center;
 	width: 48%;
+	margin-top: 2%;
 	height: 50%;
 	background-color: #fccb1b;
 	color: #545775;
