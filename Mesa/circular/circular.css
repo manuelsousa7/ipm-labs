@@ -29,8 +29,8 @@ nav.open {
           transform: translate3d(0, 0, 0);
 }
 nav.top-right {
-  top: -140px;
-  right: -140px;
+  top: 80px;
+  right: 0px;
 }
 
 .disc {

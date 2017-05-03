@@ -4,7 +4,7 @@ function menuFrame(){
 }
 
 function streamFrame(){
-	document.getElementById("frame").src = "Stream.html"
+	document.getElementById("frame").src = "stream.html"
 }
 
 function goToMenu(){
@@ -12,4 +12,7 @@ function goToMenu(){
 }
 function incompleteFrame(){
 	document.getElementById("frame").src = "404.html"
+}
+function orderFrame(){
+	document.getElementById("frame").src = "progressCircle/index.html"
 }
