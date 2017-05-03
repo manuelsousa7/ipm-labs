@@ -119,22 +119,21 @@ body{
 }
 
 #helpButton{
-	display: inline;
 	border-style: solid;
     border-width: 2px;
-    margin-top: 2%;
 	border-color: #F4A261;
 	text-align: center;
-	width: 10%;
+	width: 80%;
 	height: 10%;
 	margin-right: 1%;
 	background-color: #fccb1b;
 	color: #545775;
-	margin-bottom: 2%;
 }
 #buttons{
+	margin-top: 5%;
 	float: left;
-	width: 3%;
+	width: 7%;
+	height: 600px;
 }
 #musicButton{
 	display: inline-block;
