@@ -36,6 +36,14 @@ function RemoverPrato(nome) {
 
 function AdicionarPratoImagem(nome, preco, imagem) {
 	pratoSelecao = new PratoImagem(nome, preco, imagem);
+	localStorage.setItem("nome", pratoSelecao.prato.nome);
+	localStorage.setItem("preco", pratoSelecao.prato.preco);
+	localStorage.setItem("calorias", pratoSelecao.prato.calorias);
+	localStorage.setItem("proteinas", pratoSelecao.prato.proteinas);
+	localStorage.setItem("lipidos", pratoSelecao.prato.lipidos);
+	localStorage.setItem("hidratos", pratoSelecao.prato.hidratos);
+	localStorage.setItem("tempo", pratoSelecao.prato.tempo);
+	localStorage.setItem("imagem", pratoSelecao.imagem);
 }
 
 function ProcessSelection(nome, preco, imagem) {

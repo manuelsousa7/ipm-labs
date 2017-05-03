@@ -10,8 +10,6 @@
 
     <link rel="shortcut icon" type="image/png" href="favicon.png"/>
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 	<!-- Loading Bootstrap -->
 	<link href="..\dist/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<!-- Loading Flat UI -->
@@ -49,7 +47,7 @@
     	#Seccao1 {
     		position: absolute;
     		width: 50%;
-    		height: 100%;
+    		height: 35%;
 
     		margin-left: auto;
     		margin-right: auto;
@@ -58,26 +56,33 @@
     	#ImagemPrato {
     		width: 100%;
     		height: 50%;
-    		margin-top: 8%;
+    		padding-top: 5%;
     	}
 
     	#NomePrato {
-    		margin-top: 15%;
+    		margin-top: -5%;
     		font-size: 250%;
     	}
 
     	#PrecoPrato {
-    		margin-top: 20%;
-    		font-size: 250%;
+    		margin-top: 10%;
+    		font-size: 300%;
+    	}
+
+    	#DescricaoPrato {
+    		margin-top: 10%;
+    		font-size: 120%;
+    		width: 70%;
+    		margin-left: auto;
+    		margin-right: auto;
     	}
 
     	#Seccao2 {
     		position: absolute;
     		display: inline-block;
-    		top: 0%;
+    		top: 60%;
     		right: 0%;
     		width: 50%;
-    		height: 100%;
     	}
 
     	#NutricionalGrid {
@@ -86,8 +91,39 @@
 			text-align: center;
 
 			right: 2.5%;
-			top: 60%;
+			top: -125px;
 			color:  var(--font_color);
+		}
+
+		#BotaoVoltar, #BotaoPedir {
+			color:  var(--font_color);
+			background-color: var(--background_1);
+			border: solid var(--border_color);
+			border-radius: 8px;
+			font-size: 4em;
+
+			width: 15%;
+			height: 6%;
+			text-align: center;
+
+			margin-bottom: 1%;
+		}
+
+		#BotaoPedir {
+			position: absolute;
+			bottom: 5%;
+			right: 5%;
+			width: 18%;
+
+			font-size: 1em;
+		}
+
+		#BotaoVoltar {
+			position: absolute;
+			bottom: 5%;
+			left: 5%;
+
+			font-size: 1em;
 		}
 
 		ul {
@@ -101,11 +137,15 @@
 <body>
 
 	<div id="ImagemPrato">
-		<img id="Imagem" width="55%" height="85%" class="fake-image" src="comida/1.jpg" alt="">
+		<img id="Imagem" width="35%" height="75%" class="fake-image" src="comida/1.jpg" alt="">
 	</div>
 	<div id="Seccao1">
 		<h1 id="NomePrato">Batata Mo</h1>
 		<h2 id="PrecoPrato">7.50 €</h2>
+		<h4 id="DescricaoPrato">
+			Muito bom sim senhor excelente prato, recomendo a toda a gente que gosta de um bom bifinho
+			para a paparoca do almoço.
+		</h4>
 	</div>
 
 	<div id="Seccao2">
@@ -113,7 +153,7 @@
 		<div id="NutricionalGrid">
 			<table id="NutricionalTable" align="right" width="60%" style="min-width: 450px">
 				<tr style="font-size: 1.7em; font-weight: bold">
-					<td width="50%">Valor Nutricional</td>
+					<td width="50%" style="padding-bottom: 5%;">Valor Nutricional</td>
 				</tr>
 				<tr style="font-size: 1.7em">
 					<td width="50%" style="min-width: 350px; border-top: solid var(--border_color);">
@@ -149,9 +189,13 @@
 		</div>
 	</div>
 
-	<script type="text/javascript">
+	<button id="BotaoVoltar" type="button" class="button" onclick="location.href = 'javascript:history.back()';" style="font-size: 2em;">
+		VOLTAR
+	</button>
 
-	</script>
+	<button id="BotaoPedir" type="button" class="button" onclick="" style="font-size: 2em;">
+		ADICIONAR
+	</button>
 	
 </body>
 </html>

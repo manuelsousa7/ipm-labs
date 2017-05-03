@@ -100,9 +100,6 @@ window.onload = function() {
 	AdicionarPrato("Batatas Fritas", 2.50);
 	AdicionarPrato("Coca-Cola", 1.50);
 	AdicionarPrato("Azeitonas", 0.50);
-	AdicionarPrato("Azeitonas", 0.50);
-	AdicionarPrato("Azeitonas", 0.50);
-	AdicionarPrato("Azeitonas", 0.50);
 
 	CarregaPratos();
 	UpdatePriceText();
