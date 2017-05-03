@@ -8,7 +8,13 @@ Prato = function(nome, preco) {
 	this.tempo = nome.length * 0.5;
 }
 
+PratoImagem = function(nome, preco, imagem) {
+	this.prato = new Prato(nome, preco);
+	this.imagem = imagem;
+}
+
 var listaPratos = [];
+var pratoSelecao = 0;
 
 var caloryThreshold = 10;
 
@@ -28,13 +34,11 @@ function RemoverPrato(nome) {
 	}
 }
 
-window.onload = function() {
+function AdicionarPratoImagem(nome, preco, imagem) {
+	pratoSelecao = new PratoImagem(nome, preco, imagem);
+}
 
-	AdicionarPrato("Bife", 9.50);
-	AdicionarPrato("Batatas Fritas", 2.50);
-	AdicionarPrato("Coca-Cola", 1.50);
-	AdicionarPrato("Azeitonas", 0.50);
-
-	CarregaPratos();
-	UpdatePriceText();
+function ProcessSelection(nome, preco, imagem) {
+	AdicionarPratoImagem(nome, preco, imagem);
+	window.location.href = "descricao.html";
 }
