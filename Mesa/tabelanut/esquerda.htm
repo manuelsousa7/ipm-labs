@@ -65,6 +65,15 @@
 
 <body>
 
+<script type="text/javascript">
+    function changeValue2(){
+        localStorage.t = 2;
+    }
+    function changeValue1(){
+        localStorage.t = 1;
+    }
+</script>
+
 <table class="flat-table flat-table-1">
     <thead>
         <b><th>Ingredientes</th></b>
@@ -72,11 +81,11 @@
     </thead>
     <tbody>
         <tr>
-            <td>Carne de Porto a Alentejana</td>
+            <td onclick="changeValue1()" >Carne de Porto a Alentejana</td>
             <td>100</td>
         </tr>
         <tr>
-            <td>Sumo Detox</td>
+            <td onclick="changeValue2()">Sumo Detox</td>
             <td>100</td>
         </tr>
         <tr>
