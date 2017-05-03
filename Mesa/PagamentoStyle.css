@@ -5,6 +5,14 @@
 	--border_color: #F4A261;
 }
 
+::-webkit-scrollbar {
+	display:none;
+}
+
+body {
+	overflow: hidden;
+}
+
 #Titulo {
 	width: 100%;
 	text-align: center;

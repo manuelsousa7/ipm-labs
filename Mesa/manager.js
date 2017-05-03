@@ -8,7 +8,13 @@ Prato = function(nome, preco) {
 	this.tempo = nome.length * 0.5;
 }
 
+PratoImagem = function(nome, preco, imagem) {
+	this.prato = new Prato(nome, preco);
+	this.imagem = imagem;
+}
+
 var listaPratos = [];
+var pratoSelecao = 0;
 
 var caloryThreshold = 10;
 
@@ -28,13 +34,19 @@ function RemoverPrato(nome) {
 	}
 }
 
-window.onload = function() {
+function AdicionarPratoImagem(nome, preco, imagem) {
+	pratoSelecao = new PratoImagem(nome, preco, imagem);
+	localStorage.setItem("nome", pratoSelecao.prato.nome);
+	localStorage.setItem("preco", pratoSelecao.prato.preco);
+	localStorage.setItem("calorias", pratoSelecao.prato.calorias);
+	localStorage.setItem("proteinas", pratoSelecao.prato.proteinas);
+	localStorage.setItem("lipidos", pratoSelecao.prato.lipidos);
+	localStorage.setItem("hidratos", pratoSelecao.prato.hidratos);
+	localStorage.setItem("tempo", pratoSelecao.prato.tempo);
+	localStorage.setItem("imagem", pratoSelecao.imagem);
+}
 
-	AdicionarPrato("Bife", 9.50);
-	AdicionarPrato("Batatas Fritas", 2.50);
-	AdicionarPrato("Coca-Cola", 1.50);
-	AdicionarPrato("Azeitonas", 0.50);
-
-	CarregaPratos();
-	UpdatePriceText();
+function ProcessSelection(nome, preco, imagem) {
+	AdicionarPratoImagem(nome, preco, imagem);
+	window.location.href = "descricao.html";
 }

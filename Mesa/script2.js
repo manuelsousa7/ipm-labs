@@ -94,3 +94,14 @@ function CarregaPratos() {
 		newTd[2].appendChild(newQuantity);
 	}
 };
+
+window.onload = function() {
+
+	AdicionarPrato("Bife", 9.50);
+	AdicionarPrato("Batatas Fritas", 2.50);
+	AdicionarPrato("Coca-Cola", 1.50);
+	AdicionarPrato("Azeitonas", 0.50);
+
+	CarregaPratos();
+	UpdatePriceText();
+}
