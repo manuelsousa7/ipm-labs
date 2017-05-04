@@ -141,6 +141,30 @@
 			font-size: 1em;
 		}
 
+
+		#BotaoVoltar, #BotaoPersonalizar {
+			color:  var(--font_color);
+			background-color: var(--background_1);
+			border: solid var(--border_color);
+			border-radius: 8px;
+			font-size: 4em;
+
+			width: 15%;
+			height: 6%;
+			text-align: center;
+
+			margin-bottom: 1%;
+		}
+
+		#BotaoPersonalizar {
+			position: absolute;
+			bottom: 12%;
+			right: 25%;
+			width: 25%;
+
+			font-size: 1em;
+		}
+
 		#BotaoVoltar {
 			position: absolute;
 			bottom: 5%;
@@ -216,6 +240,12 @@
 		VOLTAR
 	</button>
 
+
+		<button id="BotaoPersonalizar" type="button" class="button" style="font-size: 2em;" onclick="change2()">
+		Personalizar
+	</button>
+
+
 	<button id="BotaoCalorias" type="button" class="button" style="font-size: 2em;" onclick="change()">
 		V. Nutricional
 	</button>
@@ -223,6 +253,9 @@
 	<script type="text/javascript">
 		function change(){
 			window.top.location.href = "../tabelanut/index.html";
+		}
+		function change2(){
+			window.top.location.href = "../personalizar/tabela/tabela1/index.html";
 		}
 	</script>
 

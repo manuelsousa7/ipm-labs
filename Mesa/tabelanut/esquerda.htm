@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Nutrition Facts Table in HTML & CSS</title>
-  
+  <!-- Loading Bootstrap -->
+<link href="../dist/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- Loading Flat UI -->
+<link href="../dist/css/flat-ui.css" rel="stylesheet">
 <style type="text/css">
     
 
@@ -58,6 +61,28 @@
     .flat-table-3 tr:hover {
         background: rgba(0,0,0,0.1);
     }
+            #BotaoVoltar, #BotaoPedir {
+            color:  var(--font_color);
+            background-color: var(--background_1);
+            border: solid var(--border_color);
+            border-radius: 8px;
+            font-size: 4em;
+
+            width: 15%;
+            height: 6%;
+            text-align: center;
+
+            margin-bottom: 1%;
+        }
+
+        #BotaoPedir {
+            position: absolute;
+            bottom: 5%;
+            right: 75%;
+            width: 18%;
+
+            font-size: 1em;
+        }
 </style>  
 
   
@@ -81,7 +106,7 @@
     </thead>
     <tbody>
         <tr>
-            <td onclick="changeValue1()" >Carne de Porto a Alentejana</td>
+            <td onclick="changeValue1()" >Carne de Porco</td>
             <td>100</td>
         </tr>
         <tr>
@@ -89,8 +114,12 @@
             <td>100</td>
         </tr>
         <tr>
-           <td>Serradura</td>
-            <td>100</td>
+           <td>Molho do Algarve</td>
+            <td>200</td>
+        </tr>
+        <tr>
+           <td>Amendoas</td>
+            <td>600</td>
         </tr>
         <tr>
            <td>Serradura</td>
@@ -102,27 +131,7 @@
         </tr>
         <tr>
            <td>Serradura</td>
-            <td>100</td>
-        </tr>
-        <tr>
-           <td>Serradura</td>
-            <td>100</td>
-        </tr>
-        <tr>
-           <td>Serradura</td>
-            <td>100</td>
-        </tr>
-        <tr>
-           <td>Serradura</td>
-            <td>100</td>
-        </tr>
-        <tr>
-           <td>Serradura</td>
-            <td>100</td>
-        </tr>
-        <tr>
-           <td>Serradura</td>
-            <td>100</td>
+            <td>1000</td>
         </tr>
         <tr>
            <td>Serradura</td>
@@ -131,6 +140,9 @@
     </tbody>
 </table>
 
-  
+    <button id="BotaoPedir" type="button" class="button" onclick="location.href = 'javascript:history.back()';" style="font-size: 2em;">
+        Voltar
+    </button>
+
 </body>
 </html>

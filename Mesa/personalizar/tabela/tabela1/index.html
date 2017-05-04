@@ -23,6 +23,28 @@
   top:20;
 }
 
+#BotaoVoltar, #BotaoPedir {
+            color:  var(--font_color);
+            background-color: var(--background_1);
+            border: solid var(--border_color);
+            border-radius: 8px;
+            font-size: 4em;
+
+            width: 15%;
+            height: 6%;
+            text-align: center;
+
+            margin-bottom: 1%;
+        }
+
+        #BotaoPedir {
+            position: absolute;
+            bottom: 5%;
+            right: 75%;
+            width: 18%;
+
+            font-size: 1em;
+        }
 </style>
 	</head>
 	<body>
@@ -76,7 +98,6 @@ function ShowPicture(id,show, img) {
 
 </script>
 
-
 			<!-- right container -->
 			<div id="right">
 				<table>
@@ -95,6 +116,7 @@ function ShowPicture(id,show, img) {
 					</ol>
 					<input id="save-button" type="button" value="Guardar" class="button" onclick="" title="Save form"/>
 				</form>
+				
 			</div>
 		</div>
 	</body>
