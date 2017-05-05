@@ -1,11 +1,13 @@
 window.onload = function() {
 	var imagem = document.getElementById("Imagem");
-	imagem.setAttribute("src", localStorage.imagem);
-	document.getElementById("NomePrato").innerHTML = localStorage.nome;
-	document.getElementById("PrecoPrato").innerHTML = localStorage.preco + " €";
+	var temp = localStorage.getItem("pratoSelecao");
+	var descricao = JSON.parse(temp);
+	imagem.setAttribute("src", descricao.imagem);
+	document.getElementById("NomePrato").innerHTML = descricao.prato.nome;
+	document.getElementById("PrecoPrato").innerHTML = descricao.prato.preco + " €";
 
-	document.getElementById("TextoCalorias").innerHTML = "Calorias:\t" + localStorage.calorias + " kcal";
-	document.getElementById("TextoProteinas").innerHTML = "Proteínas:\t" + localStorage.proteinas + " g";
-	document.getElementById("TextoLipidos").innerHTML = "Lípidos:\t" + localStorage.lipidos + " g";
-	document.getElementById("TextoHidratos").innerHTML = "Hidratos:\t" + localStorage.hidratos + " g";
+	document.getElementById("TextoCalorias").innerHTML = "Calorias:\t" + descricao.prato.calorias + " kcal";
+	document.getElementById("TextoProteinas").innerHTML = "Proteínas:\t" + descricao.prato.proteinas + " g";
+	document.getElementById("TextoLipidos").innerHTML = "Lípidos:\t" + descricao.prato.lipidos + " g";
+	document.getElementById("TextoHidratos").innerHTML = "Hidratos:\t" + descricao.prato.hidratos + " g";
 }

@@ -23,6 +23,7 @@
 
  
 <link href="direita.css" rel="stylesheet">
+<script type="text/javascript" src="../tabela.js"></script>
 
 <style type="text/css">
 	:root {
@@ -38,29 +39,10 @@
 
 	<!--Tabela de visualização do pedido-->
 	<div id="OverviewGrid">
-		<table id="Table" border="0">
+		<table id="Table" border="0" align="center" width="85%">
 			<tr style="font-size: 1.2em; font-weight: bold">
 				<td width="50%" height="50">Nome</td>
 				<td width="50%" height="50">€</td>
-			</tr>
-			<tr style="font-size: 1.1em; border-top: solid var(--border_color);">
-				<td width="50%" height="80">Bife</td>
-				<td width="50%" height="80" id="TextoPrato1">9.50</td>
-					
-				</td>
-			</tr>
-			<tr style="font-size: 1.1em; border-top: solid var(--border_color);">
-				<td width="50%" height="80">Batatas fritas</td>
-				<td width="50%" height="80" id="TextoPrato2">2.50</td>
-					
-					</div>
-				</td>
-			</tr>
-			<tr style="font-size: 1.1em; border-top: solid var(--border_color);">
-				<td width="25%" height="80">Coca-Cola</td>
-				<td width="50%" height="80" id="TextoPrato3">1.50</td>
-				
-				</td>
 			</tr>
 		</table>
 		</div>
@@ -71,8 +53,8 @@
 	
 	<script type="text/javascript">
 		function goPay(){
-	window.top.location.href = "../Pagamento.html";
-}
+		window.top.location.href = "../Pagamento.html";
+	}
 	</script>
 
 </body>

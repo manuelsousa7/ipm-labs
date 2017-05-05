@@ -22,14 +22,14 @@ function UpdatePriceText() {
 
 	var contador = 0;
 	var i;
-	for (i = 1; i <= listaPratos.length; i++) {
+	for (i = 1; i <= pratos.length; i++) {
 		var Texto = "Quantidade" + i;
 		var Quant = parseInt(document.getElementById(Texto).innerHTML);
-		contador += listaPratos[i-1].preco * Quant;
-		TotalCalorias += listaPratos[i-1].calorias * Quant;
-		TotalProteinas += listaPratos[i-1].proteinas * Quant;
-		TotalLipidos += listaPratos[i-1].lipidos * Quant;
-		TotalHidratos += listaPratos[i-1].hidratos * Quant;
+		contador += pratos[i-1].preco * Quant;
+		TotalCalorias += pratos[i-1].calorias * Quant;
+		TotalProteinas += pratos[i-1].proteinas * Quant;
+		TotalLipidos += pratos[i-1].lipidos * Quant;
+		TotalHidratos += pratos[i-1].hidratos * Quant;
 	}
 
 	var textoComSimbolo = contador.toFixed(2) + " €";
@@ -52,13 +52,13 @@ function CarregaPratos() {
 	var quantityElement = document.getElementsByClassName("Quantidade");
 	var table = document.getElementById("Table1");
 	var nomes = ["TextoPrato", "QuadradoMenos", "Quantidade", "QuadradoMais"];
-	
-	for (i = 1; i <= listaPratos.length; i++) {
+
+	for (i = 1; i <= pratos.length; i++) {
 
 		var newTr = table.insertRow(i);
-		if (listaPratos[i-1].nome.length > caloryThreshold) {
+		if (pratos[i-1].nome.length > caloryThreshold) {
 			newTr.setAttribute("style", "font-size: 1.7em; border-top: solid var(--border_color); background-color: #dbbc83");
-			newTr.setAttribute("title", "Atenção: " + listaPratos[i-1].nome + " tem muitas calorias!");
+			newTr.setAttribute("title", "Atenção: " + pratos[i-1].nome + " tem muitas calorias!");
 		}
 		else {
 			newTr.setAttribute("style", "font-size: 1.7em; border-top: solid var(--border_color);");
@@ -75,8 +75,8 @@ function CarregaPratos() {
 		newTd[1].setAttribute("id", nomes[0] + i);
 		newTd[2].setAttribute("style", "min-width: 150px");
 
-		newTd[0].appendChild(document.createTextNode(listaPratos[i-1].nome));
-		newTd[1].appendChild(document.createTextNode((listaPratos[i-1].preco).toFixed(2)));
+		newTd[0].appendChild(document.createTextNode(pratos[i-1].nome));
+		newTd[1].appendChild(document.createTextNode((pratos[i-1].preco).toFixed(2)));
 
 		var newQuantity = quantityElement[0].cloneNode(true);
 
@@ -102,6 +102,9 @@ window.onload = function() {
 	AdicionarPrato("Coca-Cola", 1.50);
 	AdicionarPrato("Azeitonas", 0.50);
 
+	var lista = localStorage.getItem("listaPratos");
+	var pratos = JSON.parse(lista);
+	
 	CarregaPratos();
 	UpdatePriceText();
 }
