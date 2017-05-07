@@ -10,6 +10,8 @@ function streamFrame(){
 function goToMenu(){
 	window.top.location.href = "personalizar/index.html";
 }
+
+
 function incompleteFrame(){
 	document.getElementById("frame").src = "404.html"
 }

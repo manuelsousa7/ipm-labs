@@ -8,7 +8,17 @@
 <!-- Loading Flat UI -->
 <link href="../dist/css/flat-ui.css" rel="stylesheet">
 <style type="text/css">
-    
+    body{
+        margin-top: 15%;
+        margin-left: 20%;
+    }    
+
+     :root {
+            --background_1: #fccb1b;
+            --background_2: #FFFCF9;
+            --font_color: #545775;
+            --border_color: #F4A261;
+        }
 
     .flat-table {
         margin-bottom: 20px;
@@ -37,6 +47,7 @@
         padding: 0.7em 1em 0.7em 1.15em;
         text-shadow: 0 0 1px rgba(255,255,255,0.1);
         font-size: 1.4em;
+        cursor: pointer;
     }
     .flat-table tr {
         -webkit-transition: background 0.3s, box-shadow 0.3s;
@@ -61,14 +72,14 @@
     .flat-table-3 tr:hover {
         background: rgba(0,0,0,0.1);
     }
-            #BotaoVoltar, #BotaoPedir {
+            #BotaoPedir {
             color:  var(--font_color);
             background-color: var(--background_1);
             border: solid var(--border_color);
             border-radius: 8px;
             font-size: 4em;
 
-            width: 15%;
+            width: 20%;
             height: 6%;
             text-align: center;
 
@@ -78,8 +89,8 @@
         #BotaoPedir {
             position: absolute;
             bottom: 5%;
-            right: 75%;
-            width: 18%;
+            right: 65%;
+            width: 25%;
 
             font-size: 1em;
         }
@@ -99,7 +110,7 @@
     }
 </script>
 
-<table class="flat-table flat-table-1">
+<table class="flat-table flat-table-1" style="border: solid var(--border_color); ">
     <thead>
         <b><th>Ingredientes</th></b>
         <th>Calorias Totais</th>
@@ -140,9 +151,15 @@
     </tbody>
 </table>
 
-    <button id="BotaoPedir" type="button" class="button" onclick="location.href = 'javascript:history.back()';" style="font-size: 2em;">
-        Voltar
+    <button id="BotaoPedir" type="button" class="button" onclick="change()" style="font-size: 2em;">
+        VOLTAR
     </button>
+
+        <script type="text/javascript">
+        function change(){
+            window.top.location.href = "../personalizar/index.html";
+        }
+    </script>
 
 </body>
 </html>
