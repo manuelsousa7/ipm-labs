@@ -7,6 +7,7 @@
 
     <script type="text/javascript" src="../manager.js"></script>
     <script type="text/javascript" src="../descricao.js"></script>
+    <script type="text/javascript" src="../tabela.js"></script>
 
     <link rel="shortcut icon" type="image/png" href="favicon.png"/>
 
@@ -229,26 +230,17 @@
 
 
 		<button id="BotaoPersonalizar" type="button" class="button" style="font-size: 2em;" onclick="change2()">
-		Personalizar
+		PERSONALIZAR
 	</button>
 
 
 	<button id="BotaoCalorias" type="button" class="button" style="font-size: 2em;" onclick="change()">
-		V. Nutricional
+		V. NUTRICIONAL
 	</button>
 
-	<script type="text/javascript">
-		function change(){
-			window.top.location.href = "../tabelanut/index.html";
-		}
-		function change2(){
-			window.top.location.href = "../personalizar/tabela/tabela1/index.html";
-		}
-	</script>
-
-	<button id="BotaoPedir" type="button" class="button" onclick="" style="font-size: 2em;">
+	<button id="BotaoPedir" type="button" class="button" onclick="chamada()" style="font-size: 2em;">
 		ADICIONAR
 	</button>
-	
+
 </body>
 </html>

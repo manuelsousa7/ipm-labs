@@ -5,6 +5,10 @@
 	--border_color: #F4A261;
 }
 
+::-webkit-scrollbar { 
+    display: none; 
+}
+
 #Titulo {
 	width: 100%;
 	text-align: center;

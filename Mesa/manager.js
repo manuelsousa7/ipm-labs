@@ -20,6 +20,7 @@ var caloryThreshold = 10;
 
 function AdicionarPrato(nome, preco) {
 	listaPratos.push(new Prato(nome, preco));
+	localStorage.setItem("listaPratos", JSON.stringify(listaPratos));
 }
 
 function RemoverPrato(nome) {
@@ -29,6 +30,7 @@ function RemoverPrato(nome) {
 			var array_1 = listaPratos.slice(0, i);
 			var array_2 = listaPratos.slice(i, listaPratos.length-1);
 			listaPratos = array_1.concat(array_2);
+			localStorage.setItem("listaPratos", JSON.stringify(listaPratos));
 			return;
 		}
 	}
@@ -36,14 +38,7 @@ function RemoverPrato(nome) {
 
 function AdicionarPratoImagem(nome, preco, imagem) {
 	pratoSelecao = new PratoImagem(nome, preco, imagem);
-	localStorage.setItem("nome", pratoSelecao.prato.nome);
-	localStorage.setItem("preco", pratoSelecao.prato.preco);
-	localStorage.setItem("calorias", pratoSelecao.prato.calorias);
-	localStorage.setItem("proteinas", pratoSelecao.prato.proteinas);
-	localStorage.setItem("lipidos", pratoSelecao.prato.lipidos);
-	localStorage.setItem("hidratos", pratoSelecao.prato.hidratos);
-	localStorage.setItem("tempo", pratoSelecao.prato.tempo);
-	localStorage.setItem("imagem", pratoSelecao.imagem);
+	localStorage.setItem("pratoSelecao", JSON.stringify(pratoSelecao));
 }
 
 function ProcessSelection(nome, preco, imagem) {
