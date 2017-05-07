@@ -29,6 +29,25 @@
 	:root {
 		--border_color: #F4A261;
 	}
+
+	::-webkit-scrollbar { 
+	    display: none;
+	}
+
+	body {
+		overflow: hidden;
+	}
+
+	#NovaTabela {
+		max-height: 620px;
+		overflow-y: scroll;
+	}
+
+	#BotaoPedir {
+		position: absolute;
+		right: auto;
+	}
+
 </style>
 
 </head>
@@ -45,7 +64,11 @@
 				<td width="50%" height="50">€</td>
 			</tr>
 		</table>
+		<div id="NovaTabela">
+			<table id="TabelaPratos" border="0" align="center" width="85%">
+			</table>
 		</div>
+	</div>
 	
 	<button id="BotaoPedir" type="button" class="button" onclick="goPay()" style="font-size: 2em;">
 		PEDIR

@@ -103,8 +103,10 @@ window.onload = function() {
 	AdicionarPrato("Azeitonas", 0.50);
 
 	var lista = localStorage.getItem("listaPratos");
-	var pratos = JSON.parse(lista);
+	pratos = JSON.parse(lista);
 	
 	CarregaPratos();
 	UpdatePriceText();
 }
+
+var pratos = 0;
