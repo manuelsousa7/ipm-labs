@@ -167,7 +167,7 @@
 			<button id="BotaoConfirmar" type="button" class="button" onclick="removeAndBack()">
 				REMOVER
 			</button>
-			<button id="BotaoNãoConfirmar" type="button" class="button" onclick="myFatPopUp()" >
+			<button id="BotaoNãoConfirmar" type="button" class="button" onclick="ignorar()" >
 				IGNORAR
 			</button>
 		</div>
@@ -185,6 +185,10 @@
     function removeAndBack(){
     	CustomOnClick(lastIndex,false);
     	myFatPopUp();
+    }
+    function ignorar(){
+    	myFatPopUp();
+    	ignore = 1;
     }
 	</script>	
 

@@ -1,5 +1,6 @@
 var numPratos = 8;
 var lastIndex = 0;
+var ignore = 0;
 //Clicar nos botoes das quantidades
 function CustomOnClick(index, add) {
 	var nome = "Quantidade" + index.toString();
@@ -36,13 +37,14 @@ function UpdatePriceText() {
 	document.getElementById("TotalTexto").innerHTML = contador.toFixed(2);
 	document.getElementById("moneyText").innerHTML = textoComSimbolo;
 	document.getElementById("TextoCalorias").innerHTML = "Calorias:\t" + TotalCalorias + "kcal";
-	if(TotalCalorias>=localStorage.calories){myFatPopUp();}
+	if(TotalCalorias>=localStorage.calories && TotalCalorias>=2000){myFatPopUp();}
 	document.getElementById("TextoProteinas").innerHTML = "Proteínas:\t" + TotalProteinas + " g";
 	document.getElementById("TextoLipidos").innerHTML = "Lípidos:\t" + TotalLipidos + " g";
 	document.getElementById("TextoHidratos").innerHTML = "Hidratos:\t" + TotalHidratos + " g";
 }
 
 function myFatPopUp() {
+		if(ignore == 1){return;}
 	    var popup = document.getElementById("fatPopup");
 	    popup.classList.toggle("show");
 }
