@@ -145,7 +145,6 @@
                      <div id="dc_results" class="alert alert-success" style="display: none">
                       <h4>Calorias Diarias Estimadas:<strong><span id="calAmount"></span></strong></h4>
                       </div>
-                      </div>
                     <div class="form-group">
                      <div class="modal-footer">
                         <button class="btn btn-danger" onclick="resetForm();">Reset</button>
@@ -246,7 +245,9 @@ function calcDailyCals(){
         a="male"==e?88.362+13.397*a+4.799*c-5.677*d:447.593+9.247*a+3.098*c-4.33*d;
         "no"===b?a*=1.2:"light"===b?a*=1.375:"moderate"===b?a*=1.55:"heavy"===b?a*=1.725:"extreme"===b&&(a*=1.9);
         a=Math.round(a+parseInt($("#gain_loss_amount").val()));
-        $("#calAmount").text(500<a?a:0);
+        var x = 500<a?a:0;
+        localStorage.calories=x;
+        $("#calAmount").text(x);
         $("#dc_results").show();
         //if(a>0)
          //   $("#recommendations").show();

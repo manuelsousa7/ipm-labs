@@ -36,7 +36,7 @@ function UpdatePriceText() {
 	document.getElementById("TotalTexto").innerHTML = contador.toFixed(2);
 	document.getElementById("moneyText").innerHTML = textoComSimbolo;
 	document.getElementById("TextoCalorias").innerHTML = "Calorias:\t" + TotalCalorias + "kcal";
-	if(TotalCalorias>=2000){myFatPopUp();}
+	if(TotalCalorias>=localStorage.calories){myFatPopUp();}
 	document.getElementById("TextoProteinas").innerHTML = "Proteínas:\t" + TotalProteinas + " g";
 	document.getElementById("TextoLipidos").innerHTML = "Lípidos:\t" + TotalLipidos + " g";
 	document.getElementById("TextoHidratos").innerHTML = "Hidratos:\t" + TotalHidratos + " g";
