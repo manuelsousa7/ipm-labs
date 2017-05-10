@@ -1,11 +1,11 @@
 window.onload = function() {
-	
+	localStorage.setItem("Tabela", "Nao");
 	var imagem = document.getElementById("Imagem");
 	var temp = localStorage.getItem("pratoSelecao");
 	var descricao = JSON.parse(temp);
 	imagem.setAttribute("src", descricao.imagem);
 	document.getElementById("NomePrato").innerHTML = descricao.prato.nome;
-	document.getElementById("PrecoPrato").innerHTML = descricao.prato.preco + " €";
+	document.getElementById("PrecoPrato").innerHTML = descricao.prato.preco.toFixed(2) + " €";
 
 	document.getElementById("TextoCalorias").innerHTML = "Calorias:\t" + descricao.prato.calorias + " kcal";
 	document.getElementById("TextoProteinas").innerHTML = "Proteínas:\t" + descricao.prato.proteinas + " g";
@@ -25,6 +25,6 @@ function chamada() {
 	var novosPratos = JSON.parse(localStorage.getItem("listaPratos"));
 	novosPratos.push(JSON.parse(localStorage.getItem("pratoSelecao")));
 	localStorage.setItem("listaPratos", JSON.stringify(novosPratos));
-	
-	AdicionaTabela();
+	localStorage.setItem("Tabela", "Sim");
 }
+	

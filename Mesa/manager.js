@@ -13,18 +13,19 @@ PratoImagem = function(nome, preco, imagem) {
 	this.imagem = imagem;
 }
 
-var listaPratos = [];
 var pratoSelecao = 0;
 
 var caloryThreshold = 10;
 
 function AdicionarPrato(nome, preco) {
+	var listaPratos = JSON.parse(localStorage.getItem("listaPratos"));
 	listaPratos.push(new Prato(nome, preco));
 	localStorage.setItem("listaPratos", JSON.stringify(listaPratos));
 }
 
 function RemoverPrato(nome) {
 	var i;
+	var listaPratos = JSON.parse(localStorage.getItem("listaPratos"));
 	for (i = 0; i < listaPratos.length; i++) {
 		if (listaPratos[i].nome == nome) {
 			var array_1 = listaPratos.slice(0, i);
@@ -44,4 +45,10 @@ function AdicionarPratoImagem(nome, preco, imagem) {
 function ProcessSelection(nome, preco, imagem) {
 	AdicionarPratoImagem(nome, preco, imagem);
 	window.location.href = "descricao.html";
+}
+
+function AdicionarSemImagem(nome, preco) {
+	pratoSelecao = new PratoImagem(nome, preco, "imagem");
+	localStorage.setItem("pratoSelecao", JSON.stringify(pratoSelecao));
+	localStorage.setItem("Tabela", "Sim");
 }

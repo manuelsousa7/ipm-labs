@@ -26,7 +26,6 @@
 <link rel="stylesheet" href="clock/flipclock2.css">
 
 <script src="google/jquery.min.js"></script>
-<script src="clock/flipclock2.js"></script>
 
 
 
@@ -159,6 +158,9 @@ body{
 			.flip-item-title{
 			font-size: 1.5em;
 			margin: 1em 0 0.8em;
+			}
+			.BotaoDescricao:hover {
+				cursor: pointer;
 			}
 
 
@@ -327,14 +329,16 @@ body {
 				    	<img src="comida/1b.jpg" alt=""></img>
 				    	<div class="flip-item-desc">
 				    		<h4 class="flip-item-title">Carne do Algarve</h4>
-				    		<p>
-				    		Carne de porco a alentejava com favas e molho do algarve. Contem ervas aromaticas do minho, e cenas e cenas e cenas e cenas e cenas e cenas e cenas e cenas e cenas e cenas e cenas e cenas e cenas </p></p>
-				    		</br>
-				    		<button id="BotaoPedir" type="button" class="button" style="font-size: 2em;" onclick="location.href = 'descricao.html';">
+				    		<h1 style="font-size: 200%">6.50 €</h1>
+				    		<br>
+				    		<p>Carne de porco à alentejana com favas e molho do algarve. Contem ervas aromaticas do minho.</p>
+				    		<br>
+				    		<br>
+				    		<button class="BotaoDescricao" type="button" class="button" style="font-size: 2em;" onclick="ProcessSelection('Carne do Algarve', 6.50, 'comida/1.jpg')">
 									Saber mais
 							</button>
-							<button id="BotaoPedir" type="button" class="button" style="font-size: 2em;">
-									Pedir Ja
+							<button class="BotaoDescricao" type="button" class="button" style="font-size: 2em;" onclick="AdicionarSemImagem('Carne do Algarve', 6.50)">
+									Pedir Já
 							</button>
 				    	</div>
 				    </figure>
@@ -348,13 +352,17 @@ body {
 				    <figure class="back">
 				    	<img src="comida/1b.jpg" alt=""></img>
 				    	<div class="flip-item-desc">
-				    		<h4 class="flip-item-title">Carne</h4>
-				    		<br>
+				    		<h4 class="flip-item-title">Carne do Algarve</h4>
 				    		<h1 style="font-size: 200%">6.50 €</h1>
 				    		<br>
+				    		<p>Carne de porco à alentejana com favas e molho do algarve. Contem ervas aromaticas do minho.</p>
 				    		<br>
-				    		<button id="BotaoPedir" type="button" class="button" onclick="ProcessSelection('Carne', '6.50', 'comida/1.jpg')" style="font-size: 2em; cursor: pointer;">
-								Selecionar
+				    		<br>
+				    		<button class="BotaoDescricao" type="button" class="button" style="font-size: 2em;" onclick="ProcessSelection('Carne do Algarve', 6.50, 'comida/1.jpg')">
+									Saber mais
+							</button>
+							<button class="BotaoDescricao" type="button" class="button" style="font-size: 2em;" onclick="AdicionarSemImagem('Carne do Algarve', 6.50)">
+									Pedir Já
 							</button>
 				    	</div>
 				    </figure>
@@ -368,13 +376,17 @@ body {
 				    <figure class="back">
 				    	<img src="http://lorempixel.com/g/500/500/food/3" alt=""></img>
 				    	<div class="flip-item-desc">
-				    		<h4 class="flip-item-title">Carne</h4>
-				    		<br>
+				    		<h4 class="flip-item-title">Carne do Algarve</h4>
 				    		<h1 style="font-size: 200%">6.50 €</h1>
 				    		<br>
+				    		<p>Carne de porco à alentejana com favas e molho do algarve. Contem ervas aromaticas do minho.</p>
 				    		<br>
-				    		<button id="BotaoPedir" type="button" class="button" onclick='ProcessSelection("Carne", "6.50", "comida/1.jpg")' style="font-size: 2em; cursor: pointer;">
-								Selecionar
+				    		<br>
+				    		<button class="BotaoDescricao" type="button" class="button" style="font-size: 2em;" onclick="ProcessSelection('Carne do Algarve', 6.50, 'comida/1.jpg')">
+									Saber mais
+							</button>
+							<button class="BotaoDescricao" type="button" class="button" style="font-size: 2em;" onclick="AdicionarSemImagem('Carne do Algarve', 6.50)">
+									Pedir Já
 							</button>
 				    	</div>
 				    </figure>
@@ -388,13 +400,17 @@ body {
 				    <figure class="back">
 				    	<img src="http://lorempixel.com/g/500/500/food/4" alt=""></img>
 				    	<div class="flip-item-desc">
-				    		<h4 class="flip-item-title">Carne</h4>
-				    		<br>
+				    		<h4 class="flip-item-title">Carne do Algarve</h4>
 				    		<h1 style="font-size: 200%">6.50 €</h1>
 				    		<br>
+				    		<p>Carne de porco à alentejana com favas e molho do algarve. Contem ervas aromaticas do minho.</p>
 				    		<br>
-				    		<button id="BotaoPedir" type="button" class="button" onclick='ProcessSelection("Carne", "6.50", "comida/1.jpg")' style="font-size: 2em; cursor: pointer;">
-								Selecionar
+				    		<br>
+				    		<button class="BotaoDescricao" type="button" class="button" style="font-size: 2em;" onclick="ProcessSelection('Carne do Algarve', 6.50, 'comida/1.jpg')">
+									Saber mais
+							</button>
+							<button class="BotaoDescricao" type="button" class="button" style="font-size: 2em;" onclick="AdicionarSemImagem('Carne do Algarve', 6.50)">
+									Pedir Já
 							</button>
 				    	</div>
 				    </figure>
@@ -408,13 +424,17 @@ body {
 				    <figure class="back">
 				    	<img src="http://lorempixel.com/g/500/500/food/5" alt=""></img>
 				    	<div class="flip-item-desc">
-				    		<h4 class="flip-item-title">Carne</h4>
-				    		<br>
+				    		<h4 class="flip-item-title">Carne do Algarve</h4>
 				    		<h1 style="font-size: 200%">6.50 €</h1>
 				    		<br>
+				    		<p>Carne de porco à alentejana com favas e molho do algarve. Contem ervas aromaticas do minho.</p>
 				    		<br>
-				    		<button id="BotaoPedir" type="button" class="button" onclick='ProcessSelection("Carne", "6.50", "comida/1.jpg")' style="font-size: 2em; cursor: pointer;">
-								Selecionar
+				    		<br>
+				    		<button class="BotaoDescricao" type="button" class="button" style="font-size: 2em;" onclick="ProcessSelection('Carne do Algarve', 6.50, 'comida/1.jpg')">
+									Saber mais
+							</button>
+							<button class="BotaoDescricao" type="button" class="button" style="font-size: 2em;" onclick="AdicionarSemImagem('Carne do Algarve', 6.50)">
+									Pedir Já
 							</button>
 				    	</div>
 				    </figure>
@@ -428,13 +448,17 @@ body {
 				    <figure class="back">
 				    	<img src="http://lorempixel.com/g/500/500/food/6" alt=""></img>
 				    	<div class="flip-item-desc">
-				    		<h4 class="flip-item-title">Carne</h4>
-				    		<br>
+				    		<h4 class="flip-item-title">Carne do Algarve</h4>
 				    		<h1 style="font-size: 200%">6.50 €</h1>
 				    		<br>
+				    		<p>Carne de porco à alentejana com favas e molho do algarve. Contem ervas aromaticas do minho.</p>
 				    		<br>
-				    		<button id="BotaoPedir" type="button" class="button" onclick='ProcessSelection("Carne", "6.50", "comida/1.jpg")' style="font-size: 2em; cursor: pointer;">
-								Selecionar
+				    		<br>
+				    		<button class="BotaoDescricao" type="button" class="button" style="font-size: 2em;" onclick="ProcessSelection('Carne do Algarve', 6.50, 'comida/1.jpg')">
+									Saber mais
+							</button>
+							<button class="BotaoDescricao" type="button" class="button" style="font-size: 2em;" onclick="AdicionarSemImagem('Carne do Algarve', 6.50)">
+									Pedir Já
 							</button>
 				    	</div>
 				    </figure>
@@ -448,13 +472,17 @@ body {
 				    <figure class="back">
 				    	<img src="http://lorempixel.com/g/500/500/food/7" alt=""></img>
 				    	<div class="flip-item-desc">
-				    		<h4 class="flip-item-title">Carne</h4>
-				    		<br>
+				    		<h4 class="flip-item-title">Carne do Algarve</h4>
 				    		<h1 style="font-size: 200%">6.50 €</h1>
 				    		<br>
+				    		<p>Carne de porco à alentejana com favas e molho do algarve. Contem ervas aromaticas do minho.</p>
 				    		<br>
-				    		<button id="BotaoPedir" type="button" class="button" onclick='ProcessSelection("Carne", "6.50", "comida/1.jpg")' style="font-size: 2em; cursor: pointer;">
-								Selecionar
+				    		<br>
+				    		<button class="BotaoDescricao" type="button" class="button" style="font-size: 2em;" onclick="ProcessSelection('Carne do Algarve', 6.50, 'comida/1.jpg')">
+									Saber mais
+							</button>
+							<button class="BotaoDescricao" type="button" class="button" style="font-size: 2em;" onclick="AdicionarSemImagem('Carne do Algarve', 6.50)">
+									Pedir Já
 							</button>
 				    	</div>
 				    </figure>
@@ -468,13 +496,17 @@ body {
 				    <figure class="back">
 				    	<img src="http://lorempixel.com/g/500/500/food/8" alt=""></img>
 				    	<div class="flip-item-desc">
-				    		<h4 class="flip-item-title">Carne</h4>
-				    		<br>
+				    		<h4 class="flip-item-title">Carne do Algarve</h4>
 				    		<h1 style="font-size: 200%">6.50 €</h1>
 				    		<br>
+				    		<p>Carne de porco à alentejana com favas e molho do algarve. Contem ervas aromaticas do minho.</p>
 				    		<br>
-				    		<button id="BotaoPedir" type="button" class="button" onclick='ProcessSelection("Carne", "6.50", "comida/1.jpg")' style="font-size: 2em; cursor: pointer;">
-								Selecionar
+				    		<br>
+				    		<button class="BotaoDescricao" type="button" class="button" style="font-size: 2em;" onclick="ProcessSelection('Carne do Algarve', 6.50, 'comida/1.jpg')">
+									Saber mais
+							</button>
+							<button class="BotaoDescricao" type="button" class="button" style="font-size: 2em;" onclick="AdicionarSemImagem('Carne do Algarve', 6.50)">
+									Pedir Já
 							</button>
 				    	</div>
 				    </figure>
@@ -488,13 +520,17 @@ body {
 				    <figure class="back">
 				    	<img src="http://lorempixel.com/g/500/500/food/9" alt=""></img>
 				    	<div class="flip-item-desc">
-				    		<h4 class="flip-item-title">Carne</h4>
-				    		<br>
+				    		<h4 class="flip-item-title">Carne do Algarve</h4>
 				    		<h1 style="font-size: 200%">6.50 €</h1>
 				    		<br>
+				    		<p>Carne de porco à alentejana com favas e molho do algarve. Contem ervas aromaticas do minho.</p>
 				    		<br>
-				    		<button id="BotaoPedir" type="button" class="button" onclick='ProcessSelection("Carne", "6.50", "comida/1.jpg")' style="font-size: 2em; cursor: pointer;">
-								Selecionar
+				    		<br>
+				    		<button class="BotaoDescricao" type="button" class="button" style="font-size: 2em;" onclick="ProcessSelection('Carne do Algarve', 6.50, 'comida/1.jpg')">
+									Saber mais
+							</button>
+							<button class="BotaoDescricao" type="button" class="button" style="font-size: 2em;" onclick="AdicionarSemImagem('Carne do Algarve', 6.50)">
+									Pedir Já
 							</button>
 				    	</div>
 				    </figure>
@@ -508,13 +544,17 @@ body {
 				    <figure class="back">
 				    	<img src="http://lorempixel.com/g/500/500/food/10" alt=""></img>
 				    	<div class="flip-item-desc">
-				    		<h4 class="flip-item-title">Carne</h4>
-				    		<br>
+				    		<h4 class="flip-item-title">Carne do Algarve</h4>
 				    		<h1 style="font-size: 200%">6.50 €</h1>
 				    		<br>
+				    		<p>Carne de porco à alentejana com favas e molho do algarve. Contem ervas aromaticas do minho.</p>
 				    		<br>
-				    		<button id="BotaoPedir" type="button" class="button" style="font-size: 2em; cursor: pointer;">
-								Selecionar
+				    		<br>
+				    		<button class="BotaoDescricao" type="button" class="button" style="font-size: 2em;" onclick="ProcessSelection('Carne do Algarve', 6.50, 'comida/1.jpg')">
+									Saber mais
+							</button>
+							<button class="BotaoDescricao" type="button" class="button" style="font-size: 2em;" onclick="AdicionarSemImagem('Carne do Algarve', 6.50)">
+									Pedir Já
 							</button>
 				    	</div>
 				    </figure>
@@ -528,13 +568,17 @@ body {
 				    <figure class="back">
 				    	<img src="http://lorempixel.com/g/500/500/food/1" alt=""></img>
 				    	<div class="flip-item-desc">
-				    		<h4 class="flip-item-title">Carne</h4>
-				    		<br>
+				    		<h4 class="flip-item-title">Carne do Algarve</h4>
 				    		<h1 style="font-size: 200%">6.50 €</h1>
 				    		<br>
+				    		<p>Carne de porco à alentejana com favas e molho do algarve. Contem ervas aromaticas do minho.</p>
 				    		<br>
-				    		<button id="BotaoPedir" type="button" class="button" style="font-size: 2em; cursor: pointer;">
-								Selecionar
+				    		<br>
+				    		<button class="BotaoDescricao" type="button" class="button" style="font-size: 2em;" onclick="ProcessSelection('Carne do Algarve', 6.50, 'comida/1.jpg')">
+									Saber mais
+							</button>
+							<button class="BotaoDescricao" type="button" class="button" style="font-size: 2em;" onclick="AdicionarSemImagem('Carne do Algarve', 6.50)">
+									Pedir Já
 							</button>
 				    	</div>
 				    </figure>
@@ -548,13 +592,17 @@ body {
 				    <figure class="back">
 				    	<img src="http://lorempixel.com/g/500/500/food/2" alt=""></img>
 				    	<div class="flip-item-desc">
-				    		<h4 class="flip-item-title">Carne</h4>
-				    		<br>
+				    		<h4 class="flip-item-title">Carne do Algarve</h4>
 				    		<h1 style="font-size: 200%">6.50 €</h1>
 				    		<br>
+				    		<p>Carne de porco à alentejana com favas e molho do algarve. Contem ervas aromaticas do minho.</p>
 				    		<br>
-				    		<button id="BotaoPedir" type="button" class="button" style="font-size: 2em; cursor: pointer;">
-								Selecionar
+				    		<br>
+				    		<button class="BotaoDescricao" type="button" class="button" style="font-size: 2em;" onclick="ProcessSelection('Carne do Algarve', 6.50, 'comida/1.jpg')">
+									Saber mais
+							</button>
+							<button class="BotaoDescricao" type="button" class="button" style="font-size: 2em;" onclick="AdicionarSemImagem('Carne do Algarve', 6.50)">
+									Pedir Já
 							</button>
 				    	</div>
 				    </figure>
@@ -568,13 +616,17 @@ body {
 				    <figure class="back">
 				    	<img src="http://lorempixel.com/g/500/500/food/2" alt=""></img>
 				    	<div class="flip-item-desc">
-				    		<h4 class="flip-item-title">Carne</h4>
-				    		<br>
+				    		<h4 class="flip-item-title">Carne do Algarve</h4>
 				    		<h1 style="font-size: 200%">6.50 €</h1>
 				    		<br>
+				    		<p>Carne de porco à alentejana com favas e molho do algarve. Contem ervas aromaticas do minho.</p>
 				    		<br>
-				    		<button id="BotaoPedir" type="button" class="button" style="font-size: 2em; cursor: pointer;">
-								Selecionar
+				    		<br>
+				    		<button class="BotaoDescricao" type="button" class="button" style="font-size: 2em;" onclick="ProcessSelection('Carne do Algarve', 6.50, 'comida/1.jpg')">
+									Saber mais
+							</button>
+							<button class="BotaoDescricao" type="button" class="button" style="font-size: 2em;" onclick="AdicionarSemImagem('Carne do Algarve', 6.50)">
+									Pedir Já
 							</button>
 				    	</div>
 				    </figure>
@@ -588,13 +640,17 @@ body {
 				    <figure class="back">
 				    	<img src="http://lorempixel.com/g/500/500/food/2" alt=""></img>
 				    	<div class="flip-item-desc">
-				    		<h4 class="flip-item-title">Carne</h4>
-				    		<br>
+				    		<h4 class="flip-item-title">Carne do Algarve</h4>
 				    		<h1 style="font-size: 200%">6.50 €</h1>
 				    		<br>
+				    		<p>Carne de porco à alentejana com favas e molho do algarve. Contem ervas aromaticas do minho.</p>
 				    		<br>
-				    		<button id="BotaoPedir" type="button" class="button" style="font-size: 2em; cursor: pointer;">
-								Selecionar
+				    		<br>
+				    		<button class="BotaoDescricao" type="button" class="button" style="font-size: 2em;" onclick="ProcessSelection('Carne do Algarve', 6.50, 'comida/1.jpg')">
+									Saber mais
+							</button>
+							<button class="BotaoDescricao" type="button" class="button" style="font-size: 2em;" onclick="AdicionarSemImagem('Carne do Algarve', 6.50)">
+									Pedir Já
 							</button>
 				    	</div>
 				    </figure>
@@ -608,13 +664,17 @@ body {
 				    <figure class="back">
 				    	<img src="http://lorempixel.com/g/500/500/food/2" alt=""></img>
 				    	<div class="flip-item-desc">
-				    		<h4 class="flip-item-title">Carne</h4>
-				    		<br>
+				    		<h4 class="flip-item-title">Carne do Algarve</h4>
 				    		<h1 style="font-size: 200%">6.50 €</h1>
 				    		<br>
+				    		<p>Carne de porco à alentejana com favas e molho do algarve. Contem ervas aromaticas do minho.</p>
 				    		<br>
-				    		<button id="BotaoPedir" type="button" class="button" style="font-size: 2em; cursor: pointer;">
-								Selecionar
+				    		<br>
+				    		<button class="BotaoDescricao" type="button" class="button" style="font-size: 2em;" onclick="ProcessSelection('Carne do Algarve', 6.50, 'comida/1.jpg')">
+									Saber mais
+							</button>
+							<button class="BotaoDescricao" type="button" class="button" style="font-size: 2em;" onclick="AdicionarSemImagem('Carne do Algarve', 6.50)">
+									Pedir Já
 							</button>
 				    	</div>
 				    </figure>
@@ -627,13 +687,17 @@ body {
 				    <figure class="back">
 				    	<img src="http://lorempixel.com/g/500/500/food/2" alt=""></img>
 				    	<div class="flip-item-desc">
-				    		<h4 class="flip-item-title">Carne</h4>
-				    		<br>
+				    		<h4 class="flip-item-title">Carne do Algarve</h4>
 				    		<h1 style="font-size: 200%">6.50 €</h1>
 				    		<br>
+				    		<p>Carne de porco à alentejana com favas e molho do algarve. Contem ervas aromaticas do minho.</p>
 				    		<br>
-				    		<button id="BotaoPedir" type="button" class="button" style="font-size: 2em; cursor: pointer;">
-								Selecionar
+				    		<br>
+				    		<button class="BotaoDescricao" type="button" class="button" style="font-size: 2em;" onclick="ProcessSelection('Carne do Algarve', 6.50, 'comida/1.jpg')">
+									Saber mais
+							</button>
+							<button class="BotaoDescricao" type="button" class="button" style="font-size: 2em;" onclick="AdicionarSemImagem('Carne do Algarve', 6.50)">
+									Pedir Já
 							</button>
 				    	</div>
 				    </figure>
@@ -648,13 +712,17 @@ body {
 				    <figure class="back">
 				    	<img src="http://lorempixel.com/g/500/500/food/2" alt=""></img>
 				    	<div class="flip-item-desc">
-				    		<h4 class="flip-item-title">Carne</h4>
-				    		<br>
+				    		<h4 class="flip-item-title">Carne do Algarve</h4>
 				    		<h1 style="font-size: 200%">6.50 €</h1>
 				    		<br>
+				    		<p>Carne de porco à alentejana com favas e molho do algarve. Contem ervas aromaticas do minho.</p>
 				    		<br>
-				    		<button id="BotaoPedir" type="button" class="button" style="font-size: 2em; cursor: pointer;">
-								Selecionar
+				    		<br>
+				    		<button class="BotaoDescricao" type="button" class="button" style="font-size: 2em;" onclick="ProcessSelection('Carne do Algarve', 6.50, 'comida/1.jpg')">
+									Saber mais
+							</button>
+							<button class="BotaoDescricao" type="button" class="button" style="font-size: 2em;" onclick="AdicionarSemImagem('Carne do Algarve', 6.50)">
+									Pedir Já
 							</button>
 				    	</div>
 				    </figure>
@@ -662,6 +730,28 @@ body {
 			</section>
 
 		</div>
+
+		<script type="text/javascript">
+			setInterval(
+				function() {
+					if (localStorage.getItem("IndexMenu") != "1") {
+
+						switch (localStorage.getItem("IndexMenu")) {
+							case "2":
+								window.location.href = "comida2.html";
+								localStorage.setItem("IndexMenu", "2");
+								break;
+
+							case "3":
+								window.location.href = "comida3.html";
+								localStorage.setItem("IndexMenu", "3");
+								break;
+						}
+
+					}
+				}
+			, 100);
+		</script>
 
 		</body>
 </html>
