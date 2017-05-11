@@ -4,7 +4,7 @@
     
     <meta name="robots" content="noindex">
 
-    <title>Calorie Calculator - Bootsnipp.com</title>
+    <title>Calculadora de Calorias</title>
     <link href="../../dist/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="../dist/css/flat-ui.css" rel="stylesheet">
     <style type="text/css">
@@ -84,7 +84,7 @@
     <div class="row" style="align-content: right; text-align: left;margin-left: 10%;">
         <div class="col-sm-offset-4 col-sm-4">
             <form method="put">
-                <div class="form-group">
+                <div class="form-group22">
                     <label for="age">Idade</label>
                     <div class="input-group" data-validate="number">
                         <input type="text" class="form-control" name="age" id="age" placeholder="(Anos)" required="">
@@ -148,7 +148,7 @@
                       <h4>Calorias Diarias Estimadas:<strong><span id="calAmount"></span></strong></h4>
                       </div>
                       <p>
-                      <div class="form-group2" style="margin-left: 30%;margin-top: -35%">
+                      <div class="form-group2" style="margin-left: 30%;margin-top: -34%">
                     <label for="registo">Deixar Registo</label>
                     <div class="input-group2" data-validate="number">
                         <textarea style="width: 950px;height: 100px;" type="text" class="form-control" name="registo" id="registo" placeholder="(Registo)" required=""></textarea>
@@ -158,12 +158,12 @@
                     <p>
                     <div class="form-group" style="margin-top: 27%">
                      <div class="modal-footer">
-                        <button class="btn btn-danger" onclick="resetForm();">Reset</button>
-                     <button class="btn btn-primary" style="background-color: #fccb1b; color: #545775;" onclick="voltar();">Voltar</button>
-                        <button class="btn btn-primary" type="button" id="calculate" name="calculate" class="btn btn-primary" onclick="calcDailyCals();">Calcular</button>
+                        <button class="btn btn-danger" style="cursor: pointer" onclick="resetForm();">Reset</button>
+                     <button class="btn btn-primary" style="background-color: #fccb1b; color: #545775;cursor: pointer;" onclick="voltar();">Voltar</button>
+                        <button class="btn btn-primary" type="button" id="calculate" name="calculate" class="btn btn-primary" onclick="calcDailyCals();" style="cursor: pointer;">Calcular</button>
                      </div>
                     </div>
-                <div class="form-group">
+                <div class="form-group10">
                    <div class="modal-footer" id="recommendations" style="display: none">    
                     <h5><strong>Vejas as recomendacoes!<strong></strong></strong></h5><strong><strong>
                     <button class="btn btn-primary" onclick="findDiets();">Dietas</button>
