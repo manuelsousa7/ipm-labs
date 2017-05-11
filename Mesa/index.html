@@ -48,6 +48,9 @@
             previous = 1;
 
         }
+        function goToCalculator(){
+            window.top.location.href = "tabelanut/calculadora.htm";
+        }
     </script>
 
     <script>
@@ -125,7 +128,7 @@
         </div>-->
 
         <div id = "testDiv" style="margin-top: 2%;">
-            <button  id = "menuButton" class="btn btn-hg btn-primary" onclick="goToMenu()" size="2" style="margin-left: 30%;">
+            <button  id = "menuButton" class="btn btn-hg btn-primary" onclick="goToMenu()" size="2" style="margin-left: 28%;">
                    <font size="1000">Menu</font>
             </button>
             <script type="text/javascript">
@@ -135,11 +138,20 @@
             </script>
         </div>
         <div id = "main" style="">
-        <div id = "buttons" style="position: absolute;left: 31%;">
-        <div id = "helpButton" class=" fui-question-circle btn btn-block btn-lg btn-primary"></div>
-        <div id = "helpButton" class=" fui-question-circle btn btn-block btn-lg btn-primary"></div>
+
+        <div id = "buttons" style="position: absolute; left: 25%;">
+
+            <div id = "helpButton" class=" fui-new btn btn-block btn-lg btn-primary" style="font-size: 150%" onclick="goToCalculator()"></div>
+            
+            
+            <div id = "helpButton" class=" fui-facebook btn btn-block btn-lg btn-primary" style="font-size: 150%"></div>
+
+            <div id = "helpButton" class=" fui-spotify btn btn-block btn-lg btn-primary" style="font-size: 150%"></div>
+            <div id = "helpButton" class=" fui-question-circle btn btn-block btn-lg btn-primary" style="font-size: 150%"></div>
+
         </div>
-        <div class="ism-slider" id="my-slider" style="position: absolute; left: 35%; margin-top: 1%; width: 700px; height: 400px; box-shadow: 1px 1px 5px #888888; margin-left: 2%;">
+
+        <div class="ism-slider" id="my-slider" style="position: relative; margin-left: auto; margin-right: auto; width: 700px; height: 400px; box-shadow: 1px 1px 5px #888888;">
         <ol>
             <li>
                 <img src="ism/image/slides/_u/1492562152765_332677.jpg">
@@ -156,5 +168,5 @@
         </ol>
         </div>
         </div>
-        <p style="position: relative; text-align: center; margin-top: 25%; margin-bottom:2%"> Sugestões do dia</p>
+        <p style="font-size: 150%; position: relative; text-align: center;"> Sugestões do dia</p>
 </body>
