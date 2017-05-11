@@ -41,7 +41,7 @@ var jsKeyboard = {
         var text = "";
 
         var s = "";
-        s += "<div id=\"keyboard\">";
+        s += "<div id=\"keyboard\" style=\" margin-top: -25%;margin-left: 45%;\">";
         s += "<div id=\"keyboardHeader\">";
         // s += "<div onclick=\"jsKeyboard.hide();\"><span>" + jsKeyboard.settings.text.close + "</span><span class=\"closex\"> X</span></div>"
         s += "</div>";
