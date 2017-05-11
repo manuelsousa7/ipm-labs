@@ -99,11 +99,6 @@ function CarregaPratos() {
 
 window.onload = function() {
 
-	AdicionarPrato("Bife", 9.50);
-	AdicionarPrato("Batatas Fritas", 2.50);
-	AdicionarPrato("Coca-Cola", 1.50);
-	AdicionarPrato("Azeitonas", 0.50);
-
 	var lista = localStorage.getItem("listaPratos");
 	pratos = JSON.parse(lista);
 	
@@ -111,4 +106,4 @@ window.onload = function() {
 	UpdatePriceText();
 }
 
-var pratos = 0;
+var pratos = [];
