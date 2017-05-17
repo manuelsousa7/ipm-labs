@@ -25,10 +25,8 @@
     
     <script src="google/jquery.min.js"></script>
     <script src="clock/flipclock.js"></script>
-
  
  <link rel="stylesheet" href="MenuStyle.css">
- <script src="manager.js"></script>
 
 </head>
 
@@ -37,13 +35,6 @@
     <script type="text/javascript">
         // variavel global que guarda  a  ultima sugestao clicada
         var previous = 0;
-
-        window.onload = function() {
-            alert("Sim!");
-            localStorage.setItem("pratoSelecao", JSON.stringify(null));
-            localStorage.setItem("listaPratos", JSON.stringify([]));
-            localStorage.setItem("Tabela", "Nao");
-        }
     </script>
 
     <script>
@@ -56,9 +47,6 @@
             document.getElementById("sugestaobtn1").style.background = "#1abc9c";
             previous = 1;
 
-        }
-        function goToCalculator(){
-            window.top.location.href = "tabelanut/calculadora.htm";
         }
     </script>
 
@@ -121,120 +109,52 @@
         <div id = "profileDiv">
             <div id = "profileThumbnail">
                 <img id = "profilePhoto" src = "manuel.png">   <p> Manuel </p>
+                <!--<div id = icons>
+                    <div id = "icon1" class=" fui-heart btn btn-block btn-lg btn-inverse"></div>
+                    <div id = "icon2" class=" fui-bookmark btn btn-block btn-lg btn-inverse"></div>
+                    <div id = "icon3" class=" fui-gear  btn btn-block btn-lg btn-inverse"> Settings</div>
+                </div> -->
             </div>
         </div>
 
+        <!--<div id = "otherButtonsDiv">
+                   <div id = "helpButton" class=" fui-question-circle btn btn-block btn-lg btn-primary"></div>
+                   <div id = "musicButton" class=" fui-facebook btn btn-block btn-lg btn-primary"></div>
+                   <div id = "musicButton"  style = "margin-left: 2%;" class=" fui-spotify btn btn-block btn-lg btn-primary"></div>
+                   <div id = "moreButton" class=" fui-plus btn btn-block btn-lg btn-primary"></div>
+        </div>-->
+
         <div id = "testDiv" style="margin-top: 2%;">
-            <button  id = "menuButton" class="btn btn-hg btn-primary" onclick="goToMenu()" size="2" style="margin-left: 28%;">
+            <button  id = "menuButton" class="btn btn-hg btn-primary" onclick="goToMenu()" size="2" style="margin-left: 30%;">
                    <font size="1000">Menu</font>
             </button>
             <script type="text/javascript">
                 function goToMenu(){
-
-                    localStorage.setItem("listaPratos", JSON.stringify([]));
-                    localStorage.setItem("Tabela", "Nao");
-
                     window.top.location.href = "personalizar/index.html";
                 }   
             </script>
         </div>
         <div id = "main" style="">
-
-        <div id = "buttons" style="position: absolute; left: 25%;">
-
-            <div id = "helpButton" class=" fui-new btn btn-block btn-lg btn-primary" style="font-size: 150%" onclick="goToCalculator()"></div>
-            
-            
-            <div id = "helpButton" class=" fui-facebook btn btn-block btn-lg btn-primary" style="font-size: 150%"></div>
-
-            <div id = "helpButton" class=" fui-spotify btn btn-block btn-lg btn-primary" style="font-size: 150%"></div>
-            <div id = "helpButton" class=" fui-question-circle btn btn-block btn-lg btn-primary" style="font-size: 150%"></div>
-
+        <div id = "buttons" style="position: absolute;left: 31%;">
+        <div id = "helpButton" class=" fui-question-circle btn btn-block btn-lg btn-primary"></div>
+        <div id = "helpButton" class=" fui-question-circle btn btn-block btn-lg btn-primary"></div>
         </div>
-
-        <div class="ism-slider" id="my-slider" style="position: relative; margin-left: auto; margin-right: auto; width: 700px; height: 400px; box-shadow: 1px 1px 5px #888888;">
-        <ol id="ListaSugestoes">
-            <li onclick="Sugestao('Salada de alho francês', 8.20, '../ism/image/slides/_u/1492562152765_332677.jpg')">
+        <div class="ism-slider" id="my-slider" style="position: absolute; left: 35%; margin-top: 1%; width: 700px; height: 400px; box-shadow: 1px 1px 5px #888888; margin-left: 2%;">
+        <ol>
+            <li>
                 <img src="ism/image/slides/_u/1492562152765_332677.jpg">
                 <div class="ism-caption ism-caption-0">Salada de alho francês</div>
             </li>
-            <li onclick="Sugestao('Hamburguer da casa', 6.70, '../ism/image/slides/_u/1492562036870_209786.jpg')">
+            <li>
                 <img src="ism/image/slides/_u/1492562036870_209786.jpg">
                 <div class="ism-caption ism-caption-0">Hamburguer da casa</div>
             </li>
-            <li onclick="Sugestao('Salmão á chef', 9.75, '../ism/image/slides/_u/1492562024631_533954.jpg')">
+            <li>
                 <img src="ism/image/slides/_u/1492562024631_533954.jpg">
                 <div class="ism-caption ism-caption-0">Salmão á chef</div>
             </li>
         </ol>
         </div>
         </div>
-        <p style="font-size: 150%; position: relative; text-align: center;"> Sugestões do dia</p>
-<<<<<<< HEAD
-        <div class="popup" id="myPopup">
-        <div class="fillScreen"></div>
-
-        <div class="janelaPopup">
-            <div id="popupText">
-                Bem vindo ao RISTorante
-            </div>
-            <div id="moneyText">
-                <p>Bem vindo ao RISTorante o nosso leitor biométrico determinou as seguintes informações sobre si:</p>
-                <p>Idade:20 anos</p>
-                <p>Peso: 80kg</p>
-                <p>Altura:180cm</p>
-                <p>E calculou que não devia consumir mais de 2186kCal.</p>
-            </div>
-            <button id="BotaoConfirmar" type="button" class="button" onclick="confirmar()">
-                CONFIRMAR
-            </button>
-            <button id="BotaoIgnorar" type="button" class="button" onclick="confirmar()">
-                IGNORAR
-            </button>
-            <button id="BotaoNãoConfirmar" type="button" class="button" onclick="corrigir()" >
-                CORRIGIR
-            </button>
-        </div>
-    </div>
-    <script type="text/javascript">
-        if(localStorage.show == 1){
-            var popup = document.getElementById("myPopup");
-            popup.style.visibility='hidden';
-        }
-    </script>
-    <script type="text/javascript">
-        function confirmar() {
-            var popup = document.getElementById("myPopup");
-            popup.style.visibility='hidden';
-        }
-    </script>
-    <script type="text/javascript">
-        function corrigir(){
-            localStorage.show =1;
-            confirmar();
-            window.top.location.href = "tabelanut/calculadora.htm";
-        }
-    </script>
-    <script type="text/javascript">
-        var popup = document.getElementById("myPopup");
-        popup.classList.toggle("show");
-    
-    </script>
-=======
-
-
-        <script type="text/javascript">
-            function Sugestao(nome, preco, imagem) {
-
-                localStorage.setItem("pratoSelecao", JSON.stringify(null));
-                localStorage.setItem("listaPratos", JSON.stringify([]));
-                localStorage.setItem("Tabela", "Nao");
-
-                AdicionarPratoImagem(nome, preco, imagem);
-                localStorage.setItem("ToDescription", "Sim");
-                goToMenu();
-            }
-        </script>        
-
->>>>>>> a97fa8fc7ffc7a090926ecf1041d2b5526786141
+        <p style="position: relative; text-align: center; margin-top: 25%; margin-bottom:2%"> Sugestões do dia</p>
 </body>

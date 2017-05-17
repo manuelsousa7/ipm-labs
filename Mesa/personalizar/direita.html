@@ -45,7 +45,7 @@
 
 	#BotaoPedir {
 		position: absolute;
-		right: auto;
+		left: 37%;
 	}
 
 </style>
@@ -56,16 +56,34 @@
 
 	<p id="Titulo">PEDIDO</p>
 
+	<!--Escolher a quantidade a pedir-->
+	<div class="Quantidade" style="display: none;">
+		<button id="QuadradoMenos" class="BotaoQuantidade" style="display: inline;">
+			-
+		</button>
+		<div id="Quantidade" class="QuadradoQuantidade" style="display: inline;">
+			1
+		</div>
+		<button id="QuadradoMais" class="BotaoQuantidade" style="display: inline;">
+			+
+		</button>
+	</div>
+
+	<div class="Remover" style="display: none; bottom: 5px; background-color: green; width: 100%; height: 100%;">
+		<button id="Remove" class="btn btn-danger" style="width: 30px; height: 30px; padding: 0px;">X</button>
+	</div>
+
 	<!--Tabela de visualização do pedido-->
 	<div id="OverviewGrid">
-		<table id="Table" border="0" align="center" width="85%">
+		<table id="Table" border="0" align="center" width="100%">
 			<tr style="font-size: 1.2em; font-weight: bold">
-				<td width="50%" height="50">Nome</td>
-				<td width="50%" height="50">€</td>
+				<td width="35%" height="60">Nome</td>
+				<td width="15%" height="60">€</td>
+				<td width="40%" height="60"></td>
 			</tr>
 		</table>
 		<div id="NovaTabela">
-			<table id="TabelaPratos" border="0" align="center" width="85%">
+			<table id="TabelaPratos" border="0" align="center" width="100%">
 			</table>
 		</div>
 	</div>
@@ -76,8 +94,8 @@
 	
 	<script type="text/javascript">
 		function goPay(){
-		window.top.location.href = "../Pagamento.html";
-	}
+			window.top.location.href = "../Pagamento.html";
+		}
 	</script>
 
 </body>

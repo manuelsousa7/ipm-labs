@@ -169,6 +169,7 @@ p{
 	background-color: #fccb1b;
 	color: #545775;
 }
+<<<<<<< HEAD
 /*Popup*/
 .popup {
     width: 100vw;
@@ -251,4 +252,9 @@ p{
 
 	font-size: 1.5em;
 	background-color: #FF595E;
+=======
+
+#ListaSugestoes li {
+	cursor: pointer;
+>>>>>>> a97fa8fc7ffc7a090926ecf1041d2b5526786141
 }
