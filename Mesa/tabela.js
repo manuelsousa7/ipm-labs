@@ -6,12 +6,13 @@ function AdicionaTabela() {
 	
 	var descricao = JSON.parse(localStorage.getItem("pratoSelecao"));
 
-	var nomes = ["TextoPrato", "QuadradoMenos", "Quantidade", "QuadradoMais"];
+	var nomes = ["TextoPrato", "QuadradoMenos", "Quantidade", "QuadradoMais", "Remove"];
 
 	var listaPratos = JSON.parse(localStorage.getItem("listaPratos"));
 	var i;
 	for (i = 0; i < listaPratos.length; i++) {
 		if (listaPratos[i].nome == descricao.prato.nome) {
+			alert("Ja existe");
 			return;
 		}
 	}
@@ -27,13 +28,15 @@ function AdicionaTabela() {
 		newTr.setAttribute("style", "font-size: 1.7em; border-top: solid var(--border_color);");
 	}
 
-	var newTd = [newTr.insertCell(0), newTr.insertCell(1), newTr.insertCell(2)];
+	var newTd = [newTr.insertCell(0), newTr.insertCell(1), newTr.insertCell(2), newTr.insertCell(3)];
 	newTd[0].setAttribute("width", "35%");
 	newTd[1].setAttribute("width", "15%");
-	newTd[2].setAttribute("width", "45%");
-	newTd[0].setAttribute("height", "60");
-	newTd[1].setAttribute("height", "60");
-	newTd[2].setAttribute("height", "60");
+	newTd[2].setAttribute("width", "40%");
+	newTd[3].setAttribute("width", "10%");
+	newTd[0].setAttribute("height", "80");
+	newTd[1].setAttribute("height", "80");
+	newTd[2].setAttribute("height", "80");
+	newTd[3].setAttribute("height", "80");
 
 	newTd[1].setAttribute("id", nomes[0] + contador);
 
@@ -62,11 +65,23 @@ function AdicionaTabela() {
 	newTd[2].appendChild(newQuantity);
 	newTd[2].setAttribute("display", "inline");
 
+
+	var newRemove = (document.getElementsByClassName("Remover"))[0].cloneNode(true);
+	newRemove.setAttribute("style", "display: all;");
+
+	newClick = "CustomOnClick2(" + contador + ")";
+
+	newRemove.children[0].setAttribute("id", nomes[4] + contador);
+	newRemove.children[0].setAttribute("onclick", newClick);
+
+	newTd[3].appendChild(newRemove);
+	newTd[3].setAttribute("display", "inline");
+
 }
 
 function AdicionaTabela2(prato) {
 	
-	var nomes = ["TextoPrato", "QuadradoMenos", "Quantidade", "QuadradoMais"];
+	var nomes = ["TextoPrato", "QuadradoMenos", "Quantidade", "QuadradoMais", "Remove"];
 
 	var listaPratos = JSON.parse(localStorage.getItem("listaPratos"));
 	var i;
@@ -117,6 +132,17 @@ function AdicionaTabela2(prato) {
 
 	newTd[2].appendChild(newQuantity);
 	newTd[2].setAttribute("display", "inline");
+
+	var newRemove = (document.getElementsByClassName("Remover"))[0].cloneNode(true);
+	newRemove.setAttribute("style", "display: all;");
+
+	newClick = "CustomOnClick2(" + (contador) + ")";
+
+	newRemove.children[0].setAttribute("id", nomes[4] + contador);
+	newRemove.children[0].setAttribute("onclick", newClick);
+
+	newTd[3].appendChild(newRemove);
+	newTd[3].setAttribute("display", "inline");
 }
 
 window.onload = function() {
@@ -134,11 +160,6 @@ window.onload = function() {
 			AdicionaTabela2(listaPratos[i]);
 		}
 	}
-	/*
-	contador = 0;
-	var lista = [];
-	localStorage.setItem("listaPratos", JSON.stringify(lista));
-	*/
 }
 
 //Clicar nos botoes das quantidades
@@ -159,6 +180,39 @@ function CustomOnClick(index, add) {
 	listaPratos[index - 1].quant = old;
 	document.getElementById(nome).innerHTML = old;
 	localStorage.setItem("listaPratos", JSON.stringify(listaPratos));   	
+}
+
+//remover pratos da lista
+function CustomOnClick2(index) {
+
+	var listaPratos = JSON.parse(localStorage.getItem("listaPratos"));
+	listaPratos.splice(index - 1, 1);
+	localStorage.setItem("listaPratos", JSON.stringify(listaPratos));
+	document.getElementById("TabelaPratos").deleteRow(index - 1);
+
+	var nomes = ["TextoPrato", "QuadradoMenos", "Quantidade", "QuadradoMais", "Remove"];
+
+	for (i = index-1; i < listaPratos.length; i++) {
+
+		document.getElementById(nomes[0] + (i + 2)).setAttribute("id", nomes[0] + (i + 1));
+
+		document.getElementById(nomes[1] + (i + 2)).setAttribute("id", nomes[1] + (i + 1));
+		document.getElementById(nomes[2] + (i + 2)).setAttribute("id", nomes[2] + (i + 1));
+		document.getElementById(nomes[3] + (i + 2)).setAttribute("id", nomes[3] + (i + 1));
+
+		newClick0 = "CustomOnClick(" + (i + 1) + ", false)";
+		newClick2 = "CustomOnClick(" + (i + 1) + ", true)";
+
+		document.getElementById(nomes[1] + (i + 1)).setAttribute("onclick", newClick0);
+		document.getElementById(nomes[3] + (i + 1)).setAttribute("onclick", newClick2);
+
+		newClick = "CustomOnClick2(" + (i + 1) + ")";
+
+		document.getElementById(nomes[4] + contador).setAttribute("id", nomes[4] + (i + 1));
+		document.getElementById(nomes[4] + (i + 1)).setAttribute("onclick", newClick);
+	}
+	
+	contador--;
 }
 
 setInterval(
