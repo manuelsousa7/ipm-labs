@@ -28,7 +28,6 @@
 
  
  <link rel="stylesheet" href="MenuStyle.css">
- <script src="manager.js"></script>
 
 </head>
 
@@ -37,13 +36,6 @@
     <script type="text/javascript">
         // variavel global que guarda  a  ultima sugestao clicada
         var previous = 0;
-
-        window.onload = function() {
-            alert("Sim!");
-            localStorage.setItem("pratoSelecao", JSON.stringify(null));
-            localStorage.setItem("listaPratos", JSON.stringify([]));
-            localStorage.setItem("Tabela", "Nao");
-        }
     </script>
 
     <script>
@@ -130,10 +122,6 @@
             </button>
             <script type="text/javascript">
                 function goToMenu(){
-
-                    localStorage.setItem("listaPratos", JSON.stringify([]));
-                    localStorage.setItem("Tabela", "Nao");
-
                     window.top.location.href = "personalizar/index.html";
                 }   
             </script>
@@ -153,16 +141,16 @@
         </div>
 
         <div class="ism-slider" id="my-slider" style="position: relative; margin-left: auto; margin-right: auto; width: 700px; height: 400px; box-shadow: 1px 1px 5px #888888;">
-        <ol id="ListaSugestoes">
-            <li onclick="Sugestao('Salada de alho francês', 8.20, '../ism/image/slides/_u/1492562152765_332677.jpg')">
+        <ol>
+            <li>
                 <img src="ism/image/slides/_u/1492562152765_332677.jpg">
                 <div class="ism-caption ism-caption-0">Salada de alho francês</div>
             </li>
-            <li onclick="Sugestao('Hamburguer da casa', 6.70, '../ism/image/slides/_u/1492562036870_209786.jpg')">
+            <li>
                 <img src="ism/image/slides/_u/1492562036870_209786.jpg">
                 <div class="ism-caption ism-caption-0">Hamburguer da casa</div>
             </li>
-            <li onclick="Sugestao('Salmão á chef', 9.75, '../ism/image/slides/_u/1492562024631_533954.jpg')">
+            <li>
                 <img src="ism/image/slides/_u/1492562024631_533954.jpg">
                 <div class="ism-caption ism-caption-0">Salmão á chef</div>
             </li>
@@ -170,7 +158,6 @@
         </div>
         </div>
         <p style="font-size: 150%; position: relative; text-align: center;"> Sugestões do dia</p>
-<<<<<<< HEAD
         <div class="popup" id="myPopup">
         <div class="fillScreen"></div>
 
@@ -220,16 +207,4 @@
         popup.classList.toggle("show");
     
     </script>
-        <script type="text/javascript">
-            function Sugestao(nome, preco, imagem) {
-
-                localStorage.setItem("pratoSelecao", JSON.stringify(null));
-                localStorage.setItem("listaPratos", JSON.stringify([]));
-                localStorage.setItem("Tabela", "Nao");
-
-                AdicionarPratoImagem(nome, preco, imagem);
-                localStorage.setItem("ToDescription", "Sim");
-                goToMenu();
-            }
-        </script>        
 </body>
