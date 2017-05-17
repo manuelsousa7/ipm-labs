@@ -181,8 +181,56 @@
         </div>
         </div>
         <p style="font-size: 150%; position: relative; text-align: center;"> Sugestões do dia</p>
+        <div class="popup" id="myPopup">
+        <div class="fillScreen"></div>
 
+        <div class="janelaPopup">
+            <div id="popupText">
+                Bem vindo ao RISTorante
+            </div>
+            <div id="moneyText">
+                <p>Bem vindo ao RISTorante o nosso leitor biométrico determinou as seguintes informações sobre si:</p>
+                <p>Idade:20 anos</p>
+                <p>Peso: 80kg</p>
+                <p>Altura:180cm</p>
+                <p>E calculou que não devia consumir mais de 2186kCal.</p>
+            </div>
+            <button id="BotaoConfirmar" type="button" class="button" onclick="confirmar()">
+                CONFIRMAR
+            </button>
+            <button id="BotaoIgnorar" type="button" class="button" onclick="confirmar()">
+                IGNORAR
+            </button>
+            <button id="BotaoNãoConfirmar" type="button" class="button" onclick="corrigir()" >
+                CORRIGIR
+            </button>
+        </div>
+    </div>
 
+        <script type="text/javascript">
+        if(localStorage.show == 2){
+            var popup = document.getElementById("myPopup");
+            popup.style.visibility='hidden';
+        }
+    </script>
+    <script type="text/javascript">
+        function confirmar() {
+            var popup = document.getElementById("myPopup");
+            popup.style.visibility='hidden';
+        }
+    </script>
+    <script type="text/javascript">
+        function corrigir(){
+            localStorage.show =2;
+            confirmar();
+            window.top.location.href = "tabelanut/calculadora.htm";
+        }
+    </script>
+    <script type="text/javascript">
+        var popup = document.getElementById("myPopup");
+        popup.classList.toggle("show");
+    
+    </script>
         <script type="text/javascript">
             function Sugestao(nome, preco, imagem) {
 
