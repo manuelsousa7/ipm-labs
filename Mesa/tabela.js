@@ -12,7 +12,6 @@ function AdicionaTabela() {
 	var i;
 	for (i = 0; i < listaPratos.length; i++) {
 		if (listaPratos[i].nome == descricao.prato.nome) {
-			alert("Ja existe");
 			return;
 		}
 	}

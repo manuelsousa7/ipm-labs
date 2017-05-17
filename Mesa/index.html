@@ -170,7 +170,6 @@
         </div>
         </div>
         <p style="font-size: 150%; position: relative; text-align: center;"> Sugestões do dia</p>
-<<<<<<< HEAD
         <div class="popup" id="myPopup">
         <div class="fillScreen"></div>
 
@@ -220,16 +219,17 @@
         popup.classList.toggle("show");
     
     </script>
-        <script type="text/javascript">
-            function Sugestao(nome, preco, imagem) {
 
-                localStorage.setItem("pratoSelecao", JSON.stringify(null));
-                localStorage.setItem("listaPratos", JSON.stringify([]));
-                localStorage.setItem("Tabela", "Nao");
+    <script type="text/javascript">
+        function Sugestao(nome, preco, imagem) {
 
-                AdicionarPratoImagem(nome, preco, imagem);
-                localStorage.setItem("ToDescription", "Sim");
-                goToMenu();
-            }
-        </script>        
+            localStorage.setItem("pratoSelecao", JSON.stringify(null));
+            localStorage.setItem("listaPratos", JSON.stringify([]));
+            localStorage.setItem("Tabela", "Nao");
+
+            AdicionarPratoImagem(nome, preco, imagem);
+            localStorage.setItem("ToDescription", "Sim");
+            goToMenu();
+        }
+    </script>        
 </body>
