@@ -6,7 +6,7 @@
 
 <meta charset="utf-8">
 
-<!--Variavel global que rep resenta o numero de segundos total do pedido-->
+<!--Variavel global que representa o numero de segundos total do pedido-->
 <script type="text/javascript"> 
 	var time = 800;
 </script>
@@ -66,6 +66,10 @@
 		</button>
 	</div>
 
+	<div class="Remover" style="display: none;">
+		<button id="Remove" class="btn btn-danger">X</button>
+	</div>
+
 	<!--Tabela de visualização do pedido-->
 	<div id="OverviewGrid">
 		<div id="Plates Grid" style="position: relative; max-height: 410px; width: 100%; overflow-y: scroll">
@@ -74,15 +78,17 @@
 					<td width="25%" height="50">Nome</td>
 					<td width="25%" height="50">€</td>
 					<td width="15%" height="50" style="min-width: 150px">Quantidade (doses)</td>
+					<td width="10%" height="50"></td>
 				</tr>
 			</table>
 		</div>
 
 		<table id="Table2" align="center" width="85%">
 			<tr style="font-size: 1.7em; border-top: solid var(--border_color);">
-				<td width="25%" height="80">Total:</td>
-				<td width="25%" height="80" id="TotalTexto">13.50</td>
+				<td width="20%" height="80">Total:</td>
+				<td width="20%" height="80" id="TotalTexto">13.50</td>
 				<td width="15%" height="80" style="min-width: 150px"></td>
+				<td width="10%" height="80"></td>
 			</tr>
 		</table>
 	</div>

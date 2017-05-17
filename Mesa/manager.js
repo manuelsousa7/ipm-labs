@@ -6,6 +6,8 @@ Prato = function(nome, preco) {
 	this.lipidos = nome.length * 3;
 	this.hidratos = nome.length * 10;
 	this.tempo = nome.length * 0.5;
+	this.quant = 1;
+	this.personalizado = false;
 }
 
 PratoImagem = function(nome, preco, imagem) {
@@ -13,9 +15,15 @@ PratoImagem = function(nome, preco, imagem) {
 	this.imagem = imagem;
 }
 
-var pratoSelecao = 0;
+PratoImagem2 = function(nome, preco, imagem,personalizar) {
+	this.prato = new Prato(nome, preco);
+	this.imagem = imagem;
+	this.personalizar = personalizar;
+}
 
-var caloryThreshold = 10;
+var pratoSelecao = null;
+
+var caloryThreshold = 16;
 
 function AdicionarPrato(nome, preco) {
 	var listaPratos = JSON.parse(localStorage.getItem("listaPratos"));
@@ -42,8 +50,19 @@ function AdicionarPratoImagem(nome, preco, imagem) {
 	localStorage.setItem("pratoSelecao", JSON.stringify(pratoSelecao));
 }
 
+function AdicionarPratoImagem2(nome, preco, imagem,personalizar) {
+	pratoSelecao = new PratoImagem2(nome, preco, imagem, personalizar);
+	localStorage.setItem("pratoSelecao", JSON.stringify(pratoSelecao));
+}
+
 function ProcessSelection(nome, preco, imagem) {
 	AdicionarPratoImagem(nome, preco, imagem);
+	window.location.href = "descricao.html";
+}
+
+
+function ProcessSelection2(nome, preco, imagem,personalizar) {
+	AdicionarPratoImagem2(nome, preco, imagem,personalizar);
 	window.location.href = "descricao.html";
 }
 
