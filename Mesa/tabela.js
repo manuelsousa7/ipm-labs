@@ -123,18 +123,16 @@ window.onload = function() {
 
 	contador = 0;
 	var listaPratos = JSON.parse(localStorage.getItem("listaPratos"));
-	if (listaPratos.length <= 0) {
-		alert("Null");
+	if (listaPratos.length == 0) {
 		var lista = [];
 		localStorage.setItem("listaPratos", JSON.stringify(lista));
 	}
 	else {
-		contador = listaPratos.length;
 		var i;
 		for (i = 0; i < listaPratos.length; i++) {
 			localStorage.setItem("pratoSelecao", JSON.stringify(listaPratos[i]));
 			AdicionaTabela2(listaPratos[i]);
-		} 
+		}
 	}
 	/*
 	contador = 0;

@@ -1,7 +1,7 @@
 window.onload = function() {
+	newIndex = localStorage.getItem("IndexMenu");
 	var imagem = document.getElementById("Imagem");
-	var temp = localStorage.getItem("pratoSelecao");
-	var descricao = JSON.parse(temp);
+	var descricao = JSON.parse(localStorage.getItem("pratoSelecao"));
 	imagem.setAttribute("src", descricao.imagem);
 	document.getElementById("NomePrato").innerHTML = descricao.prato.nome;
 	document.getElementById("PrecoPrato").innerHTML = descricao.prato.preco.toFixed(2) + " €";
@@ -11,10 +11,9 @@ window.onload = function() {
 	document.getElementById("TextoLipidos").innerHTML = "Lípidos:\t" + descricao.prato.lipidos + " g";
 	document.getElementById("TextoHidratos").innerHTML = "Hidratos:\t" + descricao.prato.hidratos + " g";
 
-	newIndex = localStorage.getItem("IndexMenu");
 }
 
-var newIndex;
+var newIndex = -1;
 
 function change(){
 	window.top.location.href = "../tabelanut/index.html";
@@ -26,14 +25,12 @@ function change2(){
 
 function chamada() {
 	var novosPratos = JSON.parse(localStorage.getItem("listaPratos"));
-	var novo = JSON.parse(localStorage.getItem("pratoSelecao"));
-	localStorage.setItem("listaPratos", JSON.stringify(novosPratos));
 	localStorage.setItem("Tabela", "Sim");
 }
 	
 setInterval(
 	function() {
-		if (localStorage.getItem("IndexMenu") != newIndex.toString()) {
+		if (newIndex != -1 && localStorage.getItem("IndexMenu") != newIndex) {
 
 			switch (localStorage.getItem("IndexMenu")) {
 				case "1":

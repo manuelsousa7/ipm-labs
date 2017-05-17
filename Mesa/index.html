@@ -36,6 +36,13 @@
     <script type="text/javascript">
         // variavel global que guarda  a  ultima sugestao clicada
         var previous = 0;
+
+        window.onload = function() {
+            alert("Sim!");
+            localStorage.setItem("pratoSelecao", JSON.stringify(null));
+            localStorage.setItem("listaPratos", JSON.stringify([]));
+            localStorage.setItem("Tabela", "Nao");
+        }
     </script>
 
     <script>
@@ -51,12 +58,6 @@
         }
         function goToCalculator(){
             window.top.location.href = "tabelanut/calculadora.htm";
-        }
-
-        window.onload = function() {
-            var lista = [];
-            localStorage.setItem("listaPratos", JSON.stringify(lista));
-            localStorage.setItem("Tabela", "Nao");
         }
     </script>
 
@@ -140,6 +141,10 @@
             </button>
             <script type="text/javascript">
                 function goToMenu(){
+
+                    localStorage.setItem("listaPratos", JSON.stringify([]));
+                    localStorage.setItem("Tabela", "Nao");
+
                     window.top.location.href = "personalizar/index.html";
                 }   
             </script>
@@ -180,6 +185,11 @@
 
         <script type="text/javascript">
             function Sugestao(nome, preco, imagem) {
+
+                localStorage.setItem("pratoSelecao", JSON.stringify(null));
+                localStorage.setItem("listaPratos", JSON.stringify([]));
+                localStorage.setItem("Tabela", "Nao");
+
                 AdicionarPratoImagem(nome, preco, imagem);
                 localStorage.setItem("ToDescription", "Sim");
                 goToMenu();

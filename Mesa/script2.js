@@ -108,8 +108,6 @@ function CarregaPratos() {
 
 window.onload = function() {
 
-	alert("Nao");
-	//alert(document.title);
 	var lista = localStorage.getItem("listaPratos");
 	pratos = JSON.parse(lista);
 	
