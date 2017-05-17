@@ -334,7 +334,7 @@ body {
 				    		<p>Carne de porco à alentejana com favas e molho do algarve. Contem ervas aromaticas do minho.</p>
 				    		<br>
 				    		<br>
-				    		<button class="BotaoDescricao" type="button" class="button" style="font-size: 2em;" onclick="ProcessSelection2('Carne do Algarvee', 6.50, 'comida/1.jpg','tabela/tabela1/carneAlg.html')">
+				    		<button class="BotaoDescricao" type="button" class="button" style="font-size: 2em;" onclick="ProcessSelection('Carne do Algarve', 6.50, 'comida/1.jpg')">
 									Saber mais
 							</button>
 							<button class="BotaoDescricao" type="button" class="button" style="font-size: 2em;" onclick="AdicionarSemImagem('Carne do Algarve', 6.50)">
@@ -748,10 +748,6 @@ body {
 								break;
 						}
 
-					}
-					if (localStorage.getItem("ToDescription") == "Sim") {
-						localStorage.setItem("ToDescription", "Nao");
-						window.location.href = "descricao.html";
 					}
 				}
 			, 100);
