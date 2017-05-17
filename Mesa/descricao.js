@@ -22,7 +22,7 @@ function change(){
 function change2(){
 	var personalizar = JSON.parse(localStorage.getItem("pratoSelecao"));
 	window.location.href = personalizar.personalizar;
-}
+} 
 
 function chamada() {
 	var novosPratos = JSON.parse(localStorage.getItem("listaPratos"));
