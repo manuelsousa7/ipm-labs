@@ -15,6 +15,12 @@ PratoImagem = function(nome, preco, imagem) {
 	this.imagem = imagem;
 }
 
+PratoImagem2 = function(nome, preco, imagem,personalizar) {
+	this.prato = new Prato(nome, preco);
+	this.imagem = imagem;
+	this.personalizar = personalizar;
+}
+
 var pratoSelecao = null;
 
 var caloryThreshold = 16;
@@ -44,8 +50,19 @@ function AdicionarPratoImagem(nome, preco, imagem) {
 	localStorage.setItem("pratoSelecao", JSON.stringify(pratoSelecao));
 }
 
+function AdicionarPratoImagem2(nome, preco, imagem,personalizar) {
+	pratoSelecao = new PratoImagem2(nome, preco, imagem, personalizar);
+	localStorage.setItem("pratoSelecao", JSON.stringify(pratoSelecao));
+}
+
 function ProcessSelection(nome, preco, imagem) {
 	AdicionarPratoImagem(nome, preco, imagem);
+	window.location.href = "descricao.html";
+}
+
+
+function ProcessSelection2(nome, preco, imagem,personalizar) {
+	AdicionarPratoImagem2(nome, preco, imagem,personalizar);
 	window.location.href = "descricao.html";
 }
 

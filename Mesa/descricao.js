@@ -20,7 +20,8 @@ function change(){
 }
 
 function change2(){
-	window.top.location.href = "../personalizar/tabela/tabela1/index.html";
+	var personalizar = JSON.parse(localStorage.getItem("pratoSelecao"));
+	window.location.href = personalizar.personalizar;
 }
 
 function chamada() {
