@@ -1,5 +1,4 @@
 window.onload = function() {
-	localStorage.setItem("Tabela", "Nao");
 	var imagem = document.getElementById("Imagem");
 	var temp = localStorage.getItem("pratoSelecao");
 	var descricao = JSON.parse(temp);
@@ -11,7 +10,11 @@ window.onload = function() {
 	document.getElementById("TextoProteinas").innerHTML = "Proteínas:\t" + descricao.prato.proteinas + " g";
 	document.getElementById("TextoLipidos").innerHTML = "Lípidos:\t" + descricao.prato.lipidos + " g";
 	document.getElementById("TextoHidratos").innerHTML = "Hidratos:\t" + descricao.prato.hidratos + " g";
+
+	newIndex = localStorage.getItem("IndexMenu");
 }
+
+var newIndex;
 
 function change(){
 	window.top.location.href = "../tabelanut/index.html";
@@ -23,8 +26,32 @@ function change2(){
 
 function chamada() {
 	var novosPratos = JSON.parse(localStorage.getItem("listaPratos"));
-	novosPratos.push(JSON.parse(localStorage.getItem("pratoSelecao")));
+	var novo = JSON.parse(localStorage.getItem("pratoSelecao"));
 	localStorage.setItem("listaPratos", JSON.stringify(novosPratos));
 	localStorage.setItem("Tabela", "Sim");
 }
 	
+setInterval(
+	function() {
+		if (localStorage.getItem("IndexMenu") != newIndex.toString()) {
+
+			switch (localStorage.getItem("IndexMenu")) {
+				case "1":
+					window.location.href = "comida1.html";
+					localStorage.setItem("IndexMenu", "1");
+					break;
+
+				case "2":
+					window.location.href = "comida2.html";
+					localStorage.setItem("IndexMenu", "2");
+					break;
+
+				case "3":
+					window.location.href = "comida3.html";
+					localStorage.setItem("IndexMenu", "3");
+					break;
+			}
+
+		}
+	}
+, 100);

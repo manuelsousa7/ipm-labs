@@ -4,7 +4,9 @@ var ignore = 0;
 //Clicar nos botoes das quantidades
 function CustomOnClick(index, add) {
 	var nome = "Quantidade" + index.toString();
-	var old = document.getElementById(nome).innerHTML;
+
+	var listaPratos = JSON.parse(localStorage.getItem("listaPratos"));
+	var old = listaPratos[index - 1].quant;
 
 	if (add) {
 		old++;
@@ -13,7 +15,11 @@ function CustomOnClick(index, add) {
 	else if (old >= 1) { 
 		old--;
 	}
+
+	listaPratos[index - 1].quant = old;
 	document.getElementById(nome).innerHTML = old;
+
+	localStorage.setItem("listaPratos", JSON.stringify(listaPratos)); 
 	UpdatePriceText();
 }
 
@@ -87,6 +93,9 @@ function CarregaPratos() {
 		newQuantity.children[1].setAttribute("id", nomes[2] + i);
 		newQuantity.children[2].setAttribute("id", nomes[3] + i);
 
+			var listaPratos = JSON.parse(localStorage.getItem("listaPratos"));
+			newQuantity.children[1].innerHTML = pratos[i - 1].quant;
+
 		newClick0 = "CustomOnClick(" + i + ", false)";
 		newClick2 = "CustomOnClick(" + i + ", true)";
 
@@ -99,6 +108,8 @@ function CarregaPratos() {
 
 window.onload = function() {
 
+	alert("Nao");
+	//alert(document.title);
 	var lista = localStorage.getItem("listaPratos");
 	pratos = JSON.parse(lista);
 	

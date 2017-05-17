@@ -6,6 +6,8 @@ Prato = function(nome, preco) {
 	this.lipidos = nome.length * 3;
 	this.hidratos = nome.length * 10;
 	this.tempo = nome.length * 0.5;
+	this.quant = 1;
+	this.personalizado = false;
 }
 
 PratoImagem = function(nome, preco, imagem) {
@@ -13,9 +15,9 @@ PratoImagem = function(nome, preco, imagem) {
 	this.imagem = imagem;
 }
 
-var pratoSelecao = 0;
+var pratoSelecao = null;
 
-var caloryThreshold = 10;
+var caloryThreshold = 16;
 
 function AdicionarPrato(nome, preco) {
 	var listaPratos = JSON.parse(localStorage.getItem("listaPratos"));

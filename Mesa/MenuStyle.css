@@ -157,3 +157,7 @@ body{
 	background-color: #fccb1b;
 	color: #545775;
 }
+
+#ListaSugestoes li {
+	cursor: pointer;
+}

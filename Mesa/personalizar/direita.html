@@ -45,7 +45,7 @@
 
 	#BotaoPedir {
 		position: absolute;
-		right: auto;
+		left: 37%;
 	}
 
 </style>
@@ -56,12 +56,26 @@
 
 	<p id="Titulo">PEDIDO</p>
 
+	<!--Escolher a quantidade a pedir-->
+	<div class="Quantidade" style="display: none;">
+		<button id="QuadradoMenos" class="BotaoQuantidade" style="display: inline;">
+			-
+		</button>
+		<div id="Quantidade" class="QuadradoQuantidade" style="display: inline;">
+			1
+		</div>
+		<button id="QuadradoMais" class="BotaoQuantidade" style="display: inline;">
+			+
+		</button>
+	</div>
+
 	<!--Tabela de visualização do pedido-->
 	<div id="OverviewGrid">
-		<table id="Table" border="0" align="center" width="85%">
+		<table id="Table" border="0" align="center" width="95%">
 			<tr style="font-size: 1.2em; font-weight: bold">
-				<td width="50%" height="50">Nome</td>
-				<td width="50%" height="50">€</td>
+				<td width="35%" height="60">Nome</td>
+				<td width="15%" height="60">€</td>
+				<td width="50%" height="60"></td>
 			</tr>
 		</table>
 		<div id="NovaTabela">

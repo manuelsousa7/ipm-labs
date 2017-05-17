@@ -31,15 +31,15 @@
 }
 
 #Quantidade div{
-	display: inline;
+	display: inline-block;
 	text-align: center;
 }
 
 .BotaoQuantidade {
 	margin-left: 5%;
-	margin-right: 5%;
-	padding-left: 5%;
-	padding-right: 5%;
+	margin-right: 2%;
+	padding-left: 2%;
+	padding-right: 2%;
 	border: solid var(--border_color);
 	border-radius: 8px;
 	font-size: .8em;
