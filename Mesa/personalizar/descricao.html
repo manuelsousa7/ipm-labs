@@ -22,7 +22,7 @@
 	<![endif]  #EAEDF1 -->
 
 	<link rel="stylesheet" href="clock/flipclock2.css">
-
+<link rel="stylesheet" href="../tool.css">
 	<script src="..\google/jquery.min.js"></script>
 	<script src="..\clock/flipclock2.js"></script>
 
@@ -223,21 +223,21 @@
 		</div>
 	</div>
 
-	<button id="BotaoVoltar" type="button" class="button" onclick="window.top.location.href = 'index.html';" style="font-size: 2em;">
+	<button id="BotaoVoltar" type="button" class="button" data-balloon-pos="up" data-balloon="Volte para o menu anterior" onclick="window.top.location.href = 'index.html';" style="font-size: 2em;">
 		VOLTAR
 	</button>
 
 
-		<button id="BotaoPersonalizar" type="button" class="button" style="font-size: 2em;" onclick="change2()">
+		<button id="BotaoPersonalizar" data-balloon-pos="up" data-balloon="Clique para personalizar pedido" type="button" class="button" style="font-size: 2em;" onclick="change2()">
 		PERSONALIZAR
 	</button>
 
 
-	<button id="BotaoCalorias" type="button" class="button" style="font-size: 2em;" onclick="change()">
+	<button id="BotaoCalorias" type="button" class="button" data-balloon-pos="down" data-balloon="Consulte tabela de nutricao detalhada!" style="font-size: 2em;" onclick="change()">
 		NUTRIÇÃO
 	</button>
 
-	<button id="BotaoPedir" type="button" class="button" onclick="chamada()" style="font-size: 2em;">
+	<button id="BotaoPedir" type="button" class="button" data-balloon-pos="up" data-balloon="Adicione prato ao pedido" onclick="chamada()" style="font-size: 2em;">
 		ADICIONAR
 	</button>
 

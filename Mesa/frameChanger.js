@@ -11,6 +11,10 @@ function goToMenu(){
 	window.top.location.href = "personalizar/index.html";
 }
 
+function pagarMenu(){
+	window.top.location.href = "pagar/index.html";
+}
+
 
 function incompleteFrame(){
 	document.getElementById("frame").src = "404.html"
