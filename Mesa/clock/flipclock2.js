@@ -554,40 +554,16 @@ var FlipClock;
 	
 }(jQuery));
 
-/*jshint smarttabs:true */
 
-/**
- * FlipClock.js
- *
- * @author     Justin Kimbrell
- * @copyright  2013 - Objective HTML, LLC
- * @licesnse   http://www.opensource.org/licenses/mit-license.php
- */
 	
 (function($) {
 	
 	"use strict";
-	
-	/**
-	 * The FlipClock Factory class is used to build the clock and manage
-	 * all the public methods.
-	 *
-	 * @param 	object  A jQuery object or CSS selector used to fetch
-	 				    the wrapping DOM nodes
-	 * @param 	mixed   This is the digit used to set the clock. If an 
-	 				    object is passed, 0 will be used.	
-	 * @param 	object  An object of properties to override the default	
-	 */
+
 	 	
 	FlipClock.Factory = FlipClock.Base.extend({
 		
-		/**
-		 * The clock's animation rate.
-		 * 
-		 * Note, currently this property doesn't do anything.
-		 * This property is here to be used in the future to
-		 * programmaticaly set the clock's animation speed
-		 */		
+
 
 		animationRate: 1000,
 
@@ -791,12 +767,6 @@ var FlipClock;
 			
 			return this.face;
 		},
-				
-		/**
-		 * Load the FlipClock.Lang object
-		 *
-		 * @param	object  The name of the language to load
-		 */
 		 
 		loadLanguage: function(name) {	
 			var lang;
@@ -814,13 +784,6 @@ var FlipClock;
 			return this.lang = lang;
 		},
 					
-		/**
-		 * Localize strings into various languages
-		 *
-		 * @param	string  The index of the localized string
-		 * @param	object  Optionally pass a lang object
-		 */
-
 		localize: function(index, obj) {
 			var lang = this.lang;
 
@@ -841,10 +804,6 @@ var FlipClock;
 			return index;
 		},
 		 
-
-		/**
-		 * Starts the clock
-		 */
 		 
 		start: function(callback) {
 			var t = this;
@@ -937,28 +896,13 @@ var FlipClock;
 
 /*jshint smarttabs:true */
 
-/**
- * FlipClock.js
- *
- * @author     Justin Kimbrell
- * @copyright  2013 - Objective HTML, LLC
- * @licesnse   http://www.opensource.org/licenses/mit-license.php
- */
+
 	
 (function($) {
 	
 	"use strict";
 	
-	/**
-	 * The FlipClock List class is used to build the list used to create 
-	 * the card flip effect. This object fascilates selecting the correct
-	 * node by passing a specific digit.
-	 *
-	 * @param 	object  A FlipClock.Factory object
-	 * @param 	mixed   This is the digit used to set the clock. If an 
-	 *				    object is passed, 0 will be used.	
-	 * @param 	object  An object of properties to override the default	
-	 */
+
 	 	
 	FlipClock.List = FlipClock.Base.extend({
 		
