@@ -252,3 +252,7 @@ p{
 	font-size: 1.5em;
 	background-color: #FF595E;
 }
+
+#ListaSugestoes li:hover {
+	cursor: pointer;
+}

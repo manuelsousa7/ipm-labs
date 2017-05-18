@@ -113,7 +113,7 @@ function CarregaPratos() {
 		newTd[0].setAttribute("width", "25%");
 		newTd[1].setAttribute("width", "25%");
 		newTd[2].setAttribute("width", "15%");
-		newTd[3].setAttribute("width", "10%");
+		newTd[3].setAttribute("width", "7%");
 		newTd[0].setAttribute("height", "80");
 		newTd[1].setAttribute("height", "80");
 		newTd[2].setAttribute("height", "80");

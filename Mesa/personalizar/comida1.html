@@ -32,9 +32,16 @@
 
 
 <style>
-body{
+			body{
 				margin:0;
 				font: 14px Helvetica, Arial, serif;
+			}
+
+			:root {
+				--background_1: #fccb1b;
+				--background_2: #FFFCF9;
+				--font_color: #545775;
+				--border_color: #F4A261;
 			}
 			.title {
 			  text-align: center;
@@ -163,6 +170,13 @@ body{
 			}
 			.BotaoDescricao:hover {
 				cursor: pointer;
+			}
+			.BotaoDescricao {
+				color:  var(--font_color);
+				background-color: var(--background_1);
+				border: solid var(--border_color);
+				border-radius: 8px;
+				text-align: center;
 			}
 
 

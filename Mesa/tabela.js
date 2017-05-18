@@ -92,11 +92,6 @@ function AdicionaTabela2(prato) {
 
 	var listaPratos = JSON.parse(localStorage.getItem("listaPratos"));
 	var i;
-	for (i = 0; i < listaPratos.length; i++) {
-		if (listaPratos[i].nome == prato.nome) {
-			return;
-		}
-	}
 
 	var table = document.getElementById("TabelaPratos");
 	var newTr = table.insertRow(contador++);
@@ -162,7 +157,6 @@ window.onload = function() {
 	else {
 		var i;
 		for (i = 0; i < listaPratos.length; i++) {
-			localStorage.setItem("pratoSelecao", JSON.stringify(listaPratos[i]));
 			AdicionaTabela2(listaPratos[i]);
 		}
 	}
