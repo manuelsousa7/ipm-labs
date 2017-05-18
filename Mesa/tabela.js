@@ -15,12 +15,10 @@ function AdicionaTabela() {
 		localStorage.per = 0;
 		descricao.prato.personalizado = true;
 		descricao.prato.nome = n.concat("*");
-		alert(descricao.prato.nome);
 	}
 	if(!descricao.prato.personalizado){
 		for (i = 0; i < listaPratos.length; i++) {
 			if (listaPratos[i].nome == descricao.prato.nome) {
-				alert("Ja existe");
 				return;
 			} 
 		}
@@ -231,7 +229,6 @@ function save(){
 setInterval(
 	function() {
 		if (localStorage.getItem("Tabela") == "Sim") {
-			alert("in");
 			localStorage.setItem("Tabela", "Nao");
 			AdicionaTabela();
 		}

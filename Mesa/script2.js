@@ -52,6 +52,8 @@ function CustomOnClick2(index) {
 		document.getElementById(nomes[4] + (listaPratos.length + 1)).setAttribute("id", nomes[4] + (i + 1));
 		document.getElementById(nomes[4] + (i + 1)).setAttribute("onclick", newClick);
 	}
+
+	UpdatePriceText();
 	
 }
 
