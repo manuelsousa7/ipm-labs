@@ -10,10 +10,19 @@ function AdicionaTabela() {
 
 	var listaPratos = JSON.parse(localStorage.getItem("listaPratos"));
 	var i;
-	for (i = 0; i < listaPratos.length; i++) {
-		if (listaPratos[i].nome == descricao.prato.nome) {
-			alert("Ja existe");
-			return;
+	if(localStorage.per==1){
+		var n = localStorage.getItem("PersName");
+		localStorage.per = 0;
+		descricao.prato.personalizado = true;
+		descricao.prato.nome = n.concat("*");
+		alert(descricao.prato.nome);
+	}
+	if(!descricao.prato.personalizado){
+		for (i = 0; i < listaPratos.length; i++) {
+			if (listaPratos[i].nome == descricao.prato.nome) {
+				alert("Ja existe");
+				return;
+			} 
 		}
 	}
 
@@ -146,7 +155,6 @@ function AdicionaTabela2(prato) {
 }
 
 window.onload = function() {
-
 	contador = 0;
 	var listaPratos = JSON.parse(localStorage.getItem("listaPratos"));
 	if (listaPratos.length == 0) {
@@ -214,10 +222,16 @@ function CustomOnClick2(index) {
 	
 	contador--;
 }
+function save(){
+			localStorage.per = 1;
+			localStorage.setItem("PersName","Carne do Algarve");
+			AdicionaTabela();
+}
 
 setInterval(
 	function() {
 		if (localStorage.getItem("Tabela") == "Sim") {
+			alert("in");
 			localStorage.setItem("Tabela", "Nao");
 			AdicionaTabela();
 		}

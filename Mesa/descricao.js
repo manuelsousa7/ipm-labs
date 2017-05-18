@@ -25,8 +25,16 @@ function change2(){
 }
 
 function chamada() {
+	alert("oi oi");
 	var novosPratos = JSON.parse(localStorage.getItem("listaPratos"));
 	localStorage.setItem("Tabela", "Sim");
+}
+
+function doit(){
+			localStorage.per = 1;
+			localStorage.setItem("PersName","Carne do Algarve");
+			alert("aqui");
+			chamada();
 }
 	
 setInterval(

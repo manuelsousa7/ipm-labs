@@ -7,7 +7,7 @@ Prato = function(nome, preco) {
 	this.hidratos = nome.length * 10;
 	this.tempo = nome.length * 0.5;
 	this.quant = 1;
-	this.personalizado = false;
+	this.personalizado = false; 
 }
 
 PratoImagem = function(nome, preco, imagem) {

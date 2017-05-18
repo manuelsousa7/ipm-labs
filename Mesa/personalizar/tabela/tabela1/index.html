@@ -14,6 +14,9 @@
 <link href="dist/css/flat-ui.css" rel="stylesheet">
 <link href="../../../PagamentoStyle.css" rel="stylesheet">
 
+<script type="text/javascript" src="../../../tabela.js"></script>
+<script type="text/javascript" src="../../../manager.js"></script>
+    <script type="text/javascript" src="../../../descricao.js"></script>
 
 <style type="text/css">
 	.imageBox {
@@ -111,10 +114,10 @@ function ShowPicture(id,show, img) {
 				<div style="clear:both"/>
 				<!-- list of dropeed elements -->
 				<form id="myform">
-				Pedido comporto por:
+				Pedido composto por:
 					<ol id="drop-list">
 					</ol>
-					<input id="save-button" type="button" value="Guardar" class="button" onclick="" title="Save form"/>
+					<input id="save-button" type="button" value="Guardar" class="button" onclick="doit()" title="Save form"/>
 				</form>
 				
 			</div>
