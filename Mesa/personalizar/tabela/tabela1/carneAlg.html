@@ -37,7 +37,7 @@ html, body {
 }
 
 #table1 {
-	margin-top: 40px;
+	margin-top: 200px;
 }
 
 #table1 tr {
@@ -46,7 +46,8 @@ html, body {
 	border-color: var(--border_color);
 }
 
-#BotaoVoltar, #BotaoPedir {
+#BotaoVoltar {
+	position: absolute;
     color:  var(--font_color);
     background-color: var(--background_1);
     border: solid var(--border_color);
@@ -54,15 +55,37 @@ html, body {
     border-color: var(--border_color);
     font-size: 4em;
 
-    width: 15%;
-    height: 6%;
+    bottom: 5%;
+    left: 5%;
+
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    margin-bottom: 1%;
+}
+
+#BotaoNovo {
+	position: absolute;
+    color:  var(--font_color);
+    background-color: var(--background_1);
+    border: solid var(--border_color);
+    border-radius: 8px;
+    border-color: var(--border_color);
+    font-size: 50em;
+
+    top: 5%;
+    left: 5%;
+
+    width: 100%;
+    height: 100%;
     text-align: center;
 
     margin-bottom: 1%;
 }
 
 #redips-drag {
-	margin-top: 30%;
+	margin-top: 18%;
 	color: black;
 }
 
@@ -91,12 +114,21 @@ html, body {
     height: 35px;
     padding-left: 4px;
     padding-right: 4px;
+    margin-top: 10px;
 }
 
 
 </style>
 	</head>
 	<body>
+
+
+		<div style="position: absolute; width: 100%; height: 100%; top: 0%;">
+			<button id="BotaoNovo" type="button" class="button" onclick="window.location.href = window.history.back();">
+				VOLTAR
+			</button>
+		</div>
+
 		<div class="imageBox" id="Style">
    			<img height="300" width="300" style="img{border:0;};" src="" />
 		</div>
@@ -135,7 +167,8 @@ html, body {
 
 					<div id="message"></div>
 				</div>
-			</div><!-- left container -->
+			</div>
+			<!-- left container -->
 			
 			<script>
 			function ShowPicture(id,show, img) {
@@ -162,12 +195,14 @@ html, body {
 				<div style="clear:both"/>
 				<!-- list of dropeed elements -->
 				<form id="myform" style="border: solid; border-radius: 2px; border-color: var(--border_color); background-color: var(--background_2)">
-				<p style="margin-left: 8px">Pedido composto por:</p>
-					<ol id="drop-list" style="margin-left: 8px">
+				<p style="margin-left: 8px;">Pedido composto por:</p>
+					<ol id="drop-list" style="margin-left: 8px; max-height: 310px; overflow: scroll">
 					</ol>
 					<input id="save-button" type="button" value="Guardar" class="button" onclick="" title="Save form"/>
 				</form>
 				
+				</div>
+
 			</div>
 		</div>
 	</body>
