@@ -28,6 +28,7 @@
 <style type="text/css">
 	:root {
 		--border_color: #F4A261;
+		--background_2: #FFFCF9;
 	}
 
 	::-webkit-scrollbar { 
@@ -36,6 +37,7 @@
 
 	body {
 		overflow: hidden;
+		background-color: var(--background_2);
 	}
 
 	#NovaTabela {
@@ -45,7 +47,8 @@
 
 	#BotaoPedir {
 		position: absolute;
-		left: 37%;
+		left: 28%;
+		width: 220px;
 	}
 
 </style>
@@ -88,7 +91,7 @@
 		</div>
 	</div>
 	
-	<button id="BotaoPedir" type="button" class="button" onclick="goPay()" style="font-size: 2em;">
+	<button id="BotaoPedir" type="button" class="button" onclick="goPay()" style="font-size: 2.5em;">
 		PEDIR
 	</button>
 	

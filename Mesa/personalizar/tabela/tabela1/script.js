@@ -13,7 +13,7 @@ redips.configuration = function () {
 	redips.right = 'right';					// id of right DIV container
 	redips.form = 'myform';					// id of form beneath right table
 	redips.ajaxSave = 'db_save.php';		// submit form to the server
-	redips.deleteText = '[apagar]';		// delete text before item
+	redips.deleteText = 'X';		// delete text before item
 	redips.request = null;					// AJAX request
 	redips.ol = null;						// OL (Ordered List) reference (reference is set in redips.init)
 };
@@ -111,22 +111,23 @@ redips.addItem = function (obj) {
 	// create LI and INPUT elements (as well as text node)
 	var li  = document.createElement('li'),
 		input = document.createElement('input'),
-		span = document.createElement('span'),
 		text = obj.innerText || obj.textContent,
 		txtLi = document.createTextNode(text),
+		span = document.createElement('button'),
 		txtSpan = document.createTextNode(redips.deleteText);
 	// set properties for hidden input element: type, name and value (regex is needed because cloned element contains sufix "c0" like i01c0 that should be discarded)
+	span.setAttribute("style", "width: 30px; height: 30px; margin-left: 20px; padding-left: 9.5px; padding-top: 4px; font-size: 100%");
 	input.type = 'hidden';
 	input.name = 'p[]';
 	input.value = obj.id.match(/(.*)?c\d+/)[1];
-	// create span node
-	span.appendChild(txtSpan);
 	span.onclick = redips.deleteItem;
-	span.className = 'deleteItem';
-	// append span element
-	li.appendChild(span);
+	span.className = 'deleteItem btn btn-danger';
 	// append text node to the list item element
 	li.appendChild(txtLi);
+	// create span node
+	span.appendChild(txtSpan);
+	// append span element
+	li.appendChild(span);
 	// append input element
 	li.appendChild(input);
 	// append list item element to the UL
@@ -152,7 +153,8 @@ redips.deleteItem = function (e) {
 	// define item text (cross browser - Firefox uses the W3C-compliant textContent property)
 	text = li.innerText || li.textContent;
 	// cut out "[delete]" string
-	text = text.substring(redips.deleteText.length);
+	text = text.substring(redips.deleteText.length - 1);
+	text = text.substring(0, text.length - 1)
 	// delete item from the list
 	li.parentNode.removeChild(li);
 	// display message

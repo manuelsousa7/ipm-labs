@@ -1,5 +1,6 @@
 window.onload = function() {
-	newIndex = localStorage.getItem("IndexMenu");
+	newIndex = "0";
+	localStorage.setItem("IndexMenu", "0");
 	var imagem = document.getElementById("Imagem");
 	var descricao = JSON.parse(localStorage.getItem("pratoSelecao"));
 	imagem.setAttribute("src", descricao.imagem);

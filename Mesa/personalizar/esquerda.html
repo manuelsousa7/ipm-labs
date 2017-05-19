@@ -12,8 +12,36 @@
       <link rel="stylesheet" href="css/style.css">
 
       <style type="text/css">
+        :root {
+          --background_1: #fccb1b;
+          --background_2: #FFFCF9;
+          --font_color: #545775;
+          --border_color: #F4A261;
+        }
+
         ::-webkit-scrollbar { 
           display: none; 
+        }
+
+
+        #BotaoVoltar {
+          position: absolute;
+          color:  var(--font_color);
+          background-color: var(--background_1);
+          border: solid var(--border_color);
+          border-radius: 8px;
+          text-align: center;
+
+          cursor: pointer;
+
+          margin-left: 20px;
+
+          font-size: 250%;
+
+          bottom: 30px;
+          width: 85%;
+          height: 100px;
+
         }
       </style>
 
@@ -22,7 +50,7 @@
 
 <body>
   
-<div class="amazing-menu" style="max-height: 700px">
+<div class="amazing-menu" style="max-height: 920px">
   <div class="menu-item">
     <div class="container" onclick="MudaIndex(1)">
       <div class="icon"><span class="ion-pizza"></span></div>
@@ -108,6 +136,10 @@
     </div>
   </div>
 </div>
+
+<button id="BotaoVoltar" type="button" class="button" onclick="window.top.location.href = '../index.html';">
+  SAIR
+</button>
   
     <script src="js/index.js"></script>
 

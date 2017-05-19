@@ -16,87 +16,138 @@
 
 
 <style type="text/css">
-	.imageBox {
+
+:root {
+	--background_1: #fccb1b;
+	--background_2: #FFFCF9;
+	--font_color: #545775;
+	--border_color: #F4A261;
+}
+
+html, body {
+	background-color: var(--background_2);
+	color: black;
+	border-color: var(--border_color);
+}
+
+.imageBox {
   position: absolute;
-  padding: 5px;
   left:670px;
   top:20;
 }
 
+#table1 {
+	margin-top: 40px;
+}
+
+#table1 tr {
+	background-color: var(--background_2);
+	border-bottom: solid;
+	border-color: var(--border_color);
+}
+
 #BotaoVoltar, #BotaoPedir {
-            color:  var(--font_color);
-            background-color: var(--background_1);
-            border: solid var(--border_color);
-            border-radius: 8px;
-            font-size: 4em;
+    color:  var(--font_color);
+    background-color: var(--background_1);
+    border: solid var(--border_color);
+    border-radius: 8px;
+    border-color: var(--border_color);
+    font-size: 4em;
 
-            width: 15%;
-            height: 6%;
-            text-align: center;
+    width: 15%;
+    height: 6%;
+    text-align: center;
 
-            margin-bottom: 1%;
-        }
+    margin-bottom: 1%;
+}
 
-        #BotaoPedir {
-            position: absolute;
-            bottom: 5%;
-            right: 75%;
-            width: 18%;
+#redips-drag {
+	margin-top: 30%;
+	color: black;
+}
 
-            font-size: 1em;
-        }
+.redips-drag, .redips-clone {
+    background-color: var(--background_1);
+    border: solid var(--border_color);
+    color: black;
+    border-radius: 8px;
+    font-size: 150%;
+    height: 55px;
+    text-align: center;
+}
+
+#i00, #i01, #i03 {
+	padding-top: 12px;
+	color: black;
+}
+
+#save-button {
+	background-color: var(--background_1);
+    border: solid var(--border_color);
+    color: black;
+    border-radius: 8px;
+    text-align: center;
+    width: 100px;
+    height: 35px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+
 </style>
 	</head>
 	<body>
 		<div class="imageBox" id="Style">
-    <img height="290" width="290" style="img{border:0;}" src="" />
+   			<img height="300" width="300" style="img{border:0;};" src="" />
 		</div>
+
 		<!-- tables inside this DIV could have draggable content -->
 		<div id="redips-drag">
 			<!-- left container -->
 			<div id="left-container">
 				<!-- this block will become sticky (with a little JavaScript help)-->
 				<div id="left">
-					<table id="table1">
+
+					<table id="table1" width="400px" border="0">
 						<colgroup>
 							<col width="150"/>
 							<col width="300"/>
 						</colgroup>
+
 						<!-- items should have code length = 3 -->
-						<tr>
+						<tr style="height: 80px; border-top: solid; border-color: var(--border_color);">
 							<td><div id="i00" class="redips-drag redips-clone">Feijao Preto</div></td>
-							<td class="redips-mark desc" onMouseOver="ShowPicture('Style',1, 'preto.jpeg')" onMouseOut="ShowPicture('Style',0)" >1 dose de Feijao Preto</td>
+							<td style="font-size: 110%; border-left: solid; border-right: none; border-color: var(--border_color);" class="redips-mark desc" onMouseOver="ShowPicture('Style',1, 'preto.jpeg')" onMouseOut="ShowPicture('Style',0)" >1 dose de Feijao Preto</td>
 						</tr>
-						<tr>
+						<tr style="height: 80px;">
 							<td><div id="i01" class="redips-drag redips-clone" >Couves</div></td>
-							<td class="redips-mark desc" onMouseOver="ShowPicture('Style',1, 'couve.jpg')" onMouseOut="ShowPicture('Style',0)"> 1 Dose de Couves</td>
+							<td style="font-size: 110%; border-left: solid; border-right: none; border-color: var(--border_color);" class="redips-mark desc" onMouseOver="ShowPicture('Style',1, 'couve.jpg')" onMouseOut="ShowPicture('Style',0)"> 1 Dose de Couves</td>
 						</tr>
-						<tr>
+						<tr style="height: 80px;">
 							<td><div id="i02" class="redips-drag redips-clone">Arroz Carolino</div></td>
-							<td class="redips-mark desc" onMouseOver="ShowPicture('Style',1, 'carolino.jpg')" onMouseOut="ShowPicture('Style',0)">1 dose de Arroz Carolino</td>
+							<td style="font-size: 110%; border-left: solid; border-right: none; border-color: var(--border_color);" class="redips-mark desc" onMouseOver="ShowPicture('Style',1, 'carolino.jpg')" onMouseOut="ShowPicture('Style',0)">1 dose de Arroz Carolino</td>
 						</tr>
-						<tr>
+						<tr style="height: 80px;">
 							<td><div id="i03" class="redips-drag redips-clone">Alface</div></td>
-							<td class="redips-mark desc" onMouseOver="ShowPicture('Style',1, 'alface.jpg')" onMouseOut="ShowPicture('Style',0)">1 prato de alface</td>
+							<td style="font-size: 110%; border-left: solid; border-right: none; border-color: var(--border_color);" class="redips-mark desc" onMouseOver="ShowPicture('Style',1, 'alface.jpg')" onMouseOut="ShowPicture('Style',0)">1 prato de alface</td>
 						</tr>
 					</table>
+
 					<div id="message"></div>
 				</div>
 			</div><!-- left container -->
 			
 			<script>
-
-function ShowPicture(id,show, img) {
-  if (show=="1"){
-    document.getElementById(id).style.visibility = "visible"
-    document.getElementById(id).childNodes[1].src = img;
-  }
-  else if (show=="0"){
-    document.getElementById(id).style.visibility = "hidden"
-  }
-}
-
-</script>
+			function ShowPicture(id,show, img) {
+				if (show=="1"){
+				document.getElementById(id).style.visibility = "visible"
+				document.getElementById(id).childNodes[1].src = img;
+				}
+				else if (show=="0"){
+				document.getElementById(id).style.visibility = "hidden"
+				}
+			}
+			</script>
 
 			<!-- right container -->
 			<div id="right">
@@ -110,9 +161,9 @@ function ShowPicture(id,show, img) {
 				</table>
 				<div style="clear:both"/>
 				<!-- list of dropeed elements -->
-				<form id="myform">
-				Pedido comporto por:
-					<ol id="drop-list">
+				<form id="myform" style="border: solid; border-radius: 2px; border-color: var(--border_color); background-color: var(--background_2)">
+				<p style="margin-left: 8px">Pedido composto por:</p>
+					<ol id="drop-list" style="margin-left: 8px">
 					</ol>
 					<input id="save-button" type="button" value="Guardar" class="button" onclick="" title="Save form"/>
 				</form>
