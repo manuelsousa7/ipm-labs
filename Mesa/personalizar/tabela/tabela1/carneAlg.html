@@ -40,7 +40,7 @@ html, body {
 }
 
 #table1 {
-	margin-top: 200px;
+	margin-top: 120px;
 }
 
 #table1 tr {
@@ -49,35 +49,15 @@ html, body {
 	border-color: var(--border_color);
 }
 
-		#BotaoVoltar {
-			position: absolute;
-			bottom: 1%;
-			left: 2%;
-
-			font-size: 1em;
-		}
-
-
-
-
-
-#BotaoNovo {
+#BotaoVoltar {
 	position: absolute;
-    color:  var(--font_color);
-    background-color: var(--background_1);
-    border: solid var(--border_color);
-    border-radius: 8px;
-    border-color: var(--border_color);
-    font-size: 50em;
+	bottom: 5%;
+	left: 5%;
 
-    top: 5%;
-    left: 5%;
+	width: 15%;
+	height: 6%;
 
-    width: 100%;
-    height: 100%;
-    text-align: center;
-
-    margin-bottom: 1%;
+	font-size: 1em;
 }
 
 #redips-drag {
@@ -216,8 +196,11 @@ html, body {
 		redips.addItem(day);
 
 		</script>
-		<button id="BotaoVoltar" data-balloon-pos="up" data-balloon="Volte para o menu anterior" onclick="window.top.location.href = 'index.html';" style="font-size: 2em;">
-		VOLTAR
-	</button></div>
+
+			<button id="BotaoVoltar" data-balloon-pos="up" data-balloon="Volte para o menu anterior" onclick="window.location.href = '../../descricao.html';" style="font-size: 2em;">
+				VOLTAR
+			</button>
+		</div>
+
 	</body>
 </html>
