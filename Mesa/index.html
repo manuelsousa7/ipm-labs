@@ -25,14 +25,24 @@
     
     <script src="google/jquery.min.js"></script>
     <script src="clock/flipclock.js"></script>
- 
+
+
+
  <link rel="stylesheet" href="MenuStyle.css">
  <script src="manager.js"></script>
+<link href="intro/introjs.css" rel="stylesheet">
+<link href="example/assets/css/bootstrap-responsive.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="tool.css">
+
 
 </head>
 
 <body>
     
+       
+
+
     <script type="text/javascript">
         // variavel global que guarda  a  ultima sugestao clicada
         var previous = 0;
@@ -135,8 +145,8 @@
         </div>-->
 
         <div id = "testDiv" style="margin-top: 2%;">
-            <button  id = "menuButton" class="btn btn-hg btn-primary" onclick="goToMenu()" size="2" style="margin-left: 28%;">
-                   <font size="1000">Menu Completo</font>
+            <button  id = "menuButton" class="btn btn-hg btn-primary" data-balloon-pos="up" data-balloon="Clique para personalizar pedido" onclick="goToMenu()" size="2" style="margin-left: 28%;">
+                   <font size="1000" data-step="1" data-intro="Clique para visualizar o Menu Principal!" >Menu Completo</font>
             </button>
             <script type="text/javascript">
                 function goToMenu(){
@@ -150,6 +160,7 @@
         </div>
         <div id = "main" style="">
 
+        <img src="help.png" id="help" height="42" width="42" style="position: absolute;left: 10%;top: 10%">
         <div id = "buttons" style="position: absolute; left: 25%;">
 
             <div id = "helpButton" class=" fui-new btn btn-block btn-lg btn-primary" style="font-size: 150%" onclick="goToCalculator()"></div>
@@ -162,7 +173,7 @@
 
         </div>
 
-        <div class="ism-slider" id="my-slider" style="position: relative; margin-left: auto; margin-right: auto; width: 700px; height: 400px; box-shadow: 1px 1px 5px #888888;">
+        <div data-step="2" data-intro="Clique diretamente para adicionar o prato ao seu pedido!" class="ism-slider" id="my-slider" style="position: relative; margin-left: auto; margin-right: auto; width: 700px; height: 400px; box-shadow: 1px 1px 5px #888888;">
         <ol id="ListaSugestoes">
             <li onclick="Sugestao('Salada de alho francês', 8.20, '../ism/image/slides/_u/1492562152765_332677.jpg')">
                 <img src="ism/image/slides/_u/1492562152765_332677.jpg">
@@ -242,6 +253,17 @@
                 localStorage.setItem("ToDescription", "Sim");
                 goToMenu();
             }
-        </script>        
+        </script>   
+
+      <script type="text/javascript">
+      document.getElementById('help').onclick = function() {
+        introJs().setOption('doneLabel', 'Terminar').start().oncomplete(function() {
+          window.location.href = 'index.html';
+        });
+      };
+    </script>
+        <script type="text/javascript" src="intro/intro.js"></script>  
+
+
 
 </body>
