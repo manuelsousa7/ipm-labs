@@ -22,12 +22,13 @@
 	<![endif]  #EAEDF1 -->
 
 	<link rel="stylesheet" href="clock/flipclock2.css">
-<link rel="stylesheet" href="../tool.css">
+
 	<script src="..\google/jquery.min.js"></script>
 	<script src="..\clock/flipclock2.js"></script>
 
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 	<!-- Stylesheet for WatNotif -->
+		<link href="../intro/introjs.css" rel="stylesheet">
 
     <style type="text/css">
 
@@ -222,23 +223,37 @@
 		</div>
 	</div>
 
-	<button id="BotaoVoltar" type="button" class="button" data-balloon-pos="up" data-balloon="Volte para o menu anterior" onclick="window.top.location.href = 'index.html';" style="font-size: 2em;">
+ <img src="../help.png" id="help" height="42" width="42" style="position: absolute;left: 1%;top: 1%">
+
+	<button id="BotaoVoltar" data-step="1" data-intro="Clique para voltar ao menu anterior" type="button" class="button" data-balloon-pos="up" data-balloon="Volte para o menu anterior" onclick="window.top.location.href = 'index.html';" style="font-size: 2em;">
 		VOLTAR
 	</button>
 
 
-		<button id="BotaoPersonalizar" data-balloon-pos="up" data-balloon="Clique para personalizar pedido" type="button" class="button" style="font-size: 2em;" onclick="change2()">
+		<button id="BotaoPersonalizar" data-step="2" data-intro="Clique para personalizar este prato!" data-balloon-pos="up" data-balloon="Clique para personalizar pedido" type="button" class="button" style="font-size: 2em;" onclick="change2()">
 		PERSONALIZAR
 	</button>
 
 
-	<button id="BotaoCalorias" type="button" class="button" data-balloon-pos="down" data-balloon="Consulte tabela de nutricao detalhada!" style="font-size: 2em;" onclick="change()">
+	<button id="BotaoCalorias" data-step="3" data-intro="Clique para consultar todos os detalhes nutritivos do prato atual" type="button" class="button" data-balloon-pos="down" data-balloon="Consulte tabela de nutricao detalhada!" style="font-size: 2em;" onclick="change()">
 		NUTRIÇÃO
 	</button>
 
-	<button id="BotaoPedir" type="button" class="button" data-balloon-pos="up" data-balloon="Adicione prato ao pedido" onclick="chamada()" style="font-size: 2em;">
+	<button id="BotaoPedir" data-step="4" data-intro="Adicione este prato ao pedido" type="button" class="button" data-balloon-pos="up" data-balloon="Adicione prato ao pedido" onclick="chamada()" style="font-size: 2em;">
 		ADICIONAR
 	</button>
+
+
+		      <script type="text/javascript">
+      document.getElementById('help').onclick = function() {
+        introJs().setOption('doneLabel', 'Terminar').start().oncomplete(function() {
+          window.location.href = '';
+        });
+      };
+    </script>
+
+     <script type="text/javascript" src="../intro/intro.js"></script>  
+
 
 </body>
 </html>
