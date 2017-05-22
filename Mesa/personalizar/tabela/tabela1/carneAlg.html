@@ -17,7 +17,7 @@
 <script type="text/javascript" src="../../../tabela.js"></script>
 <script type="text/javascript" src="../../../manager.js"></script>
     <script type="text/javascript" src="../../../descricao.js"></script>
-
+		<link href="../../../intro/introjs.css" rel="stylesheet">
 <style type="text/css">
 
 :root {
@@ -109,7 +109,7 @@ html, body {
 				<!-- this block will become sticky (with a little JavaScript help)-->
 				<div id="left">
 
-					<table id="table1" width="400px" border="0">
+					<table id="table1" width="400px" border="0" data-step="1" data-intro="Aqui seleciona o extra pretendido">
 						<colgroup>
 							<col width="150"/>
 							<col width="300"/>
@@ -117,7 +117,7 @@ html, body {
 
 						<!-- items should have code length = 3 -->
 						<tr style="height: 80px; border-top: solid; border-color: var(--border_color);">
-							<td><div id="i00" class="redips-drag redips-clone">Feijao Preto</div></td>
+							<td><div id="i00" class="redips-drag redips-clone" data-step="2" data-intro="De seguida arrasta o extra a cor amarela...">Feijao Preto</div></td>
 							<td style="font-size: 110%; border-left: solid; border-right: none; border-color: var(--border_color);" class="redips-mark desc" onMouseOver="ShowPicture('Style',1, 'preto.jpeg')" onMouseOut="ShowPicture('Style',0)" >1 dose de Feijao Preto</td>
 						</tr>
 						<tr style="height: 80px; border-top: solid; border-color: var(--border_color);">
@@ -167,7 +167,7 @@ html, body {
 						<col width="300"/>
 					</colgroup>
 					<tr class="maintd">
-						<td class="redips-trash"></td>
+						<td class="redips-trash" data-step="3" data-intro="... para Aqui!"></td>
 					</tr>
 				</table>
 				<div style="clear:both"/>
@@ -196,11 +196,22 @@ html, body {
 		redips.addItem(day);
 
 		</script>
-
+ <img src="../../../help.png" id="help" height="42" width="42" style="position: absolute;left: 1%;top: 1%">
 			<button id="BotaoVoltar" data-balloon-pos="up" data-balloon="Volte para o menu anterior" onclick="window.location.href = '../../descricao.html';" style="font-size: 2em;">
 				VOLTAR
 			</button>
 		</div>
+
+				      <script type="text/javascript">
+      document.getElementById('help').onclick = function() {
+        introJs().setOption('doneLabel', 'Terminar').start().oncomplete(function() {
+          window.location.href = '';
+        });
+      };
+    </script>
+
+     <script type="text/javascript" src="../../../intro/intro.js"></script>  
+
 
 	</body>
 </html>
