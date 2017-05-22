@@ -49,24 +49,17 @@ html, body {
 	border-color: var(--border_color);
 }
 
-#BotaoVoltar {
-	position: absolute;
-    color:  var(--font_color);
-    background-color: var(--background_1);
-    border: solid var(--border_color);
-    border-radius: 8px;
-    border-color: var(--border_color);
-    font-size: 4em;
+		#BotaoVoltar {
+			position: absolute;
+			bottom: 1%;
+			left: 2%;
 
-    bottom: 5%;
-    left: 5%;
+			font-size: 1em;
+		}
 
-    width: 100%;
-    height: 100%;
-    text-align: center;
 
-    margin-bottom: 1%;
-}
+
+
 
 #BotaoNovo {
 	position: absolute;
@@ -210,10 +203,10 @@ html, body {
 
 			</div>
 		</div>
-		<script type="text/javascript">
-			function bla(){
-				alert("bla bla");
-			}
-		</script>
+		<div>
+
+		<button id="BotaoVoltar" data-balloon-pos="up" data-balloon="Volte para o menu anterior" onclick="window.top.location.href = 'index.html';" style="font-size: 2em;">
+		VOLTAR
+	</button></div>
 	</body>
 </html>
