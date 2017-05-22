@@ -109,17 +109,19 @@ redips.displayMessage = function (message, delay) {
 // add list item element to OL
 redips.addItem = function (obj) {
 	// create LI and INPUT elements (as well as text node)
+
 	var li  = document.createElement('li'),
 		input = document.createElement('input'),
 		text = obj.innerText || obj.textContent,
 		txtLi = document.createTextNode(text),
 		span = document.createElement('button'),
 		txtSpan = document.createTextNode(redips.deleteText);
+
 	// set properties for hidden input element: type, name and value (regex is needed because cloned element contains sufix "c0" like i01c0 that should be discarded)
 	span.setAttribute("style", "width: 30px; height: 30px; margin-left: 20px; padding-left: 9.5px; padding-top: 4px; font-size: 100%");
 	input.type = 'hidden';
 	input.name = 'p[]';
-	input.value = obj.id.match(/(.*)?c\d+/)[1];
+	input.value = "i00";
 	span.onclick = redips.deleteItem;
 	span.className = 'deleteItem btn btn-danger';
 	// append text node to the list item element
@@ -131,6 +133,7 @@ redips.addItem = function (obj) {
 	// append input element
 	li.appendChild(input);
 	// append list item element to the UL
+
 	redips.ol.appendChild(li);
 	// show save button visible
 	redips.button();
