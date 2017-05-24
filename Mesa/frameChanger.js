@@ -4,7 +4,7 @@ function menuFrame(){
 }
 
 function streamFrame(){
-	document.getElementById("frame").src = "stream.html"
+	document.getElementById("frame").src = "Stream.html"
 }
 
 function goToMenu(){
