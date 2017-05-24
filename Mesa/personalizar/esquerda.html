@@ -137,7 +137,7 @@
   </div>
 </div>
 
-<button id="BotaoVoltar" type="button" class="button" onclick="window.top.location.href = '../index.html';">
+<button id="BotaoVoltar" type="button" class="button" onclick="retrocede()">
   SAIR
 </button>
   
@@ -146,6 +146,15 @@
     <script type="text/javascript">
       function MudaIndex(index) {
         localStorage.setItem("IndexMenu", index.toString());
+      }
+
+      function retrocede() {
+        if (localStorage.getItem("Sair") == "Inicio") {
+          window.top.location.href = "../index.html";
+        }
+        else {
+          window.top.location.href = "../AfterOrder.html";
+        }
       }
     </script>
 

@@ -188,6 +188,10 @@
         padding-right: 5%;
         padding-left: 5%;
     }
+
+    #help:hover {
+        cursor: pointer;
+    }
     /*custom font*/
     
     @import url(http://fonts.googleapis.com/css?family=Merriweather+Sans);
@@ -335,12 +339,15 @@
 
 <body style="background-color: #FFFCF9">
     <img src="../help.png" id="help" height="42" width="42" style="position: absolute;left: 1%;top: 1%">
+    <!--
     <div class="breadcrumb flat">
         <a href="#" class="active">Carne</a>
         <a href="#">Peixe</a>
         <a href="#">Vegetariano</a>
         <a href="#">Bebidas</a>
     </div>
+    -->
+    <div style="color: var(--font_color); margin-right: auto; margin-left: auto; font-size: 400%">CARNE</div>
     <div class="flip-menu">
         <section class="flip-item-wrap">
             <img class="fake-image" src="comida/1.jpg" alt="">
@@ -358,7 +365,7 @@
                         <p>Carne de porco à alentejana com favas e molho do algarve. Contem ervas aromaticas do minho.</p>
                         <br>
                         <button class="BotaoDescricao" type="button" class="button" style="font-size: 2em; margin-bottom: 15px;" onclick="ProcessSelection2('Carne do Algarve', 6.50, 'comida/1.jpg','tabela/tabela1/carneAlg.html')">
-                            Detalhes
+                            Saber mais
                         </button>
                         <button class="BotaoDescricao" type="button" class="button" style="font-size: 2em;" onclick="AdicionarSemImagem('Carne do Algarve', 6.50)">
                             Adicionar
@@ -371,7 +378,7 @@
             <img class="fake-image" src="comida/1.jpg" alt="">
             <!-- this image will add height to parent element -->
             <input type="checkbox" class="flipper" id="aa">
-            <label for="aa" class="flip-item" data-step="1" data-intro="Clique para ver mais opcoes sobre o prato">
+            <label for="aa" class="flip-item" data-step="1" data-intro="Clique para ver mais opções sobre o prato.">
                 <figure class="front"><img src="comida/1.jpg" alt=""></img>
                 </figure>
                 <figure class="back">
@@ -382,10 +389,10 @@
                         <br>
                         <p>Carne de porco à alentejana com favas e molho do algarve. Contem ervas aromaticas do minho.</p>
                         <br>
-                        <button data-step="2" data-intro="Clique para ver todas as informacoes sobre o prato, e personalizar o mesmo" class="BotaoDescricao" type="button" class="button" style="font-size: 2em; margin-bottom: 15px;" onclick="ProcessSelection('Carne do Algarve', 6.50, 'comida/1.jpg')">
+                        <button data-step="2" data-intro="Clique para ver todas as informacões sobre o prato e personalizá-lo." class="BotaoDescricao" type="button" class="button" style="font-size: 2em; margin-bottom: 15px;" onclick="ProcessSelection('Carne do Algarve', 6.50, 'comida/1.jpg')">
                             Saber mais
                         </button>
-                        <button class="BotaoDescricao" data-step="3" data-intro="Adicione este prato a sua lista de pedidos!" type="button" class="button" style="font-size: 2em;" onclick="AdicionarSemImagem('Carne do Algarve', 6.50)">
+                        <button class="BotaoDescricao" data-step="3" data-intro="Adicione este prato à sua lista de pedidos." type="button" class="button" style="font-size: 2em;" onclick="AdicionarSemImagem('Carne do Algarve', 6.50)">
                             Pedir Já
                         </button>
                     </div>
