@@ -12,7 +12,7 @@ function goToMenu(){
 }
 
 function pagarMenu(){
-	window.top.location.href = "pagar/index.html";
+	document.getElementById("frame").src = "pagar/index.html"
 }
 
 

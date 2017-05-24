@@ -1,5 +1,5 @@
 body {
-  background: #f2f2f2;
+  background: #EAEDF1;
   font-size: 14px;
   font-family: 'Open Sans', sans-serif;
   line-height: 1;
@@ -162,11 +162,11 @@ body {
 .modal .footer .button {
   outline: none;
   display: block;
-  background: #E39C14;
+  background: #FCCB1B;
   width: 100%;
   border: 0;
   padding: 20px 30px;
-  color: #FFF;
+  color: #545775;
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
