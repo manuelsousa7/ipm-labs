@@ -201,7 +201,7 @@
 
         <div id = "testDiv" style="margin-top: 2%;">
             <button  id = "menuButton" class="btn btn-hg btn-primary" data-balloon-pos="up" data-balloon="Clique para personalizar pedido" onclick="goToMenu()" size="2" style="margin-left: 28%;">
-                   <font size="1000" data-step="1" data-intro="Clique para visualizar o Menu Principal!" >Menu Completo</font>
+                   <font size="1000" data-step="1" data-intro="Clique para visualizar o Menu Principal." >Menu Completo</font>
             </button>
             <script type="text/javascript">
                 function goToMenu(){
@@ -228,7 +228,7 @@
 
         </div>
 
-        <div data-step="2" data-intro="Veja os varios pratos, e clique para visualizar diretmente a pagina do prato" class="ism-slider" id="my-slider" style="position: relative; margin-left: auto; margin-right: auto; width: 700px; height: 400px; box-shadow: 1px 1px 5px #888888;">
+        <div data-step="2" data-intro="Clique num destes pratos se quiser visualizá-lo diretamente." class="ism-slider" id="my-slider" style="position: relative; margin-left: auto; margin-right: auto; width: 700px; height: 400px; box-shadow: 1px 1px 5px #888888;">
         <ol id="ListaSugestoes">
             <li onclick="Sugestao('Salada de alho francês', 8.20, '../ism/image/slides/_u/1492562152765_332677.jpg')">
                 <img src="ism/image/slides/_u/1492562152765_332677.jpg">
@@ -290,6 +290,11 @@
             localStorage.show =2;
             confirmar();
             window.top.location.href = "tabelanut/calculadora.htm";
+        }
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            localStorage.setItem("Sair", "Inicio");
         }
     </script>
     <script type="text/javascript">

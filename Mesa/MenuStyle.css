@@ -255,3 +255,7 @@ p{
 #ListaSugestoes li:hover {
 	cursor: pointer;
 }
+
+#help:hover {
+	cursor: pointer;
+}
