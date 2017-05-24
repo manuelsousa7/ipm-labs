@@ -11,6 +11,7 @@
         var time = 600;
         localStorage.test= time;
     </script>
+    <link href="intro/introjs.css" rel="stylesheet">
 <!--<script type="text/javascript" src="script.js"></script>-->
 <link rel="shortcut icon" type="image/png" href="favicon.png"/>
 
@@ -49,9 +50,10 @@
     <iframe id = "frame" src="AfterOrderFrame.html" scrolling="no"></iframe>
 
     <div id = "profileDiv">
-         <nav class="top-right open">
+         <nav class="top-right open" data-step="1" data-intro="Clique para visualizar dados do perfil!">
+
   <a class="disc l1">
-    <div style="color:#545775" onclick="window.location='user/index.html';">Pefil</div>
+    <div style="color:#545775" onclick="window.location='user/index.html';" >Pefil</div>
   </a>
   <a class="disc l2">
     <div style="color:#545775">Cenas</div>
@@ -66,7 +68,7 @@
     
   </a>
 </nav>
-
+<img src="help.png" id="help" height="42" width="42" style="position: absolute;left: 3%;top:2%">
 <script src="circular/circular.js"></script>
     </div>
 
@@ -78,7 +80,7 @@
 
 </body>
 <footer>
-        <div class="clock"></div>
+        <div class="clock" data-step="2" data-intro="Consulte o tempo de espera do pedido" data-position="top"></div>
         <!--<div class="message"></div>-->
         <script type="text/javascript">
                 $(document).ready(function() {
@@ -94,4 +96,14 @@
             localStorage.test = clock.getTime();
           }, 1000);
         </script>
+
 </footer>
+ <script type="text/javascript">
+      document.getElementById('help').onclick = function() {
+        introJs().setOption('doneLabel', 'Terminar').start().oncomplete(function() {
+          window.location.href = '';
+        });
+      };
+    </script>
+ <script type="text/javascript" src="intro/intro.js"></script>  
+ </html>
