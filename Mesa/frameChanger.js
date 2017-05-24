@@ -12,9 +12,11 @@ function goToMenu(){
 }
 
 function pagarMenu(){
-	window.top.location.href = "pagar/index.html";
+	document.getElementById("frame").src = "pagar/index.html"
 }
-
+function perfil(){
+	document.getElementById("frame").src = "user/index.html"
+}
 
 function incompleteFrame(){
 	document.getElementById("frame").src = "404.html"
