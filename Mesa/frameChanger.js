@@ -14,7 +14,9 @@ function goToMenu(){
 function pagarMenu(){
 	document.getElementById("frame").src = "pagar/index.html"
 }
-
+function perfil(){
+	document.getElementById("frame").src = "user/index.html"
+}
 
 function incompleteFrame(){
 	document.getElementById("frame").src = "404.html"
