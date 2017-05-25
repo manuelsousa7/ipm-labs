@@ -26,7 +26,7 @@ function AdicionaTabela() {
 	}
 
 	var table = document.getElementById("TabelaPratos");
-	alert(contador);
+	//alert(contador);
 	var newTr = table.insertRow(contador++);
 
 	if (descricao.prato.nome.length > caloryThreshold) {
