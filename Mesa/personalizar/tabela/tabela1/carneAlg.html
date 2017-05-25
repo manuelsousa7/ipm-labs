@@ -14,7 +14,6 @@
 <link href="dist/css/flat-ui.css" rel="stylesheet">
 <link href="../../../PagamentoStyle.css" rel="stylesheet">
 
-<script type="text/javascript" src="../../../tabela.js"></script>
 <script type="text/javascript" src="../../../manager.js"></script>
 		<link href="../../../intro/introjs.css" rel="stylesheet">
 <style type="text/css">
@@ -90,6 +89,10 @@ html, body {
     padding-left: 4px;
     padding-right: 4px;
     margin-top: 10px;
+}
+
+#help {
+	cursor: pointer;
 }
 
 
@@ -175,7 +178,8 @@ html, body {
 				<p style="margin-left: 8px;">Pedido composto por:</p>
 					<ol id="drop-list" style="margin-left: 8px; max-height: 310px; overflow: scroll">
 					</ol>
-					<input id="save-button" type="button" value="Guardar" class="button" onclick="doit()" title="Save form"/>
+					<!--<input id="save-button" type="button" value="Guardar" class="button" onclick="doit()" title="Save form"/>-->
+					<button id="save-button" type="button" class="button" onclick="doit()">Guardar</button>
 				</form>
 				
 				</div>
@@ -215,6 +219,17 @@ html, body {
 window.onload = function() {
         newIndex = "0";
         localStorage.setItem("IndexMenu", "0");
+}
+
+function chamada() {
+	var novosPratos = JSON.parse(localStorage.getItem("listaPratos"));
+	localStorage.setItem("Tabela", "Sim");
+}
+
+function doit(){
+	localStorage.per = 1;
+	localStorage.setItem("PersName","Carne do Algarve");
+	chamada();
 }
 
 setInterval(

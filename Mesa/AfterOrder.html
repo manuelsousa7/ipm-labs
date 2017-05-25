@@ -10,7 +10,7 @@
 <script type="text/javascript"> 
         var time = 600;
         localStorage.test= time;
-    </script>
+</script>
     <link href="intro/introjs.css" rel="stylesheet">
 <!--<script type="text/javascript" src="script.js"></script>-->
 <link rel="shortcut icon" type="image/png" href="favicon.png"/>
@@ -110,5 +110,15 @@
         });
       };
     </script>
- <script type="text/javascript" src="intro/intro.js"></script>  
+ <script type="text/javascript" src="intro/intro.js"></script>
+
+<script type="text/javascript">
+  window.onload = function() {
+      localStorage.setItem("pratoSelecao", JSON.stringify(null));
+      localStorage.setItem("listaPratos", JSON.stringify([]));
+      localStorage.setItem("Tabela", "Nao");
+      //alert("Apagado");
+  }
+</script>
+
  </html>
