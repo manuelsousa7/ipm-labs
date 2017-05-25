@@ -19,12 +19,14 @@ function AdicionaTabela() {
 	if(!descricao.prato.personalizado){
 		for (i = 0; i < listaPratos.length; i++) {
 			if (listaPratos[i].nome == descricao.prato.nome) {
+				CustomOnClick(i + 1, true);
 				return;
 			} 
 		}
 	}
 
 	var table = document.getElementById("TabelaPratos");
+	alert(contador);
 	var newTr = table.insertRow(contador++);
 
 	if (descricao.prato.nome.length > caloryThreshold) {
@@ -148,8 +150,8 @@ function AdicionaTabela2(prato) {
 }
 
 window.onload = function() {
-	contador = 0;
 	var listaPratos = JSON.parse(localStorage.getItem("listaPratos"));
+	contador = 0;
 	if (listaPratos.length == 0) {
 		var lista = [];
 		localStorage.setItem("listaPratos", JSON.stringify(lista));

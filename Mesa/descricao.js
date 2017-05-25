@@ -31,9 +31,9 @@ function chamada() {
 }
 
 function doit(){
-			localStorage.per = 1;
-			localStorage.setItem("PersName","Carne do Algarve");
-			chamada();
+	localStorage.per = 1;
+	localStorage.setItem("PersName","Carne do Algarve");
+	chamada();
 }
 	
 setInterval(

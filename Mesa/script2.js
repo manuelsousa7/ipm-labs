@@ -112,7 +112,7 @@ function CarregaPratos() {
 		var newTd = [newTr.insertCell(0), newTr.insertCell(1), newTr.insertCell(2), newTr.insertCell(3)];
 		newTd[0].setAttribute("width", "25%");
 		newTd[1].setAttribute("width", "25%");
-		newTd[2].setAttribute("width", "15%");
+		newTd[2].setAttribute("width", "18%");
 		newTd[3].setAttribute("width", "7%");
 		newTd[0].setAttribute("height", "80");
 		newTd[1].setAttribute("height", "80");
@@ -155,6 +155,8 @@ function CarregaPratos() {
 	}
 };
 
+var pratos = [];
+
 window.onload = function() {
 
 	var lista = localStorage.getItem("listaPratos");
@@ -162,5 +164,3 @@ window.onload = function() {
 	CarregaPratos();
 	UpdatePriceText();
 }
-
-var pratos = [];
