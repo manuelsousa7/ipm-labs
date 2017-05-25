@@ -149,7 +149,7 @@
       }
 
       function retrocede() {
-        if (localStorage.getItem("Sair") == "Inicio") {
+        if (localStorage.getItem("Sair") != "Fim") {
           window.top.location.href = "../index.html";
         }
         else {
