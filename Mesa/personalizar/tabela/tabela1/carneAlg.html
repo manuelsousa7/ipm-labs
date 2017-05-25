@@ -211,7 +211,40 @@ html, body {
     </script>
 
      <script type="text/javascript" src="../../../intro/intro.js"></script>  
+<script>
 
+window.onload = function() {
+        newIndex = "0";
+        localStorage.setItem("IndexMenu", "0");
+}
+
+setInterval(
+        function() {
+                if (newIndex != -1 && localStorage.getItem("IndexMenu") != newIndex) {
+
+                        switch (localStorage.getItem("IndexMenu")) {
+                                case "1":
+                                        window.location.href = "../../comida1.html";
+                                        localStorage.setItem("IndexMenu", "1");
+                                        break;
+
+                                case "2":
+                                        window.location.href = "../../comida2.html";
+                                        localStorage.setItem("IndexMenu", "2");
+                                        break;
+
+                                case "3":
+                                        window.location.href = "../../comida3.html";
+                                        localStorage.setItem("IndexMenu", "3");
+                                        break;
+                        }
+
+                }
+        }
+, 100);
+
+
+</script>
 
 	</body>
 </html>
