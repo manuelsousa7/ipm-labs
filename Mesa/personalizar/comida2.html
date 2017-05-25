@@ -16,6 +16,7 @@
 <link href="dist/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <!-- Loading Flat UI -->
 <link href="dist/css/flat-ui.css" rel="stylesheet">
+    <link href="../intro/introjs.css" rel="stylesheet">
 
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
 <!--[if lt IE 9]>
@@ -178,26 +179,6 @@
 			#help:hover {
 				cursor: pointer;
 			}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*custom font*/
 @import url(http://fonts.googleapis.com/css?family=Merriweather+Sans);
@@ -759,14 +740,14 @@ body {
 			, 100);
 		</script>
 
-		<script type="text/javascript">
-	    document.getElementById('help').onclick = function() {
-	        introJs().setOption('doneLabel', 'Terminar').start().oncomplete(function() {
-	            window.location.href = '';
-	        });
-	    };
-	    </script>
-	    <script type="text/javascript" src="../intro/intro.js"></script>
+    <script type="text/javascript">
+    document.getElementById('help').onclick = function() {
+        introJs().setOption('doneLabel', 'Terminar').start().oncomplete(function() {
+            window.location.href = '';
+        });
+    };
+    </script>
+    <script type="text/javascript" src="../intro/intro.js"></script>
 		
 		</body>
 </html>
