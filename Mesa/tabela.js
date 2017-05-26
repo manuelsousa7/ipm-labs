@@ -38,9 +38,9 @@ function AdicionaTabela() {
 	}
 
 	var newTd = [newTr.insertCell(0), newTr.insertCell(1), newTr.insertCell(2), newTr.insertCell(3)];
-	newTd[0].setAttribute("width", "35%");
-	newTd[1].setAttribute("width", "15%");
-	newTd[2].setAttribute("width", "40%");
+	newTd[0].setAttribute("width", "30%");
+	newTd[1].setAttribute("width", "12%");
+	newTd[2].setAttribute("width", "35%");
 	newTd[3].setAttribute("width", "10%");
 	newTd[0].setAttribute("height", "80");
 	newTd[1].setAttribute("height", "80");
@@ -106,13 +106,15 @@ function AdicionaTabela2(prato) {
 		newTr.setAttribute("style", "font-size: 1.7em; border-top: solid var(--border_color);");
 	}
 
-	var newTd = [newTr.insertCell(0), newTr.insertCell(1), newTr.insertCell(2)];
-	newTd[0].setAttribute("width", "35%");
-	newTd[1].setAttribute("width", "15%");
-	newTd[2].setAttribute("width", "45%");
-	newTd[0].setAttribute("height", "60");
-	newTd[1].setAttribute("height", "60");
-	newTd[2].setAttribute("height", "60");
+	var newTd = [newTr.insertCell(0), newTr.insertCell(1), newTr.insertCell(2), newTr.insertCell(3)];
+	newTd[0].setAttribute("width", "30%");
+	newTd[1].setAttribute("width", "12%");
+	newTd[2].setAttribute("width", "35%");
+	newTd[3].setAttribute("width", "10%");
+	newTd[0].setAttribute("height", "80");
+	newTd[1].setAttribute("height", "80");
+	newTd[2].setAttribute("height", "80");
+	newTd[3].setAttribute("height", "80");
 
 	newTd[1].setAttribute("id", nomes[0] + contador);
 
