@@ -273,21 +273,21 @@
     </div>
 
         <script type="text/javascript">
-        if(localStorage.show == 2){
+        if(localStorage.show == 1){
             var popup = document.getElementById("myPopup");
             popup.style.visibility='hidden';
         }
     </script>
     <script type="text/javascript">
         function confirmar() {
-            localStorage.show =2;
+            localStorage.show =1;
             var popup = document.getElementById("myPopup");
             popup.style.visibility='hidden';
         }
     </script>
     <script type="text/javascript">
         function corrigir(){
-            localStorage.show =2;
+            localStorage.show =1;
             confirmar();
             window.top.location.href = "tabelanut/calculadora.htm";
         }
