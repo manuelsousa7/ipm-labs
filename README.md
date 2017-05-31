@@ -1,6 +1,6 @@
 # Repositorio de IPM
 
-Projeto criado por:
+Projeto realizado por:
 
 - Goncalo Marques
 - Francisco Aguiar
